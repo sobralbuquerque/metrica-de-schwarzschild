@@ -24,7 +24,7 @@ Como $ \dot{\mathbf{e}}_{i}=\partial_{j} \mathbf{e}_{i} \dot{u}^{j} $ e o podemo
 \partial_{j} \mathbf{e}_{i}=\Gamma_{i j}^{k} \mathbf{e}_{k}
 \end{equation}
 
-O que dá origem a 27 quantidades $ \Gamma_{i j}^{k} $ definidas em cada ponto no espaço. Juntando as equações \ref{eq:GammaDefinicao} e \ref{eq:VetorTangenteConstanteBase}, chegamos em
+O que dá origem a 27 quantidades $ \Gamma_{i j}^{k} $ definidas em cada ponto no espaço. Juntando as equações \eqref{eq:GammaDefinicao} e \eqref{eq:VetorTangenteConstanteBase}, chegamos em
 \begin{equation}\label{eq:CoordenadasLambdaE}
 	\left(\dot{\lambda}^{i}+\Gamma_{j k}^{i} \lambda^{j} \dot{u}^{k}\right) \mathbf{e}_{i}=\mathbf{0}
 \end{equation}
@@ -71,7 +71,7 @@ e
 \partial_{j} g_{k i}=\Gamma_{k j}^{m} g_{m i}+\Gamma_{i j}^{m} g_{k m}
 \end{equation}
 
-Subtraindo-se a equação \ref{eq:deltaj} da soma (\ref{eq:deltai}+\ref{eq:deltak}), obtemos
+Subtraindo-se a equação \eqref{eq:deltaj} da soma (\eqref{eq:deltai}+\eqref{eq:deltak}), obtemos
 
 \[2 \Gamma_{k_{i}}^{m} g_{m j}=\partial_{k} g_{i j}+\partial_{i} g_{j k}-\partial_{j} g_{k i}\]
 
@@ -82,7 +82,7 @@ que, por sua vez, ao contrair-se com $ \tfrac{1}{2} g^{l j} $ gera
 \end{equation}
 
 
-Assim, a equação \ref{eq:ComponentesUGamma} com o tensor $ \Gamma_{jk}^i $ dado pela equação \ref{eq:Gamma} é a \textit{equação geodésica} para um espaço euclidiano.
+Assim, a equação \eqref{eq:ComponentesUGamma} com o tensor $ \Gamma_{jk}^i $ dado pela equação \eqref{eq:Gamma} é a \textit{equação geodésica} para um espaço euclidiano.
 
 Para um parâmetro $ t $ da forma $ t = As+B $, com $ A\neq0,B $ constantes, a equação geodésica possui a mesma forma indicada:
 
@@ -92,7 +92,7 @@ Para um parâmetro $ t $ da forma $ t = As+B $, com $ A\neq0,B $ constantes, a e
 
 Os parâmetros cujas equações são dessa forma são chamados de \textit{parâmetros afins}. Nesses casos, $ ds/dt $ é constante e, se $ t $ for pensado como o tempo, a geodésica é atravessada a velocidade constante.
 
-A equação \ref{eq:GeodesicaEmT} é um sistema de equações diferenciais de segunda ordem cuja solução geral $ u^i(t) $ gera as geodésicas do espaço euclidiano em qualquer sistemas de coordenadas que estivermos utilizando.
+A equação \eqref{eq:GeodesicaEmT} é um sistema de equações diferenciais de segunda ordem cuja solução geral $ u^i(t) $ gera as geodésicas do espaço euclidiano em qualquer sistemas de coordenadas que estivermos utilizando.
 
 Utilizando esses resultados, podemos definir uma \textit{geodésica afim} como uma variedade Rimanniana ou pseudo-Rimanniana como uma curva $ x^a(u) $ dada satisfazendo
 
@@ -116,13 +116,13 @@ Seja $ \gamma $ uma curva no espaço euclidiano tridimensional dado parametricam
 d \boldsymbol{\lambda} / d t=\mathbf{0}
 \end{equation}
 
-que é idêntica à equação \ref{eq:VetorTangenteConstante}. Assim, fazendo as mesmas modificações e, à partir da equação \ref{eq:CoordenadasLambdaE}, chegamos que as componentes do vetor satisfazem 
+que é idêntica à equação \eqref{eq:VetorTangenteConstante}. Assim, fazendo as mesmas modificações e, à partir da equação \eqref{eq:CoordenadasLambdaE}, chegamos que as componentes do vetor satisfazem 
 
 \begin{equation}\label{eq:CoordenadasLambda}
 \dot{\lambda}^{i}+\Gamma_{j k}^{i} \lambda^{j} \dot{u}^{k}=0
 \end{equation} 
 
-em que os coeficientes de conexão são dados pela equação \ref{eq:Gamma}.
+em que os coeficientes de conexão são dados pela equação \eqref{eq:Gamma}.
 
 {\color{red}CRIAR AMBIENTE DE EXEMPLO}
 Considere uma esfera de raio $a$, com coordenadas $u^1\equiv \theta,\, u^2\equiv\phi$, onde $\theta,\phi$ são os ângulos polares usuais das coordenadas esféricas, com $0\leq\theta\leq\pi$ e $0\leq\phi\leq 2\pi$.
@@ -168,18 +168,18 @@ e
 \]
 onde $S^A\equiv a^{-1}\delta^A_1$ é o vetor unitário que aponta para o sul em $P_0$
 
-Assim, temos um problema de valor inicial consistindo nas equações \ref{eq:EquacoesTransporteLambda} com condições iniciais \ref{eq:CondicoesIniciaisLambda}. Substituindo a primeira equação de \ref{eq:EquacoesTransporteLambda} na derivada da segunda, chegamos em
+Assim, temos um problema de valor inicial consistindo nas equações \eqref{eq:EquacoesTransporteLambda} com condições iniciais \eqref{eq:CondicoesIniciaisLambda}. Substituindo a primeira equação de \eqref{eq:EquacoesTransporteLambda} na derivada da segunda, chegamos em
 \[
 \ddot{\lambda}^2+\cot\theta_0(\sin\theta_0\cos\theta_0\lambda^2)=0	
 \]
 \[
 \Rightarrow \ddot{\lambda}^2+\omega^2\lambda^2=0, \qq{onde} \omega=\cos\theta_0,
 \]
-cuja solução é da forma $\lambda^2(t)=A\cos(\omega t+\varphi)$. Derivando e substituindo na segunda equação de \ref{eq:EquacoesTransporteLambda}, temos
+cuja solução é da forma $\lambda^2(t)=A\cos(\omega t+\varphi)$. Derivando e substituindo na segunda equação de \eqref{eq:EquacoesTransporteLambda}, temos
 \[
 \lambda^1=-\tan\theta_0\dot{\lambda}^2=-\tan\theta_0(-\omega A\sin(\omega t+\varphi))	= A\sin\theta_0\sin(\omega t+\varphi).
 \]
-Aplicando-se as condições iniciais \ref{eq:CondicoesIniciaisLambda}:
+Aplicando-se as condições iniciais \eqref{eq:CondicoesIniciaisLambda}:
 \[
 \left\{\begin{array}{l}
 {A\sin\theta_0\sin\varphi=a^{-1}\cos\alpha} \\ 
@@ -311,7 +311,7 @@ h(t) \equiv-\frac{d^{2} t}{d \tau^{2}}\left(\frac{d t}{d \tau}\right)^{-2}=\frac
 
 {\color{red} prova no caderno de exercícios, pg. 4 [trocar $ s $ por $ \tau $]}
 
-Dividindo-se por $ c^2 $, a parte espacial da equação \ref{eq:TrajetoriaEmT} pode ser escrita como
+Dividindo-se por $ c^2 $, a parte espacial da equação \eqref{eq:TrajetoriaEmT} pode ser escrita como
 
 \begin{equation}\label{eq:TrajetoriaParteEspacial}
 \frac{1}{c^{2}} \frac{d^{2} x^{i}}{d t^{2}}+\Gamma_{00}^{i}+2 \Gamma_{0 j}^{i}\left(\frac{1}{c} \frac{d x^{j}}{d t}\right)+\Gamma_{j k}^{i}\left(\frac{1}{c} \frac{d x^{j}}{d t}\right)\left(\frac{1}{c} \frac{d x^{k}}{d t}\right)=\frac{1}{c} h(t)\left(\frac{1}{c} \frac{d x^{i}}{d t}\right).
@@ -371,7 +371,7 @@ e
 \approx -\tfrac{1}{2} \delta^{i k}\left(\partial_{j} h_{0 k}-\partial_{k} h_{0 j}\right)
 \]
 
-Assim, aproximamos todos os termos do lado esquerdo da equação \ref{eq:TrajetoriaParteEspacial}. Analogamente, negligenciando produtos de $ c^{-1} d x^{i} / d t $, temos que, a partir de
+Assim, aproximamos todos os termos do lado esquerdo da equação \eqref{eq:TrajetoriaParteEspacial}. Analogamente, negligenciando produtos de $ c^{-1} d x^{i} / d t $, temos que, a partir de
 
 \[
 \left(\frac{d \tau}{d t}\right)^{2}=\frac{1}{c^{2}} g_{\mu \nu} \frac{d x^{\mu}}{d t} \frac{d x^{\nu}}{d t}
@@ -389,9 +389,9 @@ Assim,
 d^{2} \tau / d t^{2}=\tfrac{1}{2} c h_{00,0} \Rightarrow \frac{1}{c} h(t)=\tfrac{1}{2} h_{00,0}\left(1-\tfrac{1}{2} h_{00}\right)=\tfrac{1}{2} h_{00,0},
 \]
 
-a partir da equação \ref{eq:HDefinicao}. 
+a partir da equação \eqref{eq:HDefinicao}. 
 
-Assim, o lado direito da equação \ref{eq:TrajetoriaParteEspacial} pode ser desprezado e, então, a aproximação em primeira ordem nos dá
+Assim, o lado direito da equação \eqref{eq:TrajetoriaParteEspacial} pode ser desprezado e, então, a aproximação em primeira ordem nos dá
 
 \[
 \frac{1}{c^{2}} \frac{d^{2} x^{i}}{d t^{2}}+\tfrac{1}{2} \delta^{i j} \partial_{j} h_{00}-\delta^{i k}\left(\partial_{j} h_{0 k}-\partial_{k} h_{0 j}\right) \frac{1}{c} \frac{d x^{j}}{d t}=0
@@ -415,7 +415,7 @@ com
 V \equiv \tfrac{1}{2} c^{2} h_{00}+V_0.
 \end{equation}
 
-Essa é a equação de movimento newtoniana de uma partícula se movendo em um potencial gravitacional $ V $ dado por \ref{eq:PotencialGravitacionalNewtonianoFraco}. Isso nos dá
+Essa é a equação de movimento newtoniana de uma partícula se movendo em um potencial gravitacional $ V $ dado por \eqref{eq:PotencialGravitacionalNewtonianoFraco}. Isso nos dá
 
 \[
 g_{00}=1+ 2(V-V_0) / c^{2}.
@@ -440,7 +440,7 @@ onde $ M $ é a massa do corpo e $ G $ a constante gravitacional. Para pequenos 
 
 \[x^{0} \equiv c t, \quad x^{1} \equiv r \sin \theta \cos \phi, \quad x^{2} \equiv r \sin \theta \sin \phi, \quad x^{3} \equiv r \cos \theta,\]
 
-obtemos um elemento de linha cujo tensor de métrica tenha a forma $ g_{\mu\nu} =\eta_{\mu \nu}+h_{\mu\nu} $, em que, para valores grandes de $ rc^2/GM $, as quantidades $ h_{\mu\nu} $ são pequenas e $ g_{00}=1-2GM/rc^2 $.  Isso nos dá $ h_{00} = -2GM/rc^2 $ e, de acordo com os resultados da seção \ref{sec:PotencialGravitacionalGeodesica}, um potencial newtoniano $ V = -GM/r $. A versão vetorial da equação \ref{eq:EquacaoMovimentoPotencial} é 
+obtemos um elemento de linha cujo tensor de métrica tenha a forma $ g_{\mu\nu} =\eta_{\mu \nu}+h_{\mu\nu} $, em que, para valores grandes de $ rc^2/GM $, as quantidades $ h_{\mu\nu} $ são pequenas e $ g_{00}=1-2GM/rc^2 $.  Isso nos dá $ h_{00} = -2GM/rc^2 $ e, de acordo com os resultados da seção \ref{sec:PotencialGravitacionalGeodesica}, um potencial newtoniano $ V = -GM/r $. A versão vetorial da equação \eqref{eq:EquacaoMovimentoPotencial} é 
 
 \[
 m d^{2} \mathbf{r} / d t^{2}=-m \nabla V=-G M m r^{-2} \hat{\mathbf{r}}

@@ -59,20 +59,20 @@ e, diferenciando {\color{ForestGreen} (notando que $g_{\nu\sigma;\mu}=0$)}, cheg
 	g_{\nu\sigma}\left(u^{\nu}_{;\mu}u^{\sigma}+u^{\nu}u^{\sigma}_{;\mu}\right)=0 
 	\Rightarrow g_{\nu\sigma}u^{\nu}_{,\mu}u^{\sigma}+g_{\sigma\nu}u^{\sigma}_{,\mu}u^{\nu}= 2u_{,\mu}^{\nu} u_{\nu} = 0
 \]
-Assim, temos que $u_{,\mu}^{\nu} u_{\nu} = 0$. Contraindo, então, a equação \ref{eq:DivergenciaTensorEnergiaMomento} com $u_\nu$ e dividindo por $c^2$ nos dá:
+Assim, temos que $u_{,\mu}^{\nu} u_{\nu} = 0$. Contraindo, então, a equação \eqref{eq:DivergenciaTensorEnergiaMomento} com $u_\nu$ e dividindo por $c^2$ nos dá:
 \begin{equation}\label{eq:EquacaoContinuidade4vetorial}
 	\boxed{
 		\left(\rho u^{\mu}\right)_{, \mu}+\left(p / c^{2}\right) u_{, \mu}^{\mu}=0.
 	}
 \end{equation}
-Colocando esse resultado na equação \ref{eq:DivergenciaTensorEnergiaMomento}, temos que ela simplifica para
+Colocando esse resultado na equação \eqref{eq:DivergenciaTensorEnergiaMomento}, temos que ela simplifica para
 \begin{equation}\label{eq:EquacaoMovimentoEuler4vetorial}
 	\boxed{
 		\left(\rho+p / c^{2}\right) u_{, \mu}^{\nu} u^{\mu}=\left(\eta^{\mu \nu}-c^{-2} u^{\mu} u^{\nu}\right) p_{, \mu}	.
 	}
 \end{equation}
 
-Vamos mostrar, agora, que a equação \ref{eq:EquacaoContinuidade4vetorial} e \ref{eq:EquacaoMovimentoEuler4vetorial}, para fluidos em baixas velocidades e baixas pressões, reduzem para as equações clássicas de continuidade e de movimento de um fluido perfeito. Velocidades baixas implica que $\gamma=1$ e baixas pressões significa que $p/c^2 \ll \rho$. Assim, a equação  \ref{eq:EquacaoContinuidade4vetorial}  reduz para
+Vamos mostrar, agora, que a equação \eqref{eq:EquacaoContinuidade4vetorial} e \eqref{eq:EquacaoMovimentoEuler4vetorial}, para fluidos em baixas velocidades e baixas pressões, reduzem para as equações clássicas de continuidade e de movimento de um fluido perfeito. Velocidades baixas implica que $\gamma=1$ e baixas pressões significa que $p/c^2 \ll \rho$. Assim, a equação  \eqref{eq:EquacaoContinuidade4vetorial}  reduz para
 \[\left(\rho v^{\mu}\right)_{, \mu}=0,\]
 o que dá
 \[(\rho c)_{, 0}+\left(\rho v^{i}\right)_{, i}=0\]
@@ -84,7 +84,7 @@ e, em notação 3-vetorial isso é
 \end{equation}
 que é a equação da continuidade clássica \textbf{(citar referência)}.
 
-Já a equação \ref{eq:EquacaoMovimentoEuler4vetorial}, nessa aproximação, reduz-se a 
+Já a equação \eqref{eq:EquacaoMovimentoEuler4vetorial}, nessa aproximação, reduz-se a 
 \[
 	\rho v_{, \mu}^{\nu} v^{\mu}=\left(\eta^{\mu \nu}-c^{-2} v^{\mu} v^{\nu}\right) p_{, \mu}
 \]
@@ -150,7 +150,7 @@ onde
 	}
 \end{equation}
 
-Como o lado esquerdo da equação \ref{eq:DiferencaDerivadaSegundaCovariante} é um tensor para vetores $\lambda_a$ arbitrários, a contração de $R^d_{abc}$ com $\lambda_d$ também é um tensor e, como $R^d_{abc}$ não depende de $\lambda_a$, o Teorema do Quociente leva-nos a concluir que $R^d_{abc}$ é um tensor do tipo $(1,3)$. Denomina-se tensor de curvatura (ou tensor de Riemann).
+Como o lado esquerdo da equação \eqref{eq:DiferencaDerivadaSegundaCovariante} é um tensor para vetores $\lambda_a$ arbitrários, a contração de $R^d_{abc}$ com $\lambda_d$ também é um tensor e, como $R^d_{abc}$ não depende de $\lambda_a$, o Teorema do Quociente leva-nos a concluir que $R^d_{abc}$ é um tensor do tipo $(1,3)$. Denomina-se tensor de curvatura (ou tensor de Riemann).
 
 Então, a condição necessária e suficiente para que a ordem em que a diferenciação covariante de um tensor $(0,1)$ qualquer pode ser trocada é que $R^a_{bcd}=0$.
 
@@ -189,7 +189,7 @@ A partir disso, apenas é necessário checarem-se as seguitnes propriedades:
 \begin{equation}\label{eq:RSimetriaC}
 	R_{abcd}=R_{cdab}
 \end{equation}
-Segue de (\ref{eq:RSimetriaA}) que
+Segue de (\eqref{eq:RSimetriaA}) que
 \[
 R^a_{acd} = 0.
 \]
@@ -222,7 +222,7 @@ onde a integral é tomada ao longo de $\gamma$ do ponto inicial $O$. Assim, pode
 \[
 	x^a=x^a_P+\xi^a
 \]
-onde os $\xi^a$ são pequenos. As diferenças entre coordenadas $\xi^a$ podem ser pensadas como um vetor partindo de $P$ para um ponto qualquer de $\gamma$. (veja a Figura \ref{fig:SmallLoop}). Como os $x^a_P$ são constantes, a equação \ref{eq:TransporteParaleloIntegral} pode ser escrita como
+onde os $\xi^a$ são pequenos. As diferenças entre coordenadas $\xi^a$ podem ser pensadas como um vetor partindo de $P$ para um ponto qualquer de $\gamma$. (veja a Figura \ref{fig:SmallLoop}). Como os $x^a_P$ são constantes, a equação \eqref{eq:TransporteParaleloIntegral} pode ser escrita como
 \begin{equation}\label{eq:TransporteParaleloIntegralXi}
 	\lambda^a=\lambda^a_0 - \int\Gamma^a_{bc}\lambda^b d\xi^c .
 \end{equation}
@@ -245,7 +245,7 @@ Utilizando esse resultado ao lado direito, podemos chegar em uma aproximação a
 \begin{equation}\label{eq:AproximacaoSegundaOrdemLambda}
 \begin{aligned} \lambda^{a} &=\lambda_{0}^{a}-\int \Gamma_{b c}^{a}\left(\lambda_{0}^{b}-\lambda_{0}^{d} \int \Gamma_{d e}^{b} d \xi^{e}\right) d \xi^{c} \\ &=\lambda_{0}^{a}-\lambda_{0}^{b} \int \Gamma_{b c}^{a} d \xi^{c}+\lambda_{0}^{d} \int \Gamma_{b c}^{a}\left(\int \Gamma_{d e}^{b} d \xi^{e}\right) d \xi^{c}. \end{aligned}
 \end{equation}
-Esse processo pode ser repetido indefinidamente, mas a aproximação dada por \ref{eq:AproximacaoSegundaOrdemLambda} é o suficiente para o nosso propósito, o qual envolve utilizar aproximações de segunda ordem em $\xi^a.$.
+Esse processo pode ser repetido indefinidamente, mas a aproximação dada por \eqref{eq:AproximacaoSegundaOrdemLambda} é o suficiente para o nosso propósito, o qual envolve utilizar aproximações de segunda ordem em $\xi^a.$.
 
 
 
