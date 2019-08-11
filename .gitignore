@@ -1,0 +1,16 @@
+# arquivos auxiliares tex
+*.aux
+*.fls
+*.ilg
+*.log
+*.synctex.gz
+*.fdb_latexmk
+
+# arquivos vscode
+.vscode/
+*.code-workspace
+
+#outros
+figuras/__pycache__
+*.ini
+
