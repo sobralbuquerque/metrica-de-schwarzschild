@@ -1,0 +1,76 @@
+\chapter{*Campos vetoriais e tensoriais}\label{cap:CamposVetoriaisETensoriais}
+\section{Sistemas de coordenadas no espaço euclidiano}\label{sec:SistemasCoordenadasEspacoEuclideano}
+Considerando um espaço euclidiano tridimensional equipado com um sistema cartesiano de coordenadas $ (x,y,z) $ e um conjunto de vetores associados $ \{\mathbf{i}, \mathbf{j}, \mathbf{k}\} $. Seja um outro sistema de coordenadas $ (u,v,w) $ não-cartesiano. Nós podemos expressar as coordenadas cartesianas em termos destas:
+
+\begin{equation}\label{eq:TransformacaoXU}
+	x=x(u, v, w), \quad y=y(u, v, w), \quad z=z(u, v, w)
+\end{equation}
+	
+E, à princípio, inverter as relações e escrever $ u,v,w $ em termos de $ x,y,z $. A equação \ref{eq:TransformacaoXU} em notação vetorial fica:
+
+\begin{equation}\label{eq:TransformacaoXUVetorial}
+\mathbf{r}=x(u, v, w) \mathbf{i}+y(u, v, w) \mathbf{j}+z(u, v, w) \mathbf{k}
+\end{equation}
+
+Agora, pode-se fixar uma das coordenadas, chegando em uma superfície parametrizada pelas outras duas. Por exemplo, fazendo-se $ w=w_0 $, temos a superfície coordenada $ \mathbf{r}=x\left(u, v, w_{0}\right) \mathbf{i}+y\left(u, v, w_{0}\right) \mathbf{j}+z\left(u, v, w_{0}\right) \mathbf{k} $ parametrizada por $ u,v $ e analogamente para as outras duas.
+
+Fixando-se duas coordenadas (e.g. $ v=v_0,w=w_0 $), tem-se uma curva coordenada parametrizada em $ u $ (neste caso, dada pela interseção das superfícies coordenadas $ v=v_0 $ e $ w=w_0 $).
+
+\begin{equation}\label{eq:CurvaCoordenadaU}
+ \mathbf{r}=x\left(u, v_{0}, w_{0}\right) \mathbf{i}+y\left(u, v_{0}, w_{0}\right) \mathbf{j}+z\left(u, v_{0}, w_{0}\right) \mathbf{k} 
+\end{equation}
+
+As outras curvas coordenadas são geradas da mesma maneira. Derivando-se a equação \ref{eq:CurvaCoordenadaU} em relação ao parâmetro $ u $, tem-se o vetor tangente à curva coordenada. Mas isso é igual a derivar parcialmente em $ u $ a equação \ref{eq:TransformacaoXUVetorial}. Assim, os vetores tangentes às curvas coordenadas que passam por $ P=(u_0,v_0,w_0) $ são
+
+
+\begin{equation}\label{eq:VetoresCoordenadosU}
+\boxed{\mathbf{e}_{\mathfrak{u}} \equiv \partial \mathbf{r} / \partial u, \quad \mathbf{e}_{v} \equiv \partial \mathbf{r} / \partial v, \quad \mathbf{e}_{w} \equiv \partial \mathbf{r} / \partial w}
+\end{equation}
+
+
+Com as derivadas tomadas em $ (u_0,v_0,w_0) $.
+
+Sejam 
+
+\[
+h_{1} \equiv\left|\mathbf{e}_{u}\right|, \quad h_{2} \equiv\left|\mathbf{e}_{v}\right|, \quad h_{3} \equiv\left|\mathbf{e}_{w}\right|
+\]
+
+Podem-se normalizar os vetores:
+
+\[
+\hat{\mathbf{e}}_{u}=\frac{1}{h_{1}} \mathbf{e}_{u}, \quad \mathbf{\hat { e }}_{v}=\frac{1}{h_{2}} \mathbf{e}_{v}, \quad \mathbf{\hat { e }}_{w}=\frac{1}{h_{3}} \mathbf{e}_{w}
+\]
+
+O conjunto $ \left\{\hat{\mathbf{e}}_{\boldsymbol{u}}, \mathbf{\hat { e }}_{\boldsymbol{v}}, \hat{\mathbf{e}}_{\boldsymbol{w}}\right\} $ forma uma base em $ P $ e, assim, podemos escrever qualquer vetor $ \mathbf{\lambda} $ na forma
+
+\[
+\boldsymbol{\lambda}=\alpha \hat{\mathbf{e}}_{u}+\beta \hat{\mathbf{e}}_{v}+\gamma \hat{\mathbf{e}}_{w}
+\]
+A terna $ \alpha,\beta,\gamma $ compõe as coordenadas nessa base.
+
+Outro modo de se criar uma base é com a normal das superfícies coordenadas. Invertendo as relações 
+\ref{eq:TransformacaoXU}, temos
+
+\begin{equation}\label{eq:TransformacaoUX}
+u=u(x, y, z), \quad v=v(x, y, z), \quad w=w(x, y, z)
+\end{equation}
+
+Assim, podemos trabalhar com cada coordenada como um campo escalar e calcular seu gradiente:
+
+\begin{equation}\label{eq:GradienteTransformacaoUX}
+\begin{aligned} \nabla u &=\frac{\partial u}{\partial x} \mathbf{i}+\frac{\partial u}{\partial y} \mathbf{j}+\frac{\partial u}{\partial z} \mathbf{k} \\ \nabla v &=\frac{\partial v}{\partial x} \mathbf{i}+\frac{\partial v}{\partial y} \mathbf{j}+\frac{\partial v}{\partial z} \mathbf{k} \\ \nabla w &=\frac{\partial w}{\partial x} \mathbf{i}+\frac{\partial w}{\partial y} \mathbf{j}+\frac{\partial w}{\partial z} \mathbf{k} \end{aligned}
+\end{equation}
+
+A cada ponto $ P $, esses vetores são normais às superfícies coordenadas correspondentes, que são $ u=u_0, v=v_0, w=w_0 $. Assim, eles formam uma base alternativa em $ P $. Chamamo-na de base \textit{dual}. Para diferenciá-la da obtida anteriormente, os sufixos são sobrescritos:
+
+\begin{equation}\label{eq:VetoresDuaisU}
+\boxed{\mathbf{e}^{u} \equiv \nabla u, \quad \mathbf{e}^{v} \equiv \nabla v, \quad \mathbf{e}^{w} \equiv \nabla w}
+\end{equation} 
+
+Dado um campo vetorial $ \mathbf{\lambda} $, é possível escrevê-lo em ambas as bases:
+
+\begin{equation}\label{eq:LambdaEmAmbasAsBases}
+\begin{array}{l}{\boldsymbol{\lambda}=\lambda^{u} \mathbf{e}_{u}+\lambda^{v} \mathbf{e}_{v}+\lambda^{w} \mathbf{e}_{w}} \\ {\boldsymbol{\lambda}=\lambda_{u} \mathbf{e}^{u}+\lambda_{v} \mathbf{e}^{v}+\lambda_{w} \mathbf{e}^{w}}\end{array}
+\end{equation}
+
