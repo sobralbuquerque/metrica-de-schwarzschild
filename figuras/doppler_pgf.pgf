@@ -15,7 +15,6 @@
 %%
 %% Matplotlib used the following preamble
 %%   \usepackage[utf8x]{inputenc}
-%%   \usepackage[T1]{fontenc}
 %%   \usepackage{amsmath}\newcommand{\vect}[1]{#1}
 %%   \usepackage{lmodern}
 %%   \renewcommand{\familydefault}{\sfdefault}
@@ -47,7 +46,7 @@
 \pgfsetrectcap%
 \pgfsetroundjoin%
 \pgfsetlinewidth{1.505625pt}%
-\definecolor{currentstroke}{rgb}{1.000000,1.000000,0.000000}%
+\definecolor{currentstroke}{rgb}{1.000000,0.843137,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
 \pgfpathmoveto{\pgfqpoint{1.674545in}{0.572727in}}%
@@ -158,7 +157,7 @@
 \pgfsetrectcap%
 \pgfsetroundjoin%
 \pgfsetlinewidth{1.505625pt}%
-\definecolor{currentstroke}{rgb}{1.000000,1.000000,0.000000}%
+\definecolor{currentstroke}{rgb}{1.000000,0.843137,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
 \pgfpathmoveto{\pgfqpoint{1.849091in}{1.009091in}}%

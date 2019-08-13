@@ -31,7 +31,7 @@ tt = np.linspace(0.0, tt_max, N)
 dist_0 = s0 + v*t_0
 t_prime = np.linspace(t_0, tt_max+t_0, N)
 li_1 = dist_0 - tt
-ax.plot(li_1, t_prime, color='yellow', zorder=0)
+ax.plot(li_1, t_prime, color='gold', zorder=0)
 
 # Legenda Luz 1
 x2, y2 = [s0+v*t_0, t_0]
@@ -49,7 +49,7 @@ t_0 = t_0 +dt_0
 dist_0 = s0 + v*t_0
 t_prime = np.linspace(t_0, tt_max+t_0, N)
 li_1 = dist_0 - tt
-ax.plot(li_1, t_prime, color='yellow', zorder=0)
+ax.plot(li_1, t_prime, color='gold', zorder=0)
 
 
 # Legenda Luz 2
