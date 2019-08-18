@@ -5,6 +5,7 @@
 *.log
 *.synctex.gz
 *.fdb_latexmk
+*.toc
 
 # arquivos vscode
 .vscode/
