@@ -15,7 +15,6 @@
 %%
 %% Matplotlib used the following preamble
 %%   \usepackage[utf8x]{inputenc}
-%%   \usepackage[T1]{fontenc}
 %%   \usepackage{amsmath}\newcommand{\vect}[1]{#1}
 %%   \usepackage{lmodern}
 %%   \renewcommand{\familydefault}{\sfdefault}
