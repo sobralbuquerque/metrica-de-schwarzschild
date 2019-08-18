@@ -14,6 +14,8 @@
 figuras/__pycache__
 *.ini
 
-#arquivo principal
+# arquivo principal
 anotacoes.tex
 anotacoes.pdf
+relatorio.tex
+relatorio.pdf
