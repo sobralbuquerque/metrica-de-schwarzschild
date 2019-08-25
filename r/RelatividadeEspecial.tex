@@ -1,22 +1,15 @@
-\chapter{Relatividade Restrita}
+\chapter{Relatividade Especial}
 
-\section{*Introdução}
+\section{Postulados da Relatividade Especial}
 
-{\color{red} Pensar em como introduzir o texto.}
-
-\section{*Postulados da Relatividade Restrita}
-
-
-
-
-A Relatividade Restrita baseia-se em dois postulados:
+A Relatividade Especial baseia-se em dois postulados:
 
 \begin{enumerate}[label=\textbf{(\Roman*)}]
     \item As leis da física se aplicam a todos os referenciais inerciais \label{post:leis}
     \item A velocidade da luz é a mesma para todos os referenciais inerciais. \label{post:velocidade}
 \end{enumerate}
 
-O primeiro postulado nós dá uma noção de referenciais preferenciais. Um referencial inercial é um em que um objeto inicialmente em repouso continuará em repouso. Por causa da gravidade, referenciais inerciais devem estar em queda livre, mas a Relatividade Restrita descreve eventos sem gravidade, de modo que, na prática, podemos descrever referenciais inerciais em termos de seu movimento relativo em velocidade constante.
+O primeiro postulado nós dá uma noção de referenciais preferenciais. Um referencial inercial é um em que um objeto inicialmente em repouso continuará em repouso. Por causa da gravidade, referenciais inerciais devem estar em queda livre, mas a Relatividade Especial descreve eventos sem gravidade, de modo que, na prática, podemos descrever referenciais inerciais em termos de seu movimento relativo em velocidade constante.
 
 O postulado \ref{post:leis} é uma generalização do princípio da \textit{Invariância de Galileu}, de modo a abranger a eletrodinâmica, além da mecânica. No entanto, as equações de Maxwell referenciam explicitamente a velocidade da luz. De fato, ela é escrita em termos da permissividade elétrica $\epsilon_0$ e a permeabilidade magnética $\mu_0$ do vácuo, que são constantes que podem ser medidas experimentalmente. As equações de Maxwell prevêm que as ondas eletromagnéticas (incluindo a luz) possuem velocidade (no vácuo) de 
 \[
@@ -24,7 +17,7 @@ O postulado \ref{post:leis} é uma generalização do princípio da \textit{Inva
 \]
 No entanto, não há uma referência a qual referencial essa velocidade é observada. O experimento de Michelson-Morley, realizado em 1887, foi realizado a fim de mostrar que essa velocidade é em relação ao éter, de modo que nós poderíamos medir nosso próprio movimento em relação ao éter ao medirem-se as variações de $c$ dependentes da direção. No entanto, o experimento mostrou que não há tais variações. Einstein então argumentou que não existe, portanto, éter. O postulado \ref{post:leis} junto com as equações de Maxwell então, nos leva ao postulado \ref{post:velocidade}.
 
-Uma conclusão imediata que segue de ambos os postulados é que dois observadores podem não concordar na simultaneidade entre dois eventos -- na verdade, eles discordam, no geral. Por exemplo, considere um trem com uma lâmpada no centro (Figura \ref{fig:Trens} \subref{fig:trem})
+Uma conclusão imediata que segue de ambos os postulados é que dois observadores podem não concordar na simultaneidade entre dois eventos -- na verdade, eles discordam, no geral. Por exemplo, considere um trem com uma lâmpada no centro (Figura \ref{fig:Trens} \subref{fig:trem}).
 
 Para um observador dentro do trem, independentemente do movimento deste, os dois feixes de luz chegarão às paredes ao mesmo tempo. No entanto, para um observador que observe o trem movendo-se para a direita, o feixe viajando para a equerda chegará primeiro (Figura \ref{fig:Trens} \subref{fig:TremMovimento}). Para esse observador, o trem possui uma velocidade adicional $v$, mas a luz continua com a mesma velocidade $c$ (ambos os feixes), segundo o postulado \ref{post:velocidade}, resultando em distâncias diferentes para serem percorridas até as paredes.
 
@@ -49,9 +42,44 @@ Para um observador dentro do trem, independentemente do movimento deste, os dois
 \end{figure*}
 
 \section{*Dilatação temporal e contração espacial}
+Vimos um exemplo em que os postulados da relatividade chegam à conclusão de que a passagem do tempo depende do observador. Agora, estudaremos esse fenômeno com mais detalhe.
+
+Considere, agora, um trem com altura $h$ e um raio de luz refletindo de cima a baixo entre espelhos posicionados no chão e no teto. O tempo entre os ricocheteios pode ser utilizado como unidade temporal e, \textit{ao ser medido por um observador no trem}, não depende da fato de o trem estar se movendo ou não. Podemos entender esse sistema como um relógio. 
+
+No entanto, para um observador no chão, o feixe de luz aparenta mover-se na diagonal -- de modo que ele sempre acompanhe os espelhos, que se movem -- e, portanto, viajam por um caminho maior. No entanto, segundo o postulado \ref{post:velocidade}, a luz deve possuir mesma velocidade para ambos os referenciais. Assim, há uma diferença na taxa em que o tempo é medido pelo 'relógio'.
+
+Seja $t$ o tempo medido por um observador no chão e $t^\prime$ o tempo medido por um observador no trem (similarmente, denotaremos $x, x^\prime$ para medidas de comprimento). Um ricocheteio dos espelhos, medido pelo trem, leva um tempo $\Delta t^\prime$, de modo que a distância percorrida é $h = c\Delta t^\prime$.
+
+Agora suponha que o mesmo feixe de luz leve um tempo $\Delta t$, medido no chão, para realizar sua trajetória. Nesse tempo, a luz viaja uma distância $c\Delta t$, que é a hipotenusa de um triângulo retângulo com catetos $h$ e $v\Delta t$, como mostrado na Figura \ref{fig:Pitagoras}.
+\begin{figure}[ht]
+    \centering
+    \plot{0.2\linewidth}{figuras/Pitagoras}
+    \caption{Triângulo retângulo resultante da comparação entre as trajetórias percorridas pela luz em ambos os referenciais.}
+    \label{fig:Pitagoras}
+\end{figure}
+
+O teorema de pitágoras nos leva a 
+\[
+\left(c\Delta t\right)^2 = \left(v\Delta t\right)^2 + \left( c \Delta t^\prime \right) ^2 .
+\]
+Resolvendo para $\Delta t$, obtemos a relação
+\begin{equation}\label{eq:DilatacaoTemporal}
+    \Delta t = \gamma\Delta t^\prime, \qq{onde} \gamma=\frac{1}{\sqrt{1-v^2/c^2}}
+\end{equation}
 
 
-\section{*Transformações de Lorentz}
+
+ Suponha, agora, uma barra com extremidades $x_0, x_1$ em repouso em um referencial $O$ e um relógio em repouso em um referencial $O^\prime$, mas ambos indo de encontro um ao outro com velocidade relativa $v$. Assim, o tempo que o relógio passa pelas extremidades é $\Delta t = \frac{x_0-x_1}{v} = \frac{\Delta x}{v}$ em $O$, mas $\Delta t^\prime = \frac{\Delta x^\prime}{v}$ em $O^\prime$. Utilizando o resultado anterior da dilatação temporal \eqref{eq:DilatacaoTemporal}, encontramos que a razão entre os comprimentos da barra são
+ \[
+   \frac{\Delta x^\prime}{\Delta x} = \frac{\Delta t^\prime}{\Delta t} = 1/\gamma ,
+ \]
+o que nos dá a relação de comprimento medido no referencial $O^\prime$
+\begin{equation}\label{eq:ContracaoEspacial}
+    \Delta x^\prime = \Delta x/\gamma
+\end{equation}
+
+
+\section{Transformações de Lorentz}
 
 Suponha que um observador $O^\prime$ se move para a direita com velocidade $v$. Se $x$ denota a distância de um objeto a um observador parado $O$, então a distância entre o objeto e $O^\prime$, medido por $O$, será $x-vt$. Mas, utilizando $\Delta x^\prime = \gamma \Delta x$, temos que
 \begin{equation}\label{eq:LorentzX}
@@ -72,10 +100,6 @@ e, pelo mesmo argumento utilizado anteriormente, podemos invertê-la como
 
 As equações \eqref{eq:LorentzX} e \eqref{eq:LorentzT} são as transformações de Lorentz de $O$ para $O^\prime$ e, trocando-se $v$ por $-v$, obtemos as inversas \eqref{eq:LorentzXInversa} e \eqref{eq:LorentzTInversa}.
 
- 
-\begin{figure}[th]
-    \centering
-    \plot{0.4\linewidth}{figuras/doppler}
-    \caption{Efeito Doppler Relativístico.}
-    \label{fig:doppler}
-\end{figure}
+\section{Estrutura causal no espaço-tempo de Minkowski}
+
+\section{Dinâmica Relativística}
