@@ -5,6 +5,9 @@
 *.log
 *.synctex.gz
 *.fdb_latexmk
+*.toc
+*.bbl
+*.blg
 
 # arquivos vscode
 .vscode/
@@ -19,3 +22,4 @@ anotacoes.tex
 anotacoes.pdf
 relatorio.tex
 relatorio.pdf
+relatorio.out

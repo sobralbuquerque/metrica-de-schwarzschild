@@ -1,0 +1,116 @@
+\chapter{Relatividade Especial}
+
+\section{Postulados da Relatividade Especial}
+
+A Relatividade Especial baseia-se em dois postulados:
+
+\begin{enumerate}[label=\textbf{(\Roman*)}]
+    \item As leis da física se aplicam a todos os referenciais inerciais \label{post:leis}
+    \item A velocidade da luz é a mesma para todos os referenciais inerciais. \label{post:velocidade}
+\end{enumerate}
+
+O primeiro postulado nós dá uma noção de referenciais preferenciais. Um referencial inercial é um em que um objeto inicialmente em repouso continuará em repouso. Por causa da gravidade, referenciais inerciais devem estar em queda livre, mas a Relatividade Especial descreve eventos sem gravidade, de modo que, na prática, podemos descrever referenciais inerciais em termos de seu movimento relativo em velocidade constante.
+
+O postulado \ref{post:leis} é uma generalização do princípio da \textit{Invariância de Galileu}, de modo a abranger a eletrodinâmica, além da mecânica. No entanto, as equações de Maxwell referenciam explicitamente a velocidade da luz. De fato, ela é escrita em termos da permissividade elétrica $\epsilon_0$ e a permeabilidade magnética $\mu_0$ do vácuo, que são constantes que podem ser medidas experimentalmente. As equações de Maxwell prevêm que as ondas eletromagnéticas (incluindo a luz) possuem velocidade (no vácuo) de 
+\[
+    c = \frac{1}{\sqrt{\epsilon_0\mu_0}}
+\]
+No entanto, não há uma referência a qual referencial essa velocidade é observada. O experimento de Michelson-Morley, realizado em 1887, foi realizado a fim de mostrar que essa velocidade é em relação ao éter, de modo que nós poderíamos medir nosso próprio movimento em relação ao éter ao medirem-se as variações de $c$ dependentes da direção. No entanto, o experimento mostrou que não há tais variações. Einstein então argumentou que não existe, portanto, éter. O postulado \ref{post:leis} junto com as equações de Maxwell então, nos leva ao postulado \ref{post:velocidade}.
+
+Uma conclusão imediata que segue de ambos os postulados é que dois observadores podem não concordar na simultaneidade entre dois eventos -- na verdade, eles discordam, no geral. Por exemplo, considere um trem com uma lâmpada no centro (Figura \ref{fig:Trens} \subref{fig:trem}).
+
+Para um observador dentro do trem, independentemente do movimento deste, os dois feixes de luz chegarão às paredes ao mesmo tempo. No entanto, para um observador que observe o trem movendo-se para a direita, o feixe viajando para a equerda chegará primeiro (Figura \ref{fig:Trens} \subref{fig:TremMovimento}). Para esse observador, o trem possui uma velocidade adicional $v$, mas a luz continua com a mesma velocidade $c$ (ambos os feixes), segundo o postulado \ref{post:velocidade}, resultando em distâncias diferentes para serem percorridas até as paredes.
+
+
+\begin{figure*}[t]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \plot{0.83\linewidth}{figuras/trem}
+        \caption{}
+        \label{fig:trem}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \plot{0.9\linewidth}{figuras/TremMovimento}
+        \caption{}
+        \label{fig:TremMovimento}
+    \end{subfigure}
+    \caption{Feixes de luz partindo do centro de um trem ao mesmo tempo para (a) um observador que anda junto ao trem e (b) para um observador que vê o trem movendo-se com velocidade $v$ para a direita.}
+\label{fig:Trens}
+\end{figure*}
+
+\section{*Dilatação temporal e contração espacial}
+Vimos um exemplo em que os postulados da relatividade chegam à conclusão de que a passagem do tempo depende do observador. Agora, estudaremos esse fenômeno com mais detalhe.
+
+Considere, agora, um trem com altura $h$ e um raio de luz refletindo de cima a baixo entre espelhos posicionados no chão e no teto. O tempo entre os ricocheteios pode ser utilizado como unidade temporal e, \textit{ao ser medido por um observador no trem}, não depende da fato de o trem estar se movendo ou não. Podemos entender esse sistema como um relógio. 
+
+No entanto, para um observador no chão, o feixe de luz aparenta mover-se na diagonal -- de modo que ele sempre acompanhe os espelhos, que se movem -- e, portanto, viajam por um caminho maior. No entanto, segundo o postulado \ref{post:velocidade}, a luz deve possuir mesma velocidade para ambos os referenciais. Assim, há uma diferença na taxa em que o tempo é medido pelo 'relógio'.
+
+Seja $t$ o tempo medido por um observador no chão e $t^\prime$ o tempo medido por um observador no trem (similarmente, denotaremos $x, x^\prime$ para medidas de comprimento). Um ricocheteio dos espelhos, medido pelo trem, leva um tempo $\Delta t^\prime$, de modo que a distância percorrida é $h = c\Delta t^\prime$.
+
+Agora suponha que o mesmo feixe de luz leve um tempo $\Delta t$, medido no chão, para realizar sua trajetória. Nesse tempo, a luz viaja uma distância $c\Delta t$, que é a hipotenusa de um triângulo retângulo com catetos $h$ e $v\Delta t$, como mostrado na Figura \ref{fig:Pitagoras}.
+\begin{figure}[ht]
+    \centering
+    \plot{0.2\linewidth}{figuras/Pitagoras}
+    \caption{Triângulo retângulo resultante da comparação entre as trajetórias percorridas pela luz em ambos os referenciais.}
+    \label{fig:Pitagoras}
+\end{figure}
+
+O teorema de pitágoras nos leva a 
+\[
+\left(c\Delta t\right)^2 = \left(v\Delta t\right)^2 + \left( c \Delta t^\prime \right) ^2 .
+\]
+Resolvendo para $\Delta t$, obtemos a relação
+\begin{equation}\label{eq:DilatacaoTemporal}
+    \Delta t = \gamma\Delta t^\prime, \qq{onde} \gamma=\frac{1}{\sqrt{1-v^2/c^2}}
+\end{equation}
+
+Esse efeito é chamado de \textit{dilatação temporal}.
+
+No entanto, o tempo não é a única coisa em que dois observadores podem discordar. Considere um raio de luz viajando entre as extremidades de um trem. Se um raio demora um tempo $\Delta t^\prime$ para ir e voltar e o tamanho do trem é $\Delta x^\prime$, então temos que 
+\begin{equation}\label{eq:RelacaoXlinhaTlinha}
+    c\Delta t^\prime = 2\Delta x^\prime .
+\end{equation}
+
+
+Agora, o que um observador no chão vê? Como o trem está em movimento, a distância percorrida em uma direção é diferente da outra, isto é, a luz que começa na parte de trás do trem precisa alcançar a frente, enquanto a parte de trás vai de encontro com um feixe indo no sentido contrário. Se um tempo $\Delta t_1$ passa para que se alcance a parte da frente, então a distância percorrida é $\Delta x + v\Delta t_1$, somando-se o tamanho do trem (de acordo com o referencial no chão) e a distância que o trem percorreu enquanto a luz viajava. Para o sentido contrário, num tempo $\Delta t_2$, a distância percorrida é $\Delta x-v\Delta t_2$. Assim, temos 
+\begin{align*}
+    &c\Delta t_1 = \Delta x + v\Delta t_1 \Rightarrow \Delta t_1 = \frac{\Delta x}{c-v}\\
+    &c\Delta t_2 = \Delta x - v\Delta t_2 \Rightarrow \Delta t_2 = \frac{\Delta x}{c+v}
+\end{align*}
+Combinando ambos, chegamos em
+\[
+    c\Delta t = c\Delta t_1 + c\Delta t_2 = \frac{2\Delta x}{1-v^2/c^2}
+\]
+combinando isso com as equações \eqref{eq:DilatacaoTemporal} e \eqref{eq:RelacaoXlinhaTlinha}, chegamos em
+\begin{equation}\label{eq:ContracaoEspacial}
+    \Delta x = \sqrt{1-\frac{v^2}{c^2}}\Delta x^\prime = \frac{1}{\gamma}\Delta x^\prime
+\end{equation}
+Assim, um objeto em movimento aparenta ser menor na direção de movimento. Esse efeito é conhecido como \textit{contração espacial}.
+
+\section{Transformações de Lorentz}
+
+Suponha que um observador $O^\prime$ se move para a direita com velocidade $v$. Se $x$ denota a distância de um objeto a um observador parado $O$, então a distância entre o objeto e $O^\prime$, medido por $O$, será $x-vt$. Mas, utilizando $\Delta x^\prime = \gamma \Delta x$, temos que
+\begin{equation}\label{eq:LorentzX}
+    x^\prime = \gamma (x-vt).
+\end{equation}
+Pelo postulado \ref{post:leis}, se trocarmos o papel de $O$ e $O^\prime$, nada deve mudar, exceto o fato de que a velocidade relativa agora é $-v$. Por simetria, pode-se concluir então que
+\begin{equation}\label{eq:LorentzXInversa}
+    x = \gamma (x^\prime + vt^\prime) .
+\end{equation}
+Combinando ambas as equações, obtemos
+\begin{equation}\label{eq:LorentzT}
+    t^\prime = \gamma \left(t - \frac{v}{c^2}x\right)
+\end{equation}
+e, pelo mesmo argumento utilizado anteriormente, podemos invertê-la como
+\begin{equation}\label{eq:LorentzTInversa}
+    t = \gamma \left(t^\prime + \frac{v}{c^2}x^\prime\right) .
+\end{equation}
+
+As equações \eqref{eq:LorentzX} e \eqref{eq:LorentzT} são as transformações de Lorentz de $O$ para $O^\prime$ e, trocando-se $v$ por $-v$, obtemos as inversas \eqref{eq:LorentzXInversa} e \eqref{eq:LorentzTInversa}.
+
+% \section{Estrutura causal no espaço-tempo de Minkowski}
+
+% \section{Dinâmica Relativística}

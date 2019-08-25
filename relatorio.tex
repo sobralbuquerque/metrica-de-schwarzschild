@@ -1,14 +1,15 @@
 \documentclass[12pt, oneside]{report}
 \input{r/preamble.tex}
 	
-%título
-	\author{Guilherme Sobral de Albuquerque}
-	\title{A Relatividade Geral e a métrica de Schwarzschild}
-%	\date{}
+% título
+\author{Guilherme Sobral de Albuquerque}
+\title{A Relatividade Geral e a métrica de Schwarzschild}
+% \date{}
 
 
 \drafttrue % NÃO RENDERIZAR FIGURAS
-%\darktrue % MODO ESCURO NO PDF
+% \darktrue % MODO ESCURO NO PDF
+
 
 
 \begin{document}
@@ -16,12 +17,16 @@
 \maketitle
 \tableofcontents
 
-\input{r/RelatividadeRestrita.tex}
+\input{r/Introducao.tex}
+
+\input{r/RelatividadeEspecial.tex}
 
 \input{r/CamposVetoriaisETensoriais.tex}
 
 \input{r/EspacoTempoRelatividadeGeralTrajetoriaParticulas.tex}
 
 \input{r/EquacoesDeCampoCurvatura.tex}
+
+\bibliography{referencias}
 
 \end{document}
