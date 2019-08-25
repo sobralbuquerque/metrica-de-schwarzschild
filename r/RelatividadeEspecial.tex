@@ -67,17 +67,28 @@ Resolvendo para $\Delta t$, obtemos a relação
     \Delta t = \gamma\Delta t^\prime, \qq{onde} \gamma=\frac{1}{\sqrt{1-v^2/c^2}}
 \end{equation}
 
+Esse efeito é chamado de \textit{dilatação temporal}.
 
-
- Suponha, agora, uma barra com extremidades $x_0, x_1$ em repouso em um referencial $O$ e um relógio em repouso em um referencial $O^\prime$, mas ambos indo de encontro um ao outro com velocidade relativa $v$. Assim, o tempo que o relógio passa pelas extremidades é $\Delta t = \frac{x_0-x_1}{v} = \frac{\Delta x}{v}$ em $O$, mas $\Delta t^\prime = \frac{\Delta x^\prime}{v}$ em $O^\prime$. Utilizando o resultado anterior da dilatação temporal \eqref{eq:DilatacaoTemporal}, encontramos que a razão entre os comprimentos da barra são
- \[
-   \frac{\Delta x^\prime}{\Delta x} = \frac{\Delta t^\prime}{\Delta t} = 1/\gamma ,
- \]
-o que nos dá a relação de comprimento medido no referencial $O^\prime$
-\begin{equation}\label{eq:ContracaoEspacial}
-    \Delta x^\prime = \Delta x/\gamma
+No entanto, o tempo não é a única coisa em que dois observadores podem discordar. Considere um raio de luz viajando entre as extremidades de um trem. Se um raio demora um tempo $\Delta t^\prime$ para ir e voltar e o tamanho do trem é $\Delta x^\prime$, então temos que 
+\begin{equation}\label{eq:RelacaoXlinhaTlinha}
+    c\Delta t^\prime = 2\Delta x^\prime .
 \end{equation}
 
+
+Agora, o que um observador no chão vê? Como o trem está em movimento, a distância percorrida em uma direção é diferente da outra, isto é, a luz que começa na parte de trás do trem precisa alcançar a frente, enquanto a parte de trás vai de encontro com um feixe indo no sentido contrário. Se um tempo $\Delta t_1$ passa para que se alcance a parte da frente, então a distância percorrida é $\Delta x + v\Delta t_1$, somando-se o tamanho do trem (de acordo com o referencial no chão) e a distância que o trem percorreu enquanto a luz viajava. Para o sentido contrário, num tempo $\Delta t_2$, a distância percorrida é $\Delta x-v\Delta t_2$. Assim, temos 
+\begin{align*}
+    &c\Delta t_1 = \Delta x + v\Delta t_1 \Rightarrow \Delta t_1 = \frac{\Delta x}{c-v}\\
+    &c\Delta t_2 = \Delta x - v\Delta t_2 \Rightarrow \Delta t_2 = \frac{\Delta x}{c+v}
+\end{align*}
+Combinando ambos, chegamos em
+\[
+    c\Delta t = c\Delta t_1 + c\Delta t_2 = \frac{2\Delta x}{1-v^2/c^2}
+\]
+combinando isso com as equações \eqref{eq:DilatacaoTemporal} e \eqref{eq:RelacaoXlinhaTlinha}, chegamos em
+\begin{equation}\label{eq:ContracaoEspacial}
+    \Delta x = \sqrt{1-\frac{v^2}{c^2}}\Delta x^\prime = \frac{1}{\gamma}\Delta x^\prime
+\end{equation}
+Assim, um objeto em movimento aparenta ser menor na direção de movimento. Esse efeito é conhecido como \textit{contração espacial}.
 
 \section{Transformações de Lorentz}
 
@@ -100,6 +111,6 @@ e, pelo mesmo argumento utilizado anteriormente, podemos invertê-la como
 
 As equações \eqref{eq:LorentzX} e \eqref{eq:LorentzT} são as transformações de Lorentz de $O$ para $O^\prime$ e, trocando-se $v$ por $-v$, obtemos as inversas \eqref{eq:LorentzXInversa} e \eqref{eq:LorentzTInversa}.
 
-\section{Estrutura causal no espaço-tempo de Minkowski}
+% \section{Estrutura causal no espaço-tempo de Minkowski}
 
-\section{Dinâmica Relativística}
+% \section{Dinâmica Relativística}
