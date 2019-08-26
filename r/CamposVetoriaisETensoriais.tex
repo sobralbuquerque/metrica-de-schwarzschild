@@ -1,5 +1,5 @@
-\chapter{*Campos vetoriais e tensoriais}\label{cap:CamposVetoriaisETensoriais}
-\section{Sistemas de coordenadas no espaço euclidiano}\label{sec:SistemasCoordenadasEspacoEuclideano}
+\chapter{Campos vetoriais e tensoriais}\label{cap:CamposVetoriaisETensoriais}
+\section{Sistemas de coordenadas no espaço euclidiano}\label{sec:SistemasCoordenadasEspacoEuclidiano}
 Considerando um espaço euclidiano tridimensional equipado com um sistema cartesiano de coordenadas $ (x,y,z) $ e um conjunto de vetores associados $ \{\mathbf{i}, \mathbf{j}, \mathbf{k}\} $. Seja um outro sistema de coordenadas $ (u,v,w) $ não-cartesiano. Nós podemos expressar as coordenadas cartesianas em termos destas:
 
 \begin{equation}\label{eq:TransformacaoXU}
@@ -74,3 +74,263 @@ Dado um campo vetorial $ \mathbf{\lambda} $, é possível escrevê-lo em ambas a
 \begin{array}{l}{\boldsymbol{\lambda}=\lambda^{u} \mathbf{e}_{u}+\lambda^{v} \mathbf{e}_{v}+\lambda^{w} \mathbf{e}_{w}} \\ {\boldsymbol{\lambda}=\lambda_{u} \mathbf{e}^{u}+\lambda_{v} \mathbf{e}^{v}+\lambda_{w} \mathbf{e}^{w}}\end{array}
 \end{equation}
 
+\section{Notação de sufixos}\label{sec:NotacaoSufixo}
+A notação de sufixos nos dá uma maneira de tratar uma coleção de quantidades relacionadas, tais como as coordenadas de um ponto ou um vetor. A ideia básica é representar os elementos dessa coleção com uma mesma letra base na qual se adiciona um sufixo, de modo a rotular a quantidade da coleção. Podem-se utilizar sufixos tanto subscritos quanto sobrescritos, além de poder haver mais de um sufixo anexado à letra base. Iremos utilizá-lo, junto a convenção de somatório, de modo a compactar o tratamento das quantidades em que estamos interessados.
+
+Primeiramente, vamos convencionar que sufixos simbolizados por letras minúsculas no meio do alfabeto (i.e., $i, j, k, \ldots$) sempre variam ao longo dos valores $1, 2, 3$, de modo que não precisamos escrever um comentário em parêntesis $(i=1,2,3)$ sempre que utilizarmos um índice. Além disso, utilizaremos a convenção de que um índice representado por uma letra minúscula no meio do alfabeto ($a,b,c,\ldots$) varia em $1,2,\ldots,N$; letras maíusculas no inicio do alfabeto ($A,B,C\ldots$) vão de $1,2$ e; letras do alfabeto grego ($\mu,\nu,\sigma,\ldots$) variam ao longo de $0,1,2,3$.
+
+Assim, utilizaremos $u^i$ em vez de $(u,v,w)$ para as coordenadas, $\left\{\mathbf{e}_{i}\right\}$ em vez de $\left\{\mathbf{e}_{u}, \mathbf{e}_{v}, \mathbf{e}_{w}\right\}$ para a base natural e $\left\{\mathbf{e}^{i}\right\}$ em vez de $\left\{\mathbf{e}^{u}, \mathbf{e}^{v}, \mathbf{e}^{w}\right\}$ para a base dual. Para um vetor $\boldsymbol{\lambda}$, denotamos suas componentes em relação a $\left\{\mathbf{e}_{i}\right\}$ como $\lambda^i$ e suas componentes com relação a $\left\{\mathbf{e}^{i}\right\}$ como $\lambda_i$.
+Assim, podemos reescrever as equações \eqref{eq:LambdaEmAmbasAsBases} como 
+\[
+\begin{array}{l}{\boldsymbol{\lambda}=\lambda^{1} \mathbf{e}_{1}+\lambda^{2} \mathbf{e}_{2}+\lambda^{3} \mathbf{e}_{3}=\displaystyle\sum_{i=1}^{3} \lambda^{i} \mathbf{e}_{i}} \\ {\boldsymbol{\lambda}=\lambda_{1} \mathbf{e}^{1}+\lambda_{2} \mathbf{e}^{2}+\lambda_{3} \mathbf{e}^{3}=\displaystyle\sum_{i=1}^{3} \lambda_{i} \mathbf{e}^{i}}\end{array} .
+\]
+
+Além disso, podemos economizar mais nossa notação utilizando a convenção de somatório. Isto é, concordarmos que sempre que um sufixo aparece duas vezes, \textit{uma como subscrito e uma como sobrescrito}, então o somatório ao longo da extensão indicada pelo sufixo é implicada, \textit{sem o uso de $\sum_{i=1}^3$ para indicar o somatório}(analogamente para os outros tipos de sufixos). Assim, podemos reduzir ainda mais as equações para
+\begin{equation}\label{eq:LambdaEmAmbasAsBasesConvencaoSomatorio}
+	\boldsymbol{\lambda}=\lambda^{i} \mathbf{e}_{i} \qq{e} \boldsymbol{\lambda}=\lambda_{i} \mathbf{e}^{i} .
+\end{equation}
+
+As componentes $\lambda^i$ de um vetor $\boldsymbol{\lambda}$ que provêm do uso da base natural são chamados de \textit{componentes contravariantes}, enquanto os componentes $\lambda_i$ que surgem do uso da base dual são chamados de \textit{componentes contravariantes}.
+
+Utilizando as definições de $\mathbf{e}^i$ e $\mathbf{e}_j$, temos
+\[
+	\mathbf{e}^{i} \cdot \mathbf{e}_{j}=\nabla u^{i} \cdot \frac{\partial \mathbf{r}}{\partial u^{j}}=\frac{\partial u^{i}}{\partial x} \frac{\partial x}{\partial u^{j}}+\frac{\partial u^{i}}{\partial y} \frac{\partial y}{\partial u^{j}}+\frac{\partial u^{i}}{\partial z} \frac{\partial z}{\partial u^{j}}=\frac{\partial u^{i}}{\partial u^{j}} ,
+\]
+onde utilizamos a regra da cadeia da derivação parcial para simplificar os termos. Se $i=j$, temos que $\partial u^{i} / \partial u^{j}=1$, e caso contrário, $\partial u^{i} / \partial u^{j}=0$. Assim, podemos escrever
+\begin{equation}\label{eq:ProdutoInternoBase}
+	\mathbf{e}^{i} \cdot \mathbf{e}_{j}=\delta_{j}^{i} ,
+\end{equation}
+onde $\delta^i_j$ é o \textit{delta de Kronecker}, definido por 
+\begin{equation}\label{eq:DeltaKroneckerDefinicao}
+\delta_{j}^{i}=\left\{\begin{array}{l}{1, \text { para } i=j} \\ {0, \text { para } i \neq j}\end{array}\right. .
+\end{equation}
+Assim, podemos dizer que as componentes contravariantes podem ser obtidas por meio do produto interno do vetor com a base dual:
+\[
+	\boldsymbol{\lambda} \cdot \mathbf{e}^{j}=\lambda^{i} \mathbf{e}_{i} \cdot \mathbf{e}^{j}=\lambda^{i} \delta_{i}^{j}=\lambda^{j}
+\]
+e, analogamente, as componentes covariantes a partir da base natural:
+\[\lambda_{j}=\boldsymbol{\lambda} \cdot \mathbf{e}_{j}.\]
+A simplificação $\lambda^i\delta^j_i=\lambda^j$ é justificada porque o único termo não nulo na soma ocorre quando $i=j$ e o delta é igual a 1 nesse caso. Assim, ele tem o efeito de substituir $j$ por $i$ e ``retirar'' o somatório.
+Usando as componentes contravariantes, podemos escrever o produto interno entre dois vetores $\boldsymbol{\lambda}$ e $\boldsymbol{\mu}$ como 
+\begin{equation*}
+	\boldsymbol{\lambda} \cdot \boldsymbol{\mu}=\lambda^{i} \mathbf{e}_{i} \cdot \mu^{j} \mathbf{e}_{j}=g_{i j} \lambda^{i} \mu^{j} ,
+\end{equation*}
+onde
+\begin{equation}\label{eq:DefinicaoTensorMetricaContravariante}
+	\boxed{
+		g_{i j} \equiv \mathbf{e}_{i} \cdot \mathbf{e}_{j}  .
+	}
+\end{equation}
+Analogamente, utilizando componentes covariantes, podemos escrevê-lo como
+\begin{equation*}
+	\boldsymbol{\lambda} \cdot \boldsymbol{\mu}=\lambda_{i} \mathbf{e}^{i} \cdot \mu_{j} \mathbf{e}^{j}=g^{i j} \lambda_{i} \mu_{j}, 
+\end{equation*}
+onde
+\begin{equation}\label{eq:DefinicaoTensorMetricaCovariante}
+	\boxed{
+		g^{i j} \equiv \mathbf{e}^{i} \cdot \mathbf{e}^{j}  .
+	}
+\end{equation}
+Também podemos misturar e escrever como
+\[
+	\boldsymbol{\lambda} \cdot \boldsymbol{\mu}=\lambda_{i} \mathbf{e}^{i} \cdot \boldsymbol{\mu}^{j} \mathbf{e}_{j}=\lambda_{i} \mu^{j} \delta_{j}^{i}=\lambda_{i} \mu^{i}
+\]
+Assim, temos quatro modos diferentes de escrever o produto interno:
+\begin{equation}\label{eq:ProdutoInterno}
+	\boxed{
+		\boldsymbol{\lambda} \cdot \boldsymbol{\mu}=g_{ij}\lambda^i\mu^j = g^{ij}\lambda_i\mu_j = \lambda_i\mu^i = \lambda^i\mu_i .
+	}
+\end{equation}
+O fato que $g^{ij}\lambda_i\mu_j=\lambda_i\mu^i$ vale para componentes arbitrárias $\lambda_i$ implica que 
+\begin{equation}\label{eq:LevantamentoIndice}
+	g^{ij}\mu_j=\mu^i ,
+\end{equation}
+mostrando que as quantidades $g^{ij}$ pode ser utilizada para levantar o sufixo para obter as componentes contravariantes de $\mu$ a partir das covariantes. Analogamente, temos 
+\begin{equation}\label{eq:AbaixamentoIndice}
+	g_{ij}\mu^j=\mu_i ,
+\end{equation}
+mostrando que as quantidades $g_{ij}$ revertem a operação, abaixando-se os sufixos. Combinando as operações, temos
+\[
+	\mu^i = g^{ij}\mu_j=g^{ij}g_{ik}\mu^k ,
+\]
+e, porque isso vale para componentes $\mu^i$ arbitrárias, podemos deduzir que
+\begin{equation}
+	\boxed{
+		g^{ij}g_{jk}=\delta^i_k   .
+	}
+\end{equation}
+
+A partir das definições dos produtos internos dos vetores da base, pode-se perceber que essas quantidades são simétricas, isto é,
+\begin{equation}\label{eq:SimetriaTensorMetrica}
+	g_{ij}=g_{ji}, \qquad g^{ij}=g^{ji} .
+\end{equation}
+
+\section{Tangentes e gradientes}\label{sec:TangentesGradientes}
+
+Vamos olhar para os vetores tangentes a uma curva no espaço.
+Suponha que temos as relações
+\begin{equation}\label{eq:CoordenadasFuncoesdeT}
+	u=u(t), \quad v=v(t), \quad w=w(t) ,
+\end{equation}
+onde $u(t),v(t),w(t)$ são funções diferenciaveis de $t$, onde este pertence a algum intervalo $I$. Então os pontos cujas coordenadas são dadas por \eqref{eq:CoordenadasFuncoesdeT} são parte de uma curva $\gamma$ parametrizada por $t$. O vetor posição desses pontos é 
+\[
+	\mathbf{r}(t)=x(u(t), v(t), w(t)) \mathbf{i}+y(u(t), v(t), w(t)) \mathbf{j}+z(u(t), v(t), w(t)) \mathbf{k}	
+\]
+e, para cada $t$ em $I$, a derivada $\dot{\mathbf{r}} \equiv d\mathbf{r}/dt$ nos dá um vetor tangente à curva (desde que não seja nula). Utilizando a regra da cadeia, temos
+\[
+	\frac{d \mathbf{r}}{d t}=\frac{\partial \mathbf{r}}{\partial u} \frac{d u}{d t}+\frac{\partial \mathbf{r}}{\partial v} \frac{d v}{d t}+\frac{\partial \mathbf{r}}{\partial w} \frac{d w}{d t} ,
+\]
+que pode ser escrito como
+
+\begin{equation}\label{eq:DerivadaPosicaoTangente}
+	\dot{\mathbf{r}}(t)=\dot{u}(t)\mathbf{e}_u+\dot{v}(t)\mathbf{e}_v+\dot{w}(t)\mathbf{e}_w = \dot{u}^i(t)\mathbf{e}_i.
+\end{equation}
+
+O comprimento da curva $\gamma$ é obtido integrando $|\dot{\mathbf{r}}|$ com respeito a $t$ ao longo do intervalo $I$. Mas
+\[
+	|\dot{\mathbf{r}}|^{2}=\dot{\mathbf{r}} \cdot \dot{\mathbf{r}}=\dot{u}^{i} \mathbf{e}_{i} \cdot \dot{u}^{j} \mathbf{e}_{j}=g_{i j} \dot{u}^{i} \dot{u}^{j},
+\]
+utilizando a equação \eqref{eq:DefinicaoTensorMetricaContravariante}. Assim, se $I$ é dado por $a\leq t\leq b$, então o comprimento de $\gamma$ é dado por
+\begin{equation}\label{eq:ComprimentoCurva}
+	\boxed{
+	L=\int_{a}^{b}\left(g_{i j} \dot{u}^{i} \dot{u}^{j}\right)^{1 / 2} dt .
+	}
+\end{equation}
+A versão infinitesimal da equação \eqref{eq:DerivadaPosicaoTangente} é $d\mathbf{r}=du^i\mathbf{e}_i$, o que nos dá
+\[
+	ds^2=d\mathbf{r}\cdot d\mathbf{r}=du^i\mathbf{e}_i \cdot du^j\mathbf{e}_j 
+\]
+para pontos cujas coordenadas diferem por $du^i$. Assim, chegamos na fórmula 
+\begin{equation}
+	\boxed{
+		ds^2=g_{ij}du^i du^j,
+	}
+\end{equation}
+que é a generaliza~çao da fórmula cartesiana $ds^2=dx^2+dy^2+dz^2$.
+
+Suponha, agora, uma função diferenciável $\phi(u,v,w,)$. Isso nos dará uma função da posição e, portanto, um campo escalar. Seu gradiente é
+\[
+	\nabla \phi \equiv \frac{\partial \phi}{\partial x} \mathbf{i}+\frac{\partial \phi}{\partial y} \mathbf{j}+\frac{\partial \phi}{\partial z} \mathbf{k} ,
+\]
+onde, ao calcularmos essas derivadas parciais, tratamos $\phi$ como uma função de $x,y,z$ ao substituirmos as expressões de $u,v,w$ em termos de $x,y,z$ dadas pela equação \eqref{eq:TransformacaoUX}:
+\[
+	\phi = \phi(u(x,y,z),\,v(x,y,z),\,w(x,y,z)) .
+\]
+A regra da cadeia nos dá 
+\[
+	\frac{\partial \phi}{\partial x}=\frac{\partial \phi}{\partial u} \frac{\partial u}{\partial x}+\frac{\partial \phi}{\partial v} \frac{\partial v}{\partial x}+\frac{\partial \phi}{\partial w} \frac{\partial w}{\partial x}	
+,\]
+com expressões análogas para $\partial\phi/\partial y$ e $\partial\phi/\partial z$. Assim, podemos dizer que
+\begin{align*} \nabla \phi=\frac{\partial \phi}{\partial u}\left(\frac{\partial u}{\partial x}\right.&\left.\mathbf{i}+\frac{\partial u}{\partial y} \mathbf{j}+\frac{\partial u}{\partial z} \mathbf{k}\right)+\frac{\partial \phi}{\partial v}\left(\frac{\partial v}{\partial x} \mathbf{i}+\frac{\partial v}{\partial y} \mathbf{j}+\frac{\partial v}{\partial z} \mathbf{k}\right) \\ &+\frac{\partial \phi}{\partial w}\left(\frac{\partial w}{\partial x} \mathbf{i}+\frac{\partial w}{\partial y} \mathbf{j}+\frac{\partial w}{\partial z} \mathbf{k}\right) \\=& \frac{\partial \phi}{\partial u} \nabla u+\frac{\partial \phi}{\partial v} \nabla v+\frac{\partial \phi}{\partial w} \nabla w .
+\end{align*}
+Isto é,
+\begin{equation}\label{eq:GradientePhi}
+	\nabla\phi = \pdv{\phi}{u^i}\mathbf{e}^i,
+\end{equation}
+mostrando que as derivadas parciais $\partial\phi/\partial u^i$ são as componentes de $\nabla\phi$ para a base dual $\{\mathbf{e}^i\}$. Note que, considerar o sufixo repetido como uma indicação de somatório na equação \eqref{eq:GradientePhi}, estamos tratando o sufixo $i$ em $\partial\phi/\partial u^i$ como um subscrito. Podemos deixar isso mais claro ao denotarmos o operador de diferenciação parcial $\partial/\partial u^i$ para $\partial_i$, de modo que $\partial\phi/\partial u^i=\partial_i\phi$. A notação $\phi_{,i}$ também é utilizada para os mesmos fins. Assim, podemos reescrever a equação \eqref{eq:GradientePhi} como 
+\begin{equation}\label{eq:GradientePhiNotacao}
+	\nabla\phi=\partial_\phi \mathbf{e}^i = \phi_{,i}\mathbf{e}^i,
+\end{equation}
+com o sufixo sendo utilizado, corretamente, como subscrito. 
+
+Assim, vemos que, ao lidarmos com tangentes a curvas, é apropriado utilizar a base natural, mas ao tratarmos campos escalares, é mais fácil utilizar a base dual.
+
+
+\section{Transformações de coordenadas em espaços euclidianos}\label{sec:TransformacoesCoordenadas}
+
+Suponha que temos dois sistemas de coordenadas curvilíneos no espaço euclidiano, denotados por $(u,v,w)$ e $(u^\prime,v^\prime,w^\prime)$. Podemos distingui-los ao chamá-los de coordenadas 'sem linha' e 'com linha', respectivamente. Vamos estudar como as componentes de vetores relativas às bases definidas pelos sistemas coordenados são transformadas quando passamos de um referencial sem linha para um linha (ou \textit{vice versa}). As coordenadas do primeiro serão denotadas por $u^i$, ao passo que no sistema linha, as coordenadas serão $u^{i^\prime}$. Seguindo a notação, temos que a base natural é dada por $\{\mathbf{e}_{i^\prime}\}$, enquanto a base dual é $\{\mathbf{e}^{i^\prime}\}$. Assim, podemos escrever
+\begin{equation}\label{eq:CoordenadasLinha}
+	\boldsymbol{\lambda}=\lambda^{i^\prime}\mathbf{e}_{i^\prime} , 
+\end{equation}
+com uma expressão similar para a base dual.
+
+Na região do espaço coberta por ambos sistemas de coordenadas, temos equações $u^{i^{\prime}}=u^{i^{\prime}}\left(u^{j}\right)$ e inversas $u^{i}=u^{i}\left(u^{j^\prime}\right)$. Por definição, temos $\mathbf{e}_i \equiv \pdv*{\mathbf{r}}{u^i}$ e $\mathbf{e}_{i^\prime} \equiv \pdv*{\mathbf{r}}{u^{i^\prime}}$. Utilizando a regra da cadeia,
+\[
+	\frac{\partial \mathbf{r}}{\partial u^{j}}=\frac{\partial \mathbf{r}}{\partial u^{i^{\prime}}} \frac{\partial u^{i^{\prime}}}{\partial u^{j}}.
+\]
+Podemos, então, escrever
+\begin{equation}\label{eq:TransformadaContravarianteBase}
+	\mathbf{e}_j = U^{i^\prime}_j \mathbf{e}_{i^\prime}, 
+\end{equation}
+onde $U^{i^\prime}_j $ é um símbolo que representa a derivada parcial $\pdv*{u^{i^\prime}}{u^j}$. Temos, então
+\[
+	\boldsymbol{\lambda}=\lambda^{j} \mathbf{e}_{j}=\lambda^{j} U_{j}^{i^{\prime}} \mathbf{e}_{i^{\prime}}.
+\]
+Comparando com a equação \eqref{eq:CoordenadasLinha}, chegamos em
+\begin{equation}\label{eq:TransformadaCoordenadasContravariante}
+	\boxed{
+		\lambda^{i^\prime} = U^{i^\prime}_j \lambda^j
+	}
+\end{equation}
+como a fórmula de transformação para as coordenadas contravariantes de um vetor. Similarmente para as coordenadas covariantes.
+
+Por definição, $\mathbf{e}^{i} \equiv \nabla u^{i} \text { e } \mathbf{e}^{i^{\prime}} \equiv \nabla u^{i^{\prime}}$. A regra da cadeia nos dá
+\[
+	\frac{\partial u^{j}}{\partial x}=\frac{\partial u^{j}}{\partial u^{i^{\prime}}} \frac{\partial u^{i^{\prime}}}{\partial x},
+\]
+com expressões similares para $\pdv*{u^j}{y}$ e $\pdv*{u^j}{z}$. Então
+\[
+	\nabla u^{j}=\frac{\partial u^{j}}{\partial u^{i^{\prime}}} \nabla u^{i^{\prime}},
+\]
+de modo que podemos escrever como
+\begin{equation}\label{eq:TransformadaCovarianteBase}
+	\mathbf{e}^{j} = U^{j}_{i^\prime} \mathbf{e}^{i^\prime}.
+\end{equation}
+Assim, para componentes covariantes, temos
+\[
+	\boldsymbol{\mu}=\boldsymbol{\mu}_{j} \mathbf{e}^{j}=\boldsymbol{\mu}_{j} U_{i^{\prime}}^{j} \mathbf{e}^{i^{\prime}}
+\]
+e, ao compararmos com $\mathbf{\mu}=\mu_{i^\prime}\mathbf{e}^{i^\prime}$ nos dá
+\begin{equation}\label{eq:TransformadaCoordenadasCovariante}
+	\boxed{
+		\mu_{i^\prime} = U^{j}_{i^\prime} \mu_j
+	}
+\end{equation}
+como a fórmula de transformação para componentes covariantes.
+
+Como as coordenadas nenhuma das coordenadas 'linha' ou 'sem linha' é privilegiada, isto é, elas podem trocar de papel, as transformadas inversas são dadas apenas trocando os sufixos. Isso nos dá
+\begin{equation}\label{eq:TransformadasBaseInversa}
+	\mathbf{e}_{j^{\prime}}=U_{j^{\prime}}^{i} \mathbf{e}_{i}, \quad \mathbf{e}^{j^{\prime}}=U_{i}^{j^{\prime}} \mathbf{e}^{i} 
+\end{equation}
+para as transformações de base e
+\begin{equation}\label{eq:TransformadasCoordenadasInversas}
+	\lambda^{i}=U_{j^{\prime}}^{i} \lambda^{j^{\prime}}, \quad \mu_{i}=U_{i}^{j^{\prime}} \mu_{j^{\prime}}
+\end{equation}
+para as componentes. Combinando esta equação com a equação \eqref{eq:TransformadaCoordenadasContravariante}, trocando o índice $j$ por $k$ nesta última, chegamos na relação
+\begin{equation}
+	\boxed{
+		U_{i}^{k} U_{j}^{i^{\prime}}=\delta_{j}^{k} .
+	}
+\end{equation}
+
+No sistema de coordenda com linha, as quantidades correspondentes a $g_{ij}$ são definidas por $g_{i^{\prime} j^{\prime}} \equiv e_{i^{\prime}} \cdot e_{j^{\prime}}$. Usando as transformadas das bases, temos
+\[
+	g_{i^{\prime} j^{\prime}}=\mathbf{e}_{i^{\prime}} \cdot \mathbf{e}_{j^{\prime}}=\left(U_{i^{\prime}}^{k} \mathbf{e}_{k}\right) \cdot\left(U_{j^{\prime}}^{l} \mathbf{e}_{l}\right)=U_{i^{\prime}}^{k} U_{j^{\prime}}^{l} \mathbf{e}_{k} \cdot \mathbf{e}_{l}=U_{i^{\prime}}^{k} U_{j^{\prime}}^{l} g_{k l} .
+\]
+Assim, a fórmula de transformação para as quantidades $g_{ij}$ é
+\begin{equation}\label{TransformadaTensorMetricaContravariante}
+	\boxed{
+		g_{i^{\prime} j^{\prime}}=U_{i^{\prime}}^{k} U_{j^{\prime}}^{l} g_{k l} .
+	}
+\end{equation}
+Analogamente, temos
+\begin{equation}\label{TransformadaTensorMetricaCovariante}
+	\boxed{
+		g^{i^{\prime} j^{\prime}}=U^{i^{\prime}}_{k} U^{j^{\prime}}_{l} g^{k l} 
+	}
+\end{equation}
+para as quantidades $g^{ij}$.
+
+As equações \eqref{TransformadaTensorMetricaContravariante} e \eqref{eq:TransformadaCoordenadasCovariante} nos dão uma primeira amostragem de como as componentes de um tensor se transformam. As quantidades $g_{ij}$ são as componentes do \textit{tensor de métrica}, chamado assim porque ele nos mostra as propriedades métricas tais como tamanhos de vetores e os ângulos entre eles (por meio do produto interno $\boldsymbol{\lambda}\cdot\boldsymbol{\mu}=g_{ij}\lambda^i\mu^j$) e a distância entre dois pontos vizinhos (por meio do elemento de linha $ds^2=g_{ij}du^idu^j$).
+
+
+
+
+
+\section{*Campos tensoriais no espaço euclidiano}\label{sec:CamposTensoriais}
+
+\section{*Variedades}\label{sec:Variedades}
+
+% e campos tensoriais em variedades
+
+\section{*Propriedades da métrica}\label{sec:Metrica}

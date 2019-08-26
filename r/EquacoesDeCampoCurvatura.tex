@@ -102,7 +102,7 @@ Em notação 3-vetorial, essa ultima igualdade é escrita como
 		\rho(\partial / \partial t+\mathbf{v} \cdot \nabla) \mathbf{v}=-\nabla p
 	}
 \end{equation}
-que é a equação de movimento de Euler clássica para um fluido perfeito \textbf{(citar referência)}.
+que é a equação de movimento de Euler clássica para um fluido perfeito.
 
 (pág. 100)
 
@@ -125,7 +125,7 @@ que é a equação de movimento de Euler clássica para um fluido perfeito \text
 
 
 
-\section{*Tensor de curvatura}\label{sec:TensorCurvatura}
+\section{*Tensor de curvatura e tensores relacionados}\label{sec:TensorCurvatura}
 
 Por questão de generalidade, esta seção tratará de variedades $N$-dimensionais, de modo que se utilizarão sufixos $a,b,\dots$, os quais vão de $1$ a $N$, em vez de $\mu,\nu,\dots$ que vão de $0$ a $3$. 
 
@@ -162,12 +162,21 @@ No espaço-tempo plano da Relatividade Especial, sabemos que existem referenciai
 
  Podemos, agora, formalizar a definição de {\color{ForestGreen}planicidade}. Uma variedade (ou uma região de uma variedade) é \textit{plana} se, em todos os seus pontos, $R^a_{bcd}=0$; de outro modo, ela é \textit{curvada}. 
 
- A princípio, o tensor $R^a_{bcd}$ possui $N^4$ componentes. No entanto, ele possui muitas simetrias e suas componentes satisfazem uma identidade importante, de modo que esse número abaixa para $N^2(N^2-1)/12$ componentes independentes. A identidade é a seguinte relação:
+ A princípio, o tensor $R^a_{bcd}$ possui $N^4$ componentes. No entanto, ele possui muitas simetrias e suas componentes satisfazem uma identidade importante, de modo que esse número abaixa para $N^2(N^2-1)/12$ componentes independentes. 
+ 
+ A partir da definição \eqref{eq:DefinicaoTensorRiemann}, temos que
+\begin{align*}
+	&R_{b c d}^{a}+R_{c d b}^{a}+R_{d b c}^{a}= 
+	\partial_{c} \Gamma_{bd}^{a}-\partial_{d} \Gamma_{bc}^{a}+\Gamma_{bd}^{e}
+	\Gamma_{ce}^{a}-\Gamma_{bc}^{e} \Gamma_{de}^{a} + \\
+	+&\partial_{d} \Gamma_{bc}^{a}-\partial_{b} \Gamma_{cd}^{a}+\Gamma_{ab}^{e} \Gamma_{de}^{a}-\Gamma_{cd}^{e} \Gamma_{be}^{a} +
+	\partial_{b} \Gamma_{cd}^{a}-\partial_{c} \Gamma_{bd}^{a}+\Gamma_{cd}^{e} \Gamma_{be}^{a}-\Gamma_{bd}^{e} \Gamma_{ce}^{a}=0,
+\end{align*}
+ou, resumindo, temos a relação:
  \begin{equation}\label{eq:IdentidadeCiclicaTensorDeCurvatura}
 	 R^a_{bcd}+R^a_{cdb}+R^a_{dbc}=0.
  \end{equation}
  Chama-se \textit{identidade cíclica}. As simetrias desse tensor são mais facilmente expressas em termos do tensor associado do tipo $(0,4)$
- {\color{red} MOSTRAR RELAÇÃO CICLICA 3.14}
 \[
 	R_{abcd} \equiv g_{ae}R^e_{bcd}.
 \]
@@ -178,7 +187,7 @@ A partir das equações 2.33 2.35 e 2.36 chegamos em
 \begin{equation}
 	R_{a b c d} \equiv \tfrac{1}{2}\left(\partial_{d} \partial_{a} g_{b c}-\partial_{d} \partial_{b} g_{a c}+\partial_{c} \partial_{b} g_{a d}-\partial_{c} \partial_{a} g_{b d}\right)-g^{e f}\left(\Gamma_{e a c} \Gamma_{f b d}-\Gamma_{e a d} \Gamma_{f b c}\right)
 \end{equation}
-A partir disso, apenas é necessário checarem-se as seguitnes propriedades:
+A partir disso, apenas é necessário checarem-se as seguintes propriedades:
 
 \begin{equation}\label{eq:RSimetriaA}
 	R_{abcd}=-R_{bacd}
@@ -189,7 +198,7 @@ A partir disso, apenas é necessário checarem-se as seguitnes propriedades:
 \begin{equation}\label{eq:RSimetriaC}
 	R_{abcd}=R_{cdab}
 \end{equation}
-Segue de (\eqref{eq:RSimetriaA}) que
+Segue de \eqref{eq:RSimetriaA} que
 \[
 R^a_{acd} = 0.
 \]
@@ -199,7 +208,42 @@ R^a_{acd} = 0.
 	Provar relações 3.16-3.17
 \end{proof}
 
+Considere, agora, um ponto $P$ qualquer e um sistema de coordenadas tal que $(T^{a}_{bc})_P=0$, {\color{ForestGreen} como explicado na seção \ref{sec:CoordenadasGeodesicas}.} Ao diferenciar a equação \eqref{eq:DefinicaoTensorRiemann} e aplicá-la ao ponto $P$, nesse sistema de coordenadas, temos
+\[
+	\left(R_{b c d ; e}^{a}\right)_{\mathrm{P}}=\left(\partial_{e} \partial_{c} \Gamma_{b d}^{a}-\partial_{e} \partial_{d} \Gamma_{b c}^{a}\right)_{\mathrm{P}} .
+\]
+Ao permutarmos $c,d,e$ e somando o resultado, chegamos na \textit{identidade de Bianchi}:
+\begin{equation}\label{eq:IdentidadeBianchi}
+	R_{b c d ; e}^{a}+R_{b d e ; c}^{a}+R_{b e c ; d}^{a}=0,
+\end{equation}
+em $P$, mas como este é um ponto genérico, o resultado vale sempre.
 
+Um outro tensor importante é o \textit{tensor de Ricci}, que também utiliza a mesma letra de base do tensor de curvatura. Ele é dado pela contração 
+\begin{equation}\label{eq:TensorRicciDefinicao}
+	\boxed{
+	R_{ab} \equiv R^c_{abc} .
+	}
+\end{equation}
+
+Contraindo $a$ na identidade cíclica \eqref{eq:IdentidadeCiclicaTensorDeCurvatura}, temos
+\[
+	0=R_{b c a}^{a}+R_{c a b}^{a}+R_{a b c}^{a}=R_{b c}-R_{c b a}^{a}+0=R_{b c}-R_{c b},
+\]
+o que nos diz que o tensor de Ricci também é simétrico. Como $R_{ab}$ é simétrico, $\tensor{R}{^a _b}=\tensor{R}{_b ^a}$ e podemos denotar ambos por $R^a_b$. Mais uma contração nos dá o \textit{escalar de curvatura}
+\begin{equation}\label{eq:EscalarCurvaturaDefinicao}
+	\boxed{
+		R \equiv g^{ab}R_{ab}=R^a_a.
+	}
+\end{equation}
+
+Um último tensor importante é o \textit{tensor de Einstein}, definido por
+\begin{equation}
+	\boxed{
+		G_{ab} \equiv R_{ab} - \tfrac{1}{2}Rg_{ab} .
+	}
+\end{equation}
+
+{\color{red} falta mostrar que o tensor de Einstein tem divergencia nula}
 
 
 
@@ -264,6 +308,7 @@ Esse processo pode ser repetido indefinidamente, mas a aproximação dada por \e
 
 \section{*Desvio geodésico}\label{sec:DesvioGeodesico}
 
+
 \begin{figure}[t]
 	\centering
 	\plot{0.4\linewidth}{figuras/DesvioGeodesico}
@@ -292,7 +337,8 @@ Esse processo pode ser repetido indefinidamente, mas a aproximação dada por \e
 
 As equações de campo discutidas aqui são extremamentes difíceis de serem resolvidas, visto que possuem um alto grau de não-linearidade. Assim, para encontrar soluções, é preciso simplificar o problema, isto é, buscar situações de alta simetria.
 
-A primeira solução das equações de campo foi uma solução especial e foi obtida por K. Schwarzschild em 1916. O que foi procurado foi o campo tensorial de métrica representando um campo gravitacional estático e de simetria esférica situado no espaço-tempo vazio em torno de um objeto esférico massivo, tal como uma estrela. Suas suposições para o problema foram: {\color{red}(comentar sobre a condição (a) ser redundante?)}
+A primeira solução das equações de campo foi uma solução especial e foi obtida por K. Schwarzschild em 1916. O que foi procurado foi o campo tensorial de métrica representando um campo gravitacional estático e de simetria esférica situado no espaço-tempo vazio em torno de um objeto esférico massivo, tal como uma estrela. Suas suposições para o problema foram:
+%  {\color{red}(comentar sobre a condição (a) ser redundante?)}
 \begin{enumerate}[label=(\alph*)]
 	\item o campo é estático,\label{sup:estatico}
 	\item o campo possui simetria esférica,\label{sup:esferico}
@@ -300,7 +346,7 @@ A primeira solução das equações de campo foi uma solução especial e foi ob
 	\item o espaço-tempo é assintoticamente plano.\label{sup:plano}
 \end{enumerate}
 
-Também assumiu-se que o espaço-tempo poderia ser descrito por um sistema de coordenadas $(t,r,\theta,\phi)$, onde $t$ é uma coordenada do tipo tempo>>>>>, % $\theta$ e $\phi$ são os ângulos polares blabalbla??
+Também assumiu-se que o espaço-tempo poderia ser descrito por um sistema de coordenadas $(t,r,\theta,\phi)$, onde $t$ é uma {\color{red} coordenada do tipo tempo}, % $\theta$ e $\phi$ são os ângulos polares blabalbla??
 
 Então, procurou-se um elemento de linha da forma
 \begin{equation}\label{eq:ElementoLinhaSchwarzschildPostulado}
@@ -308,11 +354,11 @@ Então, procurou-se um elemento de linha da forma
 \end{equation}
 onde $A(r)$ e $B(r)$ são funções deseconhecidas de $r$ a serem obtidas ao resolver as equações.
 
-O fato que nenhum dos termos depende de $t$ reflete a suposição (\ref{sup:estatico}), e o fato que as superfícies dadas por $r,t$ constantes têm elementos de linha dados por
+O fato que nenhum dos termos depende de $t$ reflete a suposição \ref{sup:estatico}, e o fato que as superfícies dadas por $r,t$ constantes têm elementos de linha dados por
 \begin{equation}\label{eq:RTConstantes}
 	d s^{2}=r^{2}\left(d \theta^{2}+\sin ^{2} \theta d \phi^{2}\right)
 \end{equation}
-mostra que possuem a geometria de esferas {\color{red}(Exercício 1.6.2)} e isso indica sua suposição (\ref{sup:esferico}). A suposição (\ref{sup:vazio}) significa que $A(r), B(r)$ devem ser encontrados utilizando as equações de campo do espaço-tempo vazio $R_{\mu\nu}=0$, ao passo que a suposição (\ref{sup:plano}) nos dá as condições de contorno em $A,B$:
+mostra que possuem a geometria de esferas {\color{red}(Exercício 1.6.2)} e isso indica sua suposição \ref{sup:esferico}. A suposição \ref{sup:vazio} significa que $A(r), B(r)$ devem ser encontrados utilizando as equações de campo do espaço-tempo vazio $R_{\mu\nu}=0$, ao passo que a suposição \ref{sup:plano} nos dá as condições de contorno em $A,B$:
 
 \begin{equation}\label{eq:CondicoesContornoSchwarzschild}
 	A(r) \rightarrow c^{2} \qq{ e } B(r) \rightarrow 1 \text { quando } r \rightarrow \infty
@@ -320,7 +366,7 @@ mostra que possuem a geometria de esferas {\color{red}(Exercício 1.6.2)} e isso
 
 {\color{red} $r$ não é a distância radial???}
 
-Vamos agora extrair a solução de Schwarzschild das equações de campo. O intuito é utilizar o tensor de métrica $g_{\mu\nu}$ obtido pelo elemento de linha{eq:ElementoLinhaSchwarzschildPostulado} como uma tentativa de solução da equação de campo para o espaço-tempo vazio. Da equação \textbf{eq:DefinicaoTensorRicci}, temos 
+Vamos agora extrair a solução de Schwarzschild das equações de campo. O intuito é utilizar o tensor de métrica $g_{\mu\nu}$ obtido pelo elemento de linha \refeq{eq:ElementoLinhaSchwarzschildPostulado} como uma tentativa de solução da equação de campo para o espaço-tempo vazio. Da equação \textbf{eq:DefinicaoTensorRicci}, temos 
 \[
 R_{\mu \nu} \equiv \partial_{\nu} \Gamma_{\mu \sigma}^{\sigma}-\partial_{\sigma} \Gamma_{\mu \nu}^{\sigma}+\Gamma_{\mu \sigma}^{\rho} \Gamma_{\rho \nu}^{\sigma}-\Gamma_{\mu \nu}^{\rho} \Gamma_{\rho \sigma}^{\sigma}
 \]
@@ -333,7 +379,7 @@ e do exemplo {\color{red} FAZER PROBLEMA 2.7}, temos
 \end{array}	
 \]
 com todos os outros coeficientes de conexão nulos. Aqui fizemos a identificação das coordenadas $x^0\equiv t, x^1\equiv r, x^2\equiv\theta,x^3\equiv\phi$ e a linha significa uma diferenciação com respeito a $r$. 
-{\color{red} FAZER AS CONTA CHATA, a partir de $R_{\mu\nu}=0$}, temos
+{\color{red} fazer as contas, a partir de $R_{\mu\nu}=0$}, temos
 
 \begin{equation}\label{eq:SolucaoR00}
 	R_{00}=-\frac{A^{\prime \prime}}{2 B}+\frac{A^{\prime}}{4 B}\left(\frac{A^{\prime}}{A}+\frac{B^{\prime}}{B}\right)-\frac{A^{\prime}}{r B}=0,
