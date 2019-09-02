@@ -1,6 +1,6 @@
-\chapter{Relatividade Especial}
+\chapter{Relatividade Especial}\label{cap:RelatividadeEspecial}
 
-\section{Postulados da Relatividade Especial}
+\section{Postulados da Relatividade Especial}\label{sec:PostuladosRelatividadeEspecial}
 
 A Relatividade Especial baseia-se em dois postulados:
 
@@ -37,11 +37,11 @@ Para um observador dentro do trem, independentemente do movimento deste, os dois
         \caption{}
         \label{fig:TremMovimento}
     \end{subfigure}
-    \caption{Feixes de luz partindo do centro de um trem ao mesmo tempo para (a) um observador que anda junto ao trem e (b) para um observador que vê o trem movendo-se com velocidade $v$ para a direita.}
+    \caption{Feixes de luz partindo do centro de um trem para (a) um observador que anda junto ao trem e (b) para um observador que vê o trem movendo-se com velocidade $v$ para a direita.}
 \label{fig:Trens}
 \end{figure*}
 
-\section{Dilatação temporal e contração espacial}
+\section{Dilatação temporal e contração espacial}\label{sec:DilatacaoContracao}
 Vimos um exemplo em que os postulados da relatividade chegam à conclusão de que a passagem do tempo depende do observador. Agora, estudaremos esse fenômeno com mais detalhe.
 
 Considere, agora, um trem com altura $h$ e um raio de luz refletindo de cima a baixo entre espelhos posicionados no chão e no teto. O tempo entre os ricocheteios pode ser utilizado como unidade temporal e, \textit{ao ser medido por um observador no trem}, não depende da fato de o trem estar se movendo ou não. Podemos entender esse sistema como um relógio. 
@@ -90,7 +90,7 @@ combinando isso com as equações \eqref{eq:DilatacaoTemporal} e \eqref{eq:Relac
 \end{equation}
 Assim, um objeto em movimento aparenta ser menor na direção de movimento. Esse efeito é conhecido como \textit{contração espacial}.
 
-\section{Transformações de Lorentz}
+\section{Transformações de Lorentz}\label{sec:TransformacoesLorentz}
 
 Suponha que um observador $O^\prime$ se move para a direita com velocidade $v$. Se $x$ denota a distância de um objeto a um observador parado $O$, então a distância entre o objeto e $O^\prime$, medido por $O$, será $x-vt$. Mas, utilizando $\Delta x^\prime = \gamma \Delta x$, temos que
 \begin{equation}\label{eq:LorentzX}
@@ -111,6 +111,71 @@ e, pelo mesmo argumento utilizado anteriormente, podemos invertê-la como
 
 As equações \eqref{eq:LorentzX} e \eqref{eq:LorentzT} são as transformações de Lorentz de $O$ para $O^\prime$ e, trocando-se $v$ por $-v$, obtemos as inversas \eqref{eq:LorentzXInversa} e \eqref{eq:LorentzTInversa}.
 
-% \section{Estrutura causal no espaço-tempo de Minkowski}
+Utilizando as transformações de Lorentz, vemos que
+\begin{equation}\label{eq:Intervalo}
+\begin{aligned} c^{2} t^{\prime 2} -x^{\prime2} &=\gamma^{2}\left(c t-\frac{v}{c} x\right)^{2}-\gamma^{2}(x-v t)^{2} \\ &=c^{2} t^{2}-x^{2} ,\end{aligned}
+\end{equation}
+de modo que a quantidade $c^2t^2-x^2$, conhecida como o \textit{intervalo de espaço-tempo}, não depende do observador que o computa.
 
-% \section{Dinâmica Relativística}
+\section{Geometria Hiperbólica}\label{sec:GeometriaHiperbolica}
+
+As funções hiperbólicas podem ser definidas na seguinte maneira:
+
+\begin{equation}\label{eq:FuncoesHiperbolicas}
+\begin{aligned} \cosh \beta &=\frac{e^{\beta}+e^{-\beta}}{2} \\ \sinh \beta &=\frac{e^{\beta}-e^{-\beta}}{2} \\ \tanh \beta &=\frac{\sinh \beta}{\cosh \beta } .\end{aligned}
+\end{equation}
+É direto verificar que as seguintes identidades são válidas:
+\begin{equation}\label{eq:IdentidadesFuncoesHiperbolicas}
+\arraycolsep=1.4pt\def\arraystretch{2.2}
+\begin{array}{lr}
+{\sinh (\alpha+\beta)=\sinh \alpha \cosh \beta+\cosh \alpha \sinh \beta \;} & {\frac{d}{d \beta} \sinh \beta=\cosh \beta} \\
+{\cosh (\alpha+\beta)=\cosh \alpha \cosh \beta+\sinh \alpha \sinh \beta \;} & {\frac{d}{d \beta} \cosh \beta=\sinh \beta} \\
+{\tanh (\alpha+\beta)=\dfrac{\tanh \alpha+\tanh \beta}{1+\tanh \alpha \tanh \beta}} & {\cosh ^{2} \beta-\sinh ^{2} \beta=1  }
+\end{array}
+\end{equation}
+
+A geometria euclidiana é baseada em círculos. Isto é, os pontos cujas distâncias a origem são uma constante (por exemplo, $\rho$) formam um conjunto de círculos (neste caso, a circunferencia $\rho^2=x^2+y^2$, para o plano). Para a geometria hiperbólica, apenas trocamos a função de distância. Um ponto $B$ com coordenadas $(x,y)$ tem ``distância quadrática'' da origem definida por
+\begin{equation}\label{eq:DistanciaHiperbolica}
+    \rho^2=x^2-y^2 .
+\end{equation}
+
+Assim, os ``círculos'' de distância a origem constante se tornam hipérbolas de $\rho=\text{constante}$. Restringimos a $x>0$ e definimos o \textit{ângulo hiperbólico} $\beta$ ebtre a linha da origem até um ponto $B$ da hipérbole e o eixo $x$ como sendo a razão entre o comprimento Lorentziano\footnote{Na geometria euclidiana, o comprimento de uma curva é obtido ao integrar-se $ds$ ao longo da curva, onde $ds^2=dx^2+dy^2$. Analogamente, o comprimento Lorentziano é obtido ao integrar $d\sigma$, onde $d\sigma^2=|dx^2-dy^2|$} do arco da hipérbole entre $B$ e $(\rho,0)$. Em termos das coordenadas $(x,y)$ de $B$, temos que
+\begin{align}\label{eq:AnguloHiperbolico}
+    \cosh\beta &= \frac{x}{\rho} ,\\
+    \sinh\beta &= \frac{y}{\rho} .
+\end{align}
+
+\begin{figure}[t]
+    \centering
+    \plot{0.4\linewidth}{figuras/Hiperbole}
+    \caption{Construção geométrica do ângulo hiperbólico}
+    \label{fig:Hiperbole}
+\end{figure}
+
+Pode-se mostrar que essa definição é igual a dada pelas equações \eqref{eq:FuncoesHiperbolicas}. Essa construção é mostrada na Figura \ref{fig:Hiperbole}, onde a outra hipérbole é dada por $x^2-y^2=-\rho^2$. Por simetria, o ponto $A$ nessa hipérbole tem coordenadas $(x,y) = (\rho\sinh\beta,\rho\cosh\beta)$.
+
+Por analogia com a rotação euclidiana, definimos a rotação hiperbólica pelas relações
+\begin{equation}\label{eq:RotacaoHiperbolica}
+\left(\begin{array}{l}{x} \\ {y}\end{array}\right)=\left(\begin{array}{ll}{\cosh \beta} & {\sinh \beta} \\ {\sinh \beta} & {\cosh \beta}\end{array}\right)\left(\begin{array}{l}{x^{\prime}} \\ {y^{\prime}}\end{array}\right) .
+\end{equation}
+Isso é equivalente a ``rotacionar'' os eixos $x, y$ no primeiro quadrante, como mostrado pela Figura \ref{fig:Hiperbole}, encontrando novas coordenadas $(x^\prime,y^\prime)$. A partir da identidade $\cosh^2\beta-\sinh^2\beta=1$, pode-se verificar que a ``distância'' é invariante, isto é,
+\begin{equation}\label{eq:InvarianciaDistanciaHiperbolica}
+    x^2-y^2=x^{\prime2}-y^{\prime 2} .
+\end{equation}
+
+Pode-se perceber que, ao utilizarmos as coordenadas $(x,ct)$, esta equação é igual à identidade \eqref{eq:Intervalo}. Além disso, para essas coordenadas, uma reta de inclinação $\beta$, isto é, uma reta com $\Delta x/(c\Delta t)=\tanh\beta$ simboliza a linha de tempo de um referencial com velocidade relativa $v = \Delta x/\Delta t$, de modo que $\tanh\beta=v/c$.
+
+Em vista disso, podemos calcular o valor de $\gamma$ para essa mudança de referencial, utilizando as identidades \eqref{eq:IdentidadesFuncoesHiperbolicas}
+\[
+    \gamma = \frac{1}{\sqrt{1-v^2/c^2}}=\frac{1}{\sqrt{1-\tanh^2\beta}}
+    =\sqrt{\frac{\cosh^2\beta}{\cosh^2\beta-\sinh^2\beta}}=\cosh\beta ,
+\]
+além de que $\tfrac{v}{c}\gamma = \tanh\beta\cosh\beta=\sinh\beta$. Agora, se reescrevermos as transformações de Lorentz \eqref{eq:LorentzX},\eqref{eq:LorentzX}, deixando $ct$ em evidência, temos
+\begin{equation}
+\begin{aligned} x &=\gamma\left(x^{\prime}+\frac{v}{c} c t^{\prime}\right) \\ c t &=\gamma\left(c t^{\prime}+\frac{v}{c} x^{\prime}\right) \end{aligned}
+\end{equation}
+Mas, utilizando as relações anteriores, chegamos que isso é equivalente a
+\begin{equation}
+\begin{aligned} x &=x^{\prime} \cosh \beta+c t^{\prime} \sinh \beta \\ c t &=x^{\prime} \sinh \beta+c t^{\prime} \cosh \beta ,\end{aligned}
+\end{equation}
+cuja forma matricial é a equação \eqref{eq:RotacaoHiperbolica}, com $y=ct$. Assim, podemos ver que a geometria hiperbólica é a gemoetria da Relatividade Especial.
