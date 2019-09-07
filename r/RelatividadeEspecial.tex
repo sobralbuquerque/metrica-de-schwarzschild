@@ -24,20 +24,20 @@ Para um observador dentro do trem, independentemente do movimento deste, os dois
 
 \begin{figure*}[t]
     \centering
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \plot{0.83\linewidth}{figuras/trem}
         \caption{}
         \label{fig:trem}
     \end{subfigure}%
     ~ 
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \plot{0.9\linewidth}{figuras/TremMovimento}
         \caption{}
         \label{fig:TremMovimento}
     \end{subfigure}
-    \caption{Feixes de luz partindo do centro de um trem para (a) um observador que anda junto ao trem e (b) para um observador que vê o trem movendo-se com velocidade $v$ para a direita.}
+    \caption{ {\small Feixes de luz partindo do centro de um trem para (a) um observador que anda junto ao trem e (b) para um observador que vê o trem movendo-se com velocidade $v$ para a direita.}  }
 \label{fig:Trens}
 \end{figure*}
 
@@ -147,7 +147,7 @@ Assim, os ``círculos'' de distância a origem constante se tornam hipérbolas d
 
 \begin{figure}[t]
     \centering
-    \plot{0.4\linewidth}{figuras/Hiperbole}
+    \plot{0.36\linewidth}{figuras/Hiperbole}
     \caption{Construção geométrica do ângulo hiperbólico}
     \label{fig:Hiperbole}
 \end{figure}
@@ -178,4 +178,40 @@ Mas, utilizando as relações anteriores, chegamos que isso é equivalente a
 \begin{equation}
 \begin{aligned} x &=x^{\prime} \cosh \beta+c t^{\prime} \sinh \beta \\ c t &=x^{\prime} \sinh \beta+c t^{\prime} \cosh \beta ,\end{aligned}
 \end{equation}
-cuja forma matricial é a equação \eqref{eq:RotacaoHiperbolica}, com $y=ct$. Assim, podemos ver que a geometria hiperbólica é a gemoetria da Relatividade Especial.
+cuja forma matricial é a equação \eqref{eq:RotacaoHiperbolica}, com $y=ct$. Assim, podemos ver que a geometria hiperbólica é a geometria da Relatividade Especial.
+
+\section{Mecânica Relativística}
+Seja $\tau$ o tempo medido por um relógio carregado por um observador movendo-se a velocidade constante $u$ com respeito ao referencial dado. Nós chamamos $\tau$ de \textit{tempo próprio}. A partir da invariância do intervalo, temos que
+\[
+  c^2dt^2-dx^2=c^2d\tau^2 -0 \Rightarrow d\tau^2 =  
+  \left( 1-\tfrac{1}{c^2}\left( dx/dt \right)^2 \right),
+\]
+ou, de maneira equivalente,
+\[
+    d\tau = \sqrt{1-u^2/c^2} \,dt = \frac{1}{\cosh\alpha}dt.
+\]
+Esse cálculo dá o mesmo resultado; o tempo próprio independe de referencial.
+
+Agora, temos que a quantidade $p=mu=mdx/dt$ \emph{não} é conservada. Usa-se então o momento definido utilizando-se o tempo próprio:
+\[
+    p = m\frac{dx}{d\tau}=mc\sinh\alpha.
+\]
+Suponha que, para um referencial específico, o momento total de uma coleção de partículas é o mesmo antes e depois de uma interação, isto é,
+\[
+   \sum m_i c\sinh\alpha_i = \sum M_jc\sinh A_j .
+\]
+Agora veja a situação vista por outro referencial inercial, movendo-se em relação ao primeiro com velocidade $v = c\tanh\beta$. Temos então, que $\alpha_i = \alpha'_i+\beta$ e $A_j = A'_j+\beta$. Assim,
+\[
+\begin{aligned} \sum m_{i} c \sinh \alpha_{i}^{\prime} &=\sum m_{i} c \sinh \left(\alpha_{i}-\beta\right) \\ &=\left(\sum m_{i} c \sinh \alpha_{i}\right) \cosh \beta-\left(\sum m_{i} c \cosh \alpha_{i}\right) \sinh \beta \end{aligned}  
+\]
+e
+\[
+    \sum M_{j} c \sinh A_{j}^{\prime}=\left(\sum M_{j} c \sinh A_{j}\right) \cosh \beta-\left(\sum M_{j} c \cosh A_{j}\right) \sinh \beta   .
+\]
+Os coeficientes de $\cosh\beta$ nessas duas expressões são iguais devido a suposição da conservação do momento no referencial original. Assim, a conservação do momento será válida no novo referencial se, e somente se, os coeficientes de $\sinh\beta$ também concordarem, isto é, 
+\[ \sum m_i c\cosh\alpha_i = \sum M_jc\cosh A_j\]
+e, de fato, definimos isso como a energia da partícula.
+Podemos, agora, definir a grandeza vetorial 2-momento $\mathbf{p}$ (pois estamos considerando apenas uma direção espacial, nas seções futuras utilizaremos o análogo 4-momento) como a derivada em relação ao tempo próprio das coordenadas $x, ct$:
+\begin{equation}
+    \mathbf{p}=m \mqty(cdx/d\tau \\ dx/d\tau) = mc\mqty(\cosh\alpha \\ \sinh\alpha) = \mqty( \tfrac{1}{c}E \\ p).
+\end{equation}
