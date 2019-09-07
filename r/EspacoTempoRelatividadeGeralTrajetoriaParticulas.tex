@@ -2,7 +2,7 @@
 \section{Geodésicas}\label{sec:Geodesicas}
 Uma geodésica num espaço Euclidiano é simplesmente uma reta, que pode ser caracterizada como a menor curva que liga dois pontos. Pode-se generalizar essa definição para a geodésica de uma variedade, onde o tensor de métrica 
 %campo tensorial de métrica?
-dá o comprimento de uma curva pela integral da equação \textbf{eq:ComprimentoCurvaTensorMetricaN}. No entanto, essa abordagem pode trazer problemas quando podem existir curvas (ou partes delas) com comprimento nulo. Dessa forma, caracterizaremos uma reta por sua \textit{retidão} e usaremos isso para definir geodésicas numa variedade.
+dá o comprimento de uma curva pela integral da equação \eqref{eq:ComprimentoCurvaVariedade}. No entanto, essa abordagem pode trazer problemas quando podem existir curvas (ou partes delas) com comprimento nulo. Dessa forma, caracterizaremos uma reta por sua \textit{retidão} e usaremos isso para definir geodésicas numa variedade.
 
 Utilizando o comprimento de arco $ s $ medido de um ponto de base numa reta como parâmetro, então os vetores tangentes $ \boldsymbol{\lambda} \equiv \dot{\mathbf{r}}(s) $ tem módulo constante
  -- dado que são vetores unitários --%Exercício 1.3.3. Foster
@@ -54,12 +54,12 @@ Subtraindo-se a equação \eqref{eq:deltaj} da soma \eqref{eq:deltai}+\eqref{eq:
 	2 \Gamma_{k_{i}}^{m} g_{m j}=\partial_{k} g_{i j}+\partial_{i} g_{j k}-\partial_{j} g_{k i} ,
 \]
 que, por sua vez, ao contrair-se com $ \tfrac{1}{2} g^{l j} $ gera
-\begin{equation}\label{eq:Gamma}
+\begin{equation}\label{eq:GammaEuclidiano}
 \boxed{
 	\Gamma_{k i}^{l}=\tfrac{1}{2} g^{l j}\left(\partial_{k} g_{i j}+\partial_{i} g_{j k}-\partial_{j} g_{k i}\right) .
 } 
 \end{equation}
-Assim, a equação \eqref{eq:ComponentesUGamma} com o tensor $ \Gamma_{jk}^i $ dado pela equação \eqref{eq:Gamma} é a \textit{equação geodésica} para um espaço euclidiano.
+Assim, a equação \eqref{eq:ComponentesUGamma} com o tensor $ \Gamma_{jk}^i $ dado pela equação \eqref{eq:GammaEuclidiano} é a \textit{equação geodésica} para um espaço euclidiano.
 
 Para um parâmetro $ t $ da forma $ t = As+B $, com $ A\neq0,B $ constantes, a equação geodésica possui a mesma forma indicada:
 \begin{equation}\label{eq:GeodesicaEmT}
@@ -76,11 +76,16 @@ Utilizando esses resultados, podemos definir uma \textit{geodésica afim} como u
 	\frac{d^{2} x^{a}}{d u^{2}}+\Gamma_{b c}^{a} \frac{d x^{b}}{d u} \frac{d x^{c}}{d u}=0 ,
 }
 \end{equation}
-onde $ \Gamma^{a}_{bc} $ é dado por $ \Gamma_{b c}^{a}=\tfrac{1}{2} g^{a d}\left(\partial_{b} g_{d c}+\partial_{c} g_{b d}-\partial_{d} g_{b c}\right) $. Essas quantidades são chamadas de \textit{coeficientes de conexão}.
+onde $ \Gamma^{a}_{bc} $ é dado por
+\begin{equation}\label{eq:Gamma}
+	\boxed{
+	\Gamma_{b c}^{a}=\tfrac{1}{2} g^{a d}\left(\partial_{b} g_{d c}+\partial_{c} g_{b d}-\partial_{d} g_{b c}\right) .}
+\end{equation}
+Essas quantidades são chamadas de \textit{coeficientes de conexão}.
 Em uma geodésica afim, o módulo do vetor tangente $ \dot{x}^a $ permanece constante e, caso a geodésica não seja nula, o parâmetro afim é dado pelo comprimento de arco $ s $ por $ u=As+B $ onde $ A\neq0,B $ são constantes. Em uma geodésica nula, os vetores tangentes satisfazem $ g_{a b} \dot{x}^{a} \dot{x}^{b}=0 $ e o comprimento de arco não pode ser utilizado como parâmetro.
 
  
-\section{*Transporte paralelo}\label{sec:TransporteParalelo} %"Vetores paralelos ao longo de uma curva"
+\section{Transporte paralelo}\label{sec:TransporteParalelo} %"Vetores paralelos ao longo de uma curva"
 
 Seja $ \gamma $ uma curva no espaço euclidiano tridimensional dado parametricamente por $ u^i(t) $ e seja $ P_0 $ com parâmetro $ t_0 $ ser o ponto inicial dessa curva onde é dado um vetor $ \boldsymbol{\lambda}_0 $. Pode-se pensar em transportar $ \boldsymbol{\lambda}_0 $ ao longo de $ \gamma $ sem nenhuma mudança em seu comprimento ou direção, de modo a obter um vetor paralelo $ \boldsymbol{\lambda}(t) $ em cada ponto da curva. O resultado é um campo vetorial paralelo ao longo de $ \gamma $ gerado pelo \textit{transporte paralelo} de $ \boldsymbol{\lambda}_0 $. Como não há mudanças em sua direção e sentido, o vetor satisfaz a equação diferencial 
 \begin{equation}\label{eq:TransporteParalelo}
@@ -90,20 +95,25 @@ que é idêntica à equação \eqref{eq:VetorTangenteConstante}. Assim, fazendo 
 \begin{equation}\label{eq:CoordenadasLambda}
 \dot{\lambda}^{i}+\Gamma_{j k}^{i} \lambda^{j} \dot{u}^{k}=0 ,
 \end{equation}
-em que os coeficientes de conexão são dados pela equação \eqref{eq:Gamma}.
+em que os coeficientes de conexão são dados pela equação \eqref{eq:GammaEuclidiano}.
 
+\noindent
+\rule{\textwidth}{0.4pt}
 \begin{exemplo}
+
 Considere uma esfera de raio $a$, com coordenadas $u^1\equiv \theta,\, u^2\equiv\phi$, onde $\theta,\phi$ são os ângulos polares usuais das coordenadas esféricas, com $0\leq\theta\leq\pi$ e $0\leq\phi\leq 2\pi$.
 
 Então, 
 \[
 \left[g_{A B}\right]=\left[\begin{array}{cc}{a^{2}} & {0} \\ {0} & {a^{2} \sin ^{2} \theta}\end{array}\right]
 \]
-e seus únicos coeficientes de conexão não nulos são {\color{red}(FAZER EXERCÍCIO 2.1.5 E CITAR AQUI)} 
-
-\[
-	\Gamma_{22}^{1}=-\sin \theta \cos \theta, \quad \Gamma_{12}^{2}=\Gamma_{21}^{2}=\cot \theta
-\]
+Utilizando a equação \eqref{eq:Gamma} e o fato que $[g^{AB}] = \operatorname{diag}(1/a^2, 1/(a^2\sin^2\theta))$, temos que os únicos coeficientes não nulos são
+\begin{align*}
+\Gamma_{22}^{1}&= \tfrac{1}{2}g^{1d}\left( \partial_2g_{d2}+\partial_2g_{2d}-\partial_d g_{22} \right) =-\tfrac{1}{2}g^{11}\partial_1g_{22}=\\
+&=-\frac{1}{2}\left( \frac{1}{a^2} \right)\pdv{\theta} \left( a^2\sin^2\theta \right) =-\sin \theta \cos \theta
+\end{align*}	
+e, analogamente,
+\[\Gamma_{12}^{2}=\Gamma_{21}^{2}=\cot \theta .\]
 
 \begin{figure}[t]
 	\centering
@@ -115,7 +125,7 @@ e seus únicos coeficientes de conexão não nulos são {\color{red}(FAZER EXERC
 
 Se transportarmos um vetor $\boldsymbol{\lambda}$ paralelamente ao longo do círculo de latitude $\gamma$ dado por $\theta=\theta_0$, começando e terminando no ponto $P_0$ onde $\phi=0$ (veja figura \ref{fig:EsferaTransporteParalelo}). O círculo é dado parametricamente por
 \[u^{A}(t)=\theta_{0} \delta_{1}^{A}+t \delta_{2}^{A}, \quad 0 \leq t \leq 2 \pi,\]
-de modo que $\dot{u}^{A}=\delta_{2}^{A}$ e a equação de transporte paralelo se torna $\dot{\lambda}^{A}+\Gamma_{B 2}^{A} \lambda^{B}=0$, que é equivalente ao par
+de modo que $\dot{u}^{A}=\delta_{2}^{A}$ e a equação de transporte paralelo torna-se $\dot{\lambda}^{A}+\Gamma_{B 2}^{A} \lambda^{B}=0$, que é equivalente ao par
 \begin{equation}\label{eq:EquacoesTransporteLambda}
 \left\{\begin{aligned} \dot{\lambda}^{1}-\sin \theta_{0} \cos \theta_{0} \lambda^{2} &=0 \\ \dot{\lambda}^{2}+\cot \theta_{0} \lambda^{1} &=0 \end{aligned}\right. .
 \end{equation}
@@ -171,9 +181,71 @@ Pode-se perceber que $g_{A B} \lambda^{A}(2 \pi) \lambda^{B}(2 \pi)=1$, então $
 \]
 temos que o vetor final faz um ângulo $2\pi\omega$ com o inicial.
 
+\noindent
+\rule{\textwidth}{0.4pt}
 \end{exemplo}
 
-{\color{red} Escrever sobre aproximações para pequenas variações (pg. 68)} 
+Os coeficientes de conexão $\Gamma^a_{bc}$ são chamados assim porque eles nos dão uma conexão entre espaços tangentes de diferentes pontos em uma variedade, nos permitindo associar um vetor no espaço tangente a um ponto com o vetor paralelo a ele em outro ponto. Para pontos distantes, essa associação depende do caminho utilizado para conectar os pontos, mas para pontos em uma vizinhança (separados por diferenças pequenas nas coordenadas), a associação é única (em primeira ordem).
+
+Sejam $P$ com coordenadas $x^a$ e $Q$ com coordenadas $x^a+\delta x^a$ pontos próximos. Suponha uma curva qualquer $\gamma$ parametrizada passando por $P$ e $Q$, sendo que $P$ tem parâmetro $u$ e $Q$, $u+\delta u$ e seja $\bar{\lambda}^a\equiv\lambda^a + \delta\lambda^a$ o vetor em $Q$ paralelo a um dado vetor $\lambda^a$ em $P$. Como o vetor em $Q$ é obtido pelo transporte paralelo de $\lambda^a$ em $P$ ao longo de um pequeno pedaço da curva de $P$ a $Q$, nós temos que 
+\[
+	\delta \lambda^a \approx \frac{d\lambda^a}{du}\delta u,
+\] 
+onde, da equação \eqref{eq:CoordenadasLambda}, $d\lambda^a/du=-\Gamma^a_{bc}\lambda^bdx^c$, o que nos dá
+\begin{equation}\label{eq:AproximacaoTransporteParalelo}
+	\bar{\lambda}^a \approx \lambda^a - \Gamma^a_{bc}\lambda^b \frac{dx^c}{du}\delta u \approx \lambda^a - \Gamma^a_{bc}\lambda^b\delta x^c .
+\end{equation}
+
+Se nós usarmos um sistema de coordenadas linha e realizarmos transporte paralelo tendo $\lambda^{a^\prime}$ satisfazendo $\dot{\lambda}^{a^{\prime}}+\Gamma_{b^{\prime} c^{\prime}}^{a^{\prime}} \lambda^{b^{\prime}} \dot{x}^{c^{\prime}}=0$, onde
+\begin{equation}\label{eq:GammaLinha}
+	\Gamma_{\boldsymbol{b}^{\prime} c^{\prime}}^{a^{\prime}} \equiv \tfrac{1}{2} g^{a^{\prime} d^{\prime}}\left(\partial_{b^{\prime}} g_{d^{\prime} c^{\prime}}+\partial_{c}^{\prime} g_{b^{\prime} d^{\prime}}-\partial_{d^{\prime}} g_{b^{\prime} c^{\prime}}\right),
+\end{equation}
+vamos encontrar o mesmo campo de vetores paralelos ao longo da curva? Podemos responder essa pergunta mostrando que o mapeamento do espaço tangente a $P$ ao espaço tangente a $Q$ dado pela equação \eqref{eq:AproximacaoTransporteParalelo} não depende do sistema de coordenadas usado. Assim, precisamos mostrar que se $\bar{\lambda}^{a^{\prime}}\equiv \lambda^{a^\prime} - \Gamma_{b^{\prime} c^{\prime}}^{a^{\prime}} \lambda^{b^{\prime}} \delta x^{c^{\prime}}$, então $\hat{\lambda^{a^\prime}}(X^e_{a^\prime})_Q=\bar{\lambda^e}$, onde $(X^e_{a^\prime})$ denota $\pdv*{x^e}{x^{a\prime}}$ calculado em $Q$. Em termos dos valores em $P$, podemos dizer que (em primeira ordem)
+\[
+	(X^e_{a^\prime})_Q = X^e_{a^\prime} = X^e_{a^\prime}+X^e_{d^\prime a^\prime} \delta x^{c^\prime} ,
+\]
+com $(X^e_{d^\prime a^\prime})=\partial^2x^e/\partial x^{d^\prime}\partial x^{a^\prime}$, então nós precisamos mostrar que 
+\[
+	\left(\lambda^{a^{\prime}}-\Gamma_{b^{\prime} c^{\prime}}^{a^{\prime}} \lambda^{b^{\prime}} \delta x^{c^{\prime}}\right)\left(X_{a^{\prime}}^{e}+X_{d^{\prime} a^{\prime}}^{e} \delta x^{d^{\prime}}\right)=\lambda^{e}-\Gamma_{f g}^{e} \lambda^{f} \delta x^{g}.
+\]
+Mas $\lambda^{a^\prime}X^e_{a^\prime}=\lambda^e$. então (em primeira ordem), a condição acima é reduzida a
+\[
+	X_{d^{\prime} a^{\prime}}^{e} \lambda^{a^{\prime}} \delta x^{d^{\prime}}-\Gamma_{b^{\prime} c^{\prime}}^{a^{\prime}} X_{a^{\prime}}^{e} \lambda^{b^{\prime}} \delta x^{c^{\prime}}=-\Gamma_{f g}^{e} \lambda^{f} \delta x^{g} ,
+\]
+ou, de maneira equivalente,
+\begin{equation}\label{eq:CondicaoIndependenciaCoordenada}
+	\left(\Gamma_{b^{\prime} c^{\prime}}^{a^{\prime}}-\Gamma_{f g}^{d} X_{d}^{a^{\prime}} X_{b^{\prime}}^{f} X_{c^{\prime}}^{g}-X_{c^{\prime} b^{\prime}}^{d} X_{d}^{a^{\prime}}\right) X_{a^{\prime}}^{e} \lambda^{b^{\prime}} \delta x^{c^{\prime}}=0,
+\end{equation}
+uma vez que $X^f_{b'}\lambda^{b^\prime}=\lambda^f$ e $X^g_{c'}\delta x^{c'}\approx \delta x^g$. Usando as definições \eqref{eq:Gamma} e \eqref{eq:GammaLinha}, podemos inferir que os coeficientes de conexão se transformam segundo
+\begin{equation}\label{eq:TransformacaoGamma}
+	\boxed{
+		\Gamma^{a'}_{b'c'} = \Gamma^d_{fg}X^{a'}_dX^f_{b'}X^g_{c'}+X^d_{c'b'}X^{a'}_d
+	}
+\end{equation}
+ou, alternativamente,
+\begin{equation}\label{eq:TransformacaoGammaAlternativa}
+	\boxed{
+		\Gamma^{a'}_{b'c'} = \Gamma^d_{ef}X^{a'}_dX^e_{b'}X^f_{c'}-X^e_{b'}X^f_{c'}X^{a'}_{ef} .
+	}
+\end{equation}
+A partir de \eqref{eq:TransformacaoGamma}, podemos ver que a condição \eqref{eq:CondicaoIndependenciaCoordenada} é satisfeita, mostrando que o transporte paralelo independe das coordenadas adotadas.
+
+Vamos terminar essa seção introduzindo algumas fórmulas envolvendo os coeficientes de conexão $\Gamma^a_{bc}$ e as quantidades relacionadas $\Gamma_{abc}$ definidas por
+\begin{equation}\label{eq:ChristoffelPrimeiroTipo}
+	\Gamma_{abc} \equiv \tfrac{1}{2}(\partial_bg_{ac}+\partial_c g_{ba}-\partial_a g_{bc}).
+\end{equation}
+A partir da equação \eqref{eq:Gamma}, vemos que
+\begin{equation}\label{eq:LevantarIndiceGamma}
+	\Gamma^a_{bc}=g^{ad}\Gamma_{dbc}
+\end{equation}
+e, utilizando \eqref{eq:TensorMetricaDelta}, vemos que
+\begin{equation}\label{eq:AbaixarIndiceGamma}
+	\Gamma_{abc}=g_{ad}\Gamma^d_{bc}.
+\end{equation}
+Somando $\Gamma_{bac}$ e $\Gamma_{abc}$ nos dá
+\begin{equation}\label{eq:DerivadaMetricaGamma}
+	\partial_cg_{ab}=\Gamma_{abc}+\Gamma_{bac}.
+\end{equation}
 
 \section{*Diferenciação absoluta e covariante}\label{sec:DiferenciacaoAbsolutaCovariante}
 
@@ -191,7 +263,7 @@ Seja $ P $ o ponto em $ \gamma $ com parâmetro $ u $ e $ Q $ um ponto na vizinh
 \[
 \lambda^{a}(u+\delta u) \approx \lambda^{a}(u)+\frac{d \lambda^{a}}{d u} \delta u
 \]
-e, da equação \textbf{eq:AproximacaoTransporteParalelo} {\color{red}(2.27 do livro)}, tiramos
+e, da equação \eqref{eq:AproximacaoTransporteParalelo}, tiramos
 \[
 \bar{\lambda}^{a} \approx \lambda^{a}(u)-\Gamma_{b c}^{a} \lambda^{b}(u) \delta x^{c} .
 \]
@@ -207,12 +279,83 @@ Quando $ \delta u \rightarrow 0 $, o ponto $ Q $ tende ao ponto $ P $ e o limite
 \end{equation}
 onde todas as quantidades são avaliadas no mesmo ponto $ P $ em $ \gamma $. Assim, a derivada absoluta de um campo vetorial ao longo de uma curva não depende apenas de sua derivada total (que não gera um campo vetorial), mas dos coeficientes de conexão $ \Gamma_{b c}^{a} $ 
 
-{\color{red} mostrar que a derivada absoluta é campo vetorial (a partir da eq. 2.43)}
+Podemos agora introduzir a \textit{derivada covariante}. Enquanto para a derivada absoluta, o campo tensorial precisa apenas estar definido em uma curva, a derivada covariante necessita que esteja definido em uma região de $M$.
 
-\section{*Coordenadas geodésicas}\label{sec:CoordenadasGeodesicas}
+Seja um campo vetorial contravariante $\lambda^a$ definido inteiramente em uma região $U$. Se $\gamma$ é uma curva em $U$, nós podemos restringir $\lambda^a$ a $\gamma$ e definir sua derivada absoluta:
+\[
+	D\lambda^a/du \equiv \dot{\lambda}^a+\Gamma^a_{bc}\lambda^b\dot{x}^c.
+\]
+Mas $\dot{\lambda}^a=\pdv*{\lambda^a}{x^c}\dot{x}^c$, de modo que isso pode ser reescrito como
+\[
+	\frac{D\lambda^a}{du}=\left(\pdv{\lambda^a}{x^c}+\Gamma^a_{bc}\lambda^b \right) \dot{x}^c.
+\]
+A expressão em parênteses não depende de $\gamma$, mas apenas nas componentes de $\lambda ^a $ e suas derivadas no ponto em questão e essa equação é válida para vetores tangentes $\dot{x}^a$ quaisquer. Pelo teorema do quociente, podemos deduzir que $\pdv{\lambda^a}{x^c}+\Gamma^a_{bc}\lambda^b$ são as componentes de um campo tensorial do tipo $(1,1)$. Esse tensor é a \textit{derivada covariante} do campo vetorial $\lambda^a$ e denotamos como $\lambda^a_{;c}$.
 
+Vamos introduzir uma nova notação. Usamos $\partial _a$ como abreviação de $\pdv*{x^a}$. A partir de agora, utilizaremos também uma vírgula seguida do subscrito $a$ para indicar a mesma coisa. Assim, a derivada covariante de $\lambda^a$ pode ser escrita como
+\begin{equation}
+	\boxed{
+		\tensor{\lambda}{^a_{;c}}=\partial_c\lambda^a+\Gamma^a_{bc}\lambda^b = 
+		\tensor{\lambda}{^a_{,c}}+\Gamma^a_{bc}\lambda^b .
+	}
+\end{equation}
 
-\section{*O espaço-tempo da Relatividade Geral}\label{sec:EspacotempoRelatividadeGeral}
+Agora, vamos analisar as derivadas do tensor de métrica e os tensores associados. Usando a equação \eqref{eq:AbaixarIndiceGamma} e o fato que $\Gamma^a_{bc}=\Gamma^a_{cb}$, podemos reescrever \eqref{eq:DerivadaMetricaGamma} como
+\[
+	\partial_c g_{ab}-\Gamma^d_{ca}g_{db}-\Gamma^d_{cb}g_{ad}=0,
+\]
+mostrando que $g_{ab;c}=0$. Isto é, a derivada covariante do tensor de métrica é identicamente zero. Para o tensor de Kronecker, notamos que
+\[
+	\delta^a_{b;c}=\partial_c\delta^a_b+\Gamma^a_{dc}\delta^d_b-\Gamma^d_{bc}\delta^a_d=0+\Gamma^a_{bc}-\Gamma ^a_{bc}=0,
+\]
+enquanto para o tensor de métrica contravariante, usamos esses resultados para mostrar
+\begin{align*}
+	0 = \delta^a_{b;c} &= (g^{ad}g_{db})_{;c} \\
+	&= \tensor{g}{^a^d_{;c}}g_{db}+g^{ad}g_{db;c} \\
+	&= \tensor{g}{^a^d_{;c}}g_{db} ,
+\end{align*}
+já que $g_{db;c}=0$. Contraindo-se com $g^{be}$ nos dá $0=\tensor{g}{^a^d_{;c}}\delta^e_d=\tensor{g}{^a^e_{;c}}$, mostrando que o resultado é válido para os tensores associados também. Ao longo de qualquer curva $\gamma$, podemos tratar as componentes $g_{ab}$ como funções do parâmetro $u$ e, assim, temos que $Dg_{ab}/du=g_{ab;c}\dot{x}^c=0$, mostrando que a derivada absoluta do tensor de métrica ao longo de $\gamma$ é zero. Podemos argumentar de maneira similar para os tensores associados. Assim, chegamos que
+\begin{equation}\label{eq:DerivadaCovarianteMetrica}
+	\boxed{
+	g_{ab;c}=0, \qquad \delta^a_{b;c}=0, \qquad \tensor{g}{^a^b_{;c}}=0
+	}
+\end{equation}
+e que, ao longo de qualquer curva $\gamma$,
+\begin{equation}
+	\boxed{
+	Dg_{ab}/du=0, \qquad D\delta^a_b/du=0, \qquad Dg^{ab}/du=0.
+	}
+\end{equation}
+Essas propriedades nos permitem mostrar um resultado importante: \textit{produtos internos são preservados sob transporte paralelo}. Note que
+\[
+d(g_{ab}\lambda^a\mu^b)/du = D(g_{ab}\lambda^a\mu^b)/du	\\
+= (Dg_{ab}/du)\lambda^a\mu^b + g_{ab}(D\lambda^a/du)\mu^b+g_{ab}\lambda^a(D\mu^b/du)=0,
+\]
+já que $D\lambda^a/du=D\mu^b/du=0$ no transporte paralelo. Assim, o produto interno é uma constante ao longo do transporte. Segue que o tamanho de um vetor  e o ângulo entre dois vetores paralelamente transportados são constantes.
+
+\section{Coordenadas geodésicas}\label{sec:CoordenadasGeodesicas}
+
+A partir da equação \eqref{eq:Gamma}, podemos ver que se utilizássemos um sistema de coordenadas em que as componentes do tensor de métrica fossem constantes, então os coeficientes de conexão seriam zero, de modo que o transporte paralelo, e diferenciação absoluta e covariante seriam mais simples de trabalhar. Isso é possível em um espaço euclidiano utilizando as coordenadas cartesianas, onde $g_{ij}=\delta_{ij}$, mas em uma variedade curvada isso não é possível em geral. No entanto, pode-se introduzir um sistema de coordenadas em que $\Gamma^a_{bc}=0$ em um ponto $O$, de modo que esses sistemas podem simplificar alguns cálculos envolvendo coeficientes de conexão. Essas coordenadas são chamadas de \textit{coordenadas geodésicas} com origem em $O$.
+
+Suponha que nós começamos em um sistema em que $O$ possui coordenadas $x^a_O$. Seja, então, um novo sistema (com linha) definido a partir de
+\[
+	x^{a^\prime}\equiv x^a - x^a_O + \tfrac{1}{2}(\Gamma^a_{bc})_O (x^b-x^b_O)(x^c-x^c_O) 	,
+\]
+onde $(\Gamma^a_{bc})_O $ são os coeficientes de conexão em $O$, dados pelo sistema de coordenadas original (sem linha). Diferenciando com respeito a $x^d$ nos dá
+\[
+\begin{aligned} X_{d}^{a^{\prime}} &=\delta_{d}^{a}+\tfrac{1}{2}\left(\Gamma_{b c}^{a}\right)_{O} \delta_{d}^{b}\left(x^{c}-x_{O}^{c}\right)+\frac{1}{2}\left(\Gamma_{b c}^{a}\right)_{O}\left(x^{b}-x_{O}^{b}\right) \delta_{d}^{c} \\ &=\delta_{d}^{a}+\left(\Gamma_{d c}^{a}\right)_{O}\left(x^{c}-x_{O}^{c}\right) ,
+\end{aligned}
+\]
+então $(X^{a^\prime}_d)_O=\delta^a_d$ e $\det[X^{a\prime}_d]_O\neq0$. Uma segunda diferenciação nos dá
+\[
+X^{a^\prime}_{ed} = (\Gamma^a_{dc})\delta^c_e = (\Gamma^a_{de})_O,
+\]
+mostrando que $(X^{a^\prime}_{ed})_O=(\Gamma^a_{de})_O$. Se utilizarmos a transformação \eqref{eq:TransformacaoGammaAlternativa} (notando que $(X^d_{a'})_O=\delta^d_a$ como consequência de $(X^{a'}_d)_O=\delta^a_d$), chegamos em
+\[
+	\left(\Gamma_{b^{\prime} c^{\prime}}^{a^{\prime}}\right)_{O}=\left(\Gamma_{e f}^{d}\right)_{O} \delta_{d}^{a} \delta_{b}^{e} \delta_{c}^{f}-\delta_{b}^{e} \delta_{c}^{f}\left(\Gamma_{f e}^{a}\right)_{O}=\left(\Gamma_{b c}^{a}\right)_{O}-\left(\Gamma_{b c}^{a}\right)_{O}=0 .
+\]
+Assim, no sistema com linha, os coeficientes de conexão em $O$ são zero, e nós temos um sistema de coordenadas geodésicas com origem em $O$.
+
+\section{O espaço-tempo da Relatividade Geral}\label{sec:EspacotempoRelatividadeGeral}
 
 O espaço-tempo da Relatividade Especial é uma variedade pseudo-Riemanniana quadridimensional com um sistema global de coordenadas no qual o tensor de métrica é da forma
 \[
@@ -222,23 +365,65 @@ Esses sistemas de coordenadas são chamados de Cartesianos. Eles estão relacion
 
 Um dos requerimentos do espaço-tempo da Relatividade Geral é que, localmente, ele deve ser próximo do espaço-tempo da Relatividade Especial.  Como explicado na seção \ref{sec:CoordenadasGeodesicas}, podemos construir um sistema de coordenadas em torno de qualquer ponto $ P $ no espaço-tempo da Relatividade Geral no qual $ \left(\Gamma_{\nu \sigma}^{\mu}\right)_{P}=0 $ e $ \left(x^{\mu}\right)_{P}=(0,0,0,0) $. Isso significa que $ \left(\partial_{\sigma} g_{\mu \nu}\right)_{P}=0 $. Desse modo, para pontos próximos de $ P $ onde as coordenadas ($ x^\mu $) são pequenas, o teorema de Taylor nos diz
 \begin{equation}\label{eq:TensorMetricaAproximado}
-g_{\mu \nu} \approx \eta_{\mu \nu}+\tfrac{1}{2}\left(\partial_{\alpha} \partial_{\beta} g_{\mu \nu}\right)_{P} x^{\alpha} x^{\beta}
+g_{\mu \nu} \approx \eta_{\mu \nu}+\tfrac{1}{2}\left(\partial_{\alpha} \partial_{\beta} g_{\mu \nu}\right)_{P} x^{\alpha} x^{\beta} ,
 \end{equation}
+com essa aproximação válida para pequenos valores de $x^\mu$.
+
+Se estivermos suficientemente próximos de $P$ de modo que o segundo termo na equação \eqref{eq:TensorMetricaAproximado} pode ser desprezado, nós temos um sistema de coordenadas em que $g_{\mu\nu}=\eta_{\mu\nu}$ aproximadamente e a extensão da região em que essa aproximação é válida depende do tamanho das segundas derivadas $\left(\partial_{\alpha} \partial_{\beta} g_{\mu \nu}\right)_{P}$. 
+
+Assim, podemos generalizar resultados da relatividade Especial, válidas para um tensor cartesiano, definindo-o do mesmo modo em um sistema de coordenadas localmente cartesiano. Suas componentes em quaisquer outras coordenadas são dadas pela fórmula de transformação \eqref{eq:TransformacaoCoordenadaTensor}. Podemos também utilizar equações de tensores cartesianos válidas na RE apenas trocando a diferenciação parcial pela diferenciação covariante, derivadas totais por derivadas absolutas e $\eta_{\mu\nu}$ por $g_{\mu\nu}$.
+
+Por exemplo, considere o caminho de uma partícula (com massa) na Relatividade Especial. Sua 4-velocidade é $u^{\mu}\equiv dx^{\mu}/d\tau$, onde o tempo próprio da partícula é definido por
+\[
+	c^2d\tau^2 \equiv \eta_{\mu\nu} dx^{\mu}dx^\nu.
+\]
+Então, sua equação de movimento é
+\[
+	dp^\mu/d\tau=f^\mu
+\]
+onde $p^\mu \equiv mu^\mu$, com $m$ sendo a massa da partícula e $f^\mu$ a 4-força agindo nela. A generalização dessas ideias nos dá $u^{\mu}\equiv dx^{\mu}/d\tau$ como a definição da 4-velocidade da partícula, onde agora o tempo próprio é definido por
+\begin{equation}\label{eq:DefinicaoTempoProprioRelatividadeGeral}
+	c^2d\tau^2 \equiv g_{\mu\nu} dx^\mu dx^\nu
+\end{equation}
+e
+\begin{equation}\label{eq:SegundaLeiDeNewtonGeneralizada}
+	Dp^\mu/d\tau = f^\mu
+\end{equation}
+como a equação de movimento (onde $p^\mu\equiv mu^\mu$), e as definições de $m$ e $f^\mu$ são tomadas da Relatividade Especial. Essas equações são válidas em qualquer sistema de coordenadas.
+
+Para uma partícula livre ($f^\mu=0$), a equação \eqref{eq:SegundaLeiDeNewtonGeneralizada} se reduz a $D(dx^\mu/d\tau)/d\tau = 0$, ou
+\begin{equation}\label{eq:MovimentoParticulaLivre}
+	\boxed{
+		\frac{d^{2} x^{\mu}}{d u^{2}}+\Gamma_{\nu \sigma}^{\mu} \frac{d x^{\sigma}}{d u} \frac{d x^{\nu}}{d u}=0.
+	}
+\end{equation}
+Isso serve para reafirmar que a trajetória de uma partícula livre é uma geodésica no espaço-tempo, além de mostrar que o tempo próprio medido pela partícula é um parâmetro afim ao longo dela.
+
+A trajetória de um fóton (ou qualquer outra partícula sem massa) no espaço-tempo da Relatividade Especial também é uma linha reta, e isso generaliza para uma geodésica em um espaço-tempo curvado. No entanto, não é mudança no tempo próprio ao longo da trajetória de um fóton, então $\tau$ não pode ser utilizado como parâmetro. Mas ainda podemos utilizar um parâmetro afim $u$ de modo que o análogo a equação \eqref{eq:MovimentoParticulaLivre} para um fóton é
+\begin{equation}\label{eq:MovimentoFoton}
+	\boxed{
+		\frac{d^{2} x^{\mu}}{d u^{2}}+\Gamma_{\nu \sigma}^{\mu} \frac{d x^{\sigma}}{d u} \frac{d x^{\nu}}{d u}=0.
+	}
+\end{equation}
+O fato que a velocidade do fóton é $c$ é expressada como
+\begin{equation}
+	g_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du},
+\end{equation}
+que generaliza a invariância do intervalo de espaço-tempo $\eta_{\mu\nu}\frac{dx^\mu}{du}\frac{dx^\nu}{du}$, ou ($c^2dt^2-dx^2-dy^2-dz^2=0$) da Relatividade Especial.
 
 
+% \section{Leis de Newton}\label{sec:LeisDeNewton}
 
-\section{Leis de Newton}\label{sec:LeisDeNewton}
+% A primeira lei de Newton diz que ``Todo corpo continua seu estado de repouso ou de movimento uniforme em uma linha reta, a menos que seja forçado a mudar aquele estado por forças aplicadas sobre ele''. De fato, em um referencial inercial onde podem-se desconsiderar os coeficientes de conexão $ \Gamma^{\mu}_{\nu\sigma} $, a equação geodésica se reduz a $ d^{2} x^{\mu} / d \tau^{2}=0 $. Para velocidades não relativísticas, temos que $ d\tau/dt \approx 1$, o que resulta em $ d^{2} x^{i} / d t^{2}=0\;(i=1,2,3) $, que é a equação de movimento newtoniana de uma partícula livre de forças.
 
-A primeira lei de Newton diz que ``Todo corpo continua seu estado de repouso ou de movimento uniforme em uma linha reta, a menos que seja forçado a mudar aquele estado por forças aplicadas sobre ele''. De fato, em um referencial inercial onde podem-se desconsiderar os coeficientes de conexão $ \Gamma^{\mu}_{\nu\sigma} $, a equação geodésica se reduz a $ d^{2} x^{\mu} / d \tau^{2}=0 $. Para velocidades não relativísticas, temos que $ d\tau/dt \approx 1$, o que resulta em $ d^{2} x^{i} / d t^{2}=0\;(i=1,2,3) $, que é a equação de movimento newtoniana de uma partícula livre de forças.
+% A segunda lei de Newton é comumente escrita na equação 3-vetorial:
+% \[\dfrac{d\mathbf{p}}{dt}=\mathbf{F} ,\]
+% onde $ \mathbf{p} $ é o momento linear e $ \mathbf{F} $ é a força aplicada. Sua generalização para a Relatividade Geral é dada pela equação \eqref{eq:SegundaLeiDeNewtonGeneralizada}.
 
-A segunda lei de Newton é comumente escrita na equação 3-vetorial:
-\[\dfrac{d\mathbf{p}}{dt}=\mathbf{F} ,\]
-onde $ \mathbf{p} $ é o momento linear e $ \mathbf{F} $ é a força aplicada. Sua generalização para a Relatividade Geral é dada pela equação \textbf{eq:SegundaLeiDeNewtonGeneralizada}.
-
-Já a terceira lei deve ser tratada com cuidado. Ela diz que ``A toda ação há sempre uma reação oposta e de igual intensidade: as ações mútuas de dois corpos um sobre o outro são sempre iguais e dirigidas em sentidos opostos.''. Para a Relatividade Geral, a ideia de força gravitacional é substituída pela ideia de que um corpo massivo curva o espaço-tempo a seu redor. É importante notar que essa abordagem ignora a curvatura produzida pela partícula seguindo a geodésica, ou seja, ela é uma partícula teste e não se considera seus efeitos sobre o corpo produzindo o campo gravitacional.
+% Já a terceira lei deve ser tratada com cuidado. Ela diz que ``A toda ação há sempre uma reação oposta e de igual intensidade: as ações mútuas de dois corpos um sobre o outro são sempre iguais e dirigidas em sentidos opostos.''. Para a Relatividade Geral, a ideia de força gravitacional é substituída pela ideia de que um corpo massivo curva o espaço-tempo a seu redor. É importante notar que essa abordagem ignora a curvatura produzida pela partícula seguindo a geodésica, ou seja, ela é uma partícula teste e não se considera seus efeitos sobre o corpo produzindo o campo gravitacional.
 
 
-\section{*Potencial gravitacional e a geodésica}\label{sec:PotencialGravitacionalGeodesica}
+\section{Potencial gravitacional e a geodésica}\label{sec:PotencialGravitacionalGeodesica}
 
 Suponha um sistema de coordenadas no qual o tensor de métrica é dado por
 
@@ -248,17 +433,28 @@ g_{\mu \nu} \equiv \eta_{\mu \nu}+h_{\mu \nu}
 
 onde $ h_{\mu \nu} $ é pequeno mas não desprezível. Além disso, considere que o campo gravitacional, expresso por $ h_{\mu\nu} $ é quasi-estático, isto é, $ \partial_{0} h_{\mu \nu} \equiv c^{-1} \partial h_{\mu \nu} / \partial t \ll \partial_{i} h_{\mu \nu} (i=1,2,3) $.
 
-Se, em vez de utilizarmos o tempo próprio $ \tau $ como parâmetro, mas a coordenada do tempo $ t $, definida por $ x^0 \equiv ct $ 
-, então a equação de geodésica que dá a trajetória de uma partícula livre é da forma
+Se, em vez de utilizarmos o tempo próprio $ \tau $ como parâmetro, mas a coordenada do tempo $ t $, definida por $ x^0 \equiv ct $, temos, a partir da regra da cadeia,
+\[
+\frac{du^i}{d\tau}=\frac{du^i}{dt}\frac{dt}{d\tau}
+\]
+e
+\[
+	\frac{d^2u^i}{d\tau^2}=\frac{d}{dt}\left( \frac{du^i}{d\tau} \right)\frac{dt}{d\tau} = \frac{d^2u^i}{dt^2}\left( \frac{dt}{d\tau} \right)^2 + \frac{du^i}{dt}\frac{d^2t}{d\tau^2}.
+\]
+Substituindo na equação geodésica, temos
+\[
+	\frac{d^2u^i}{dt^2}\left( \frac{dt}{d\tau} \right)^2 + \frac{du^i}{dt}\frac{d^2t}{d\tau^2} + \Gamma^i_{jk} \frac{du^j}{dt}\frac{du^k}{dt}\left( \frac{dt}{d\tau} \right)^2 = 0 ,
+\]
+ou
 \begin{equation}\label{eq:TrajetoriaEmT}
 \frac{d^{2} x^{\mu}}{d t^{2}}+\Gamma_{\nu \sigma}^{\mu} \frac{d x^{\nu}}{d t} \frac{d x^{\sigma}}{d t}=h(t) \frac{d x^{\mu}}{d t} ,
 \end{equation}
 onde
 \begin{equation}\label{eq:HDefinicao}
-h(t) \equiv-\frac{d^{2} t}{d \tau^{2}}\left(\frac{d t}{d \tau}\right)^{-2}=\frac{d^{2} \tau}{d t^{2}}\left(\frac{d \tau}{d t}\right)^{-1}
+h(t) \equiv-\frac{d^{2} t}{d \tau^{2}}\left(\frac{d t}{d \tau}\right)^{-2}=\frac{d^{2} \tau}{d t^{2}}\left(\frac{d \tau}{d t}\right)^{-1},
 \end{equation}
+a partir da regra da cadeia.
 
-{\color{red} prova no caderno de exercícios, pg. 4 [trocar $ s $ por $ \tau $]}
 
 Dividindo-se por $ c^2 $, a parte espacial da equação \eqref{eq:TrajetoriaEmT} pode ser escrita como
 \begin{equation}\label{eq:TrajetoriaParteEspacial}
@@ -275,27 +471,25 @@ g^{\mu \nu}=\eta^{\mu \nu}-h^{\mu \nu} \qq{e} \Gamma_{\nu \sigma}^{\mu}=\tfrac{1
 	Suponha que $ g^{\mu \nu}=\eta^{\mu \nu}+f^{\mu \nu} $, onde $ f^{\mu\nu} $ é pequeno. Então,
 	 \[\delta_{\nu}^{\mu}=g^{\mu \sigma} g_{\sigma \nu}=\left(\eta^{\mu \sigma}+f^{\mu \sigma}\right)\left(\eta_{\sigma \nu}+h_{\sigma \nu}\right) \approx
 	 \eta^{\mu\sigma}\eta_{\sigma\nu}+\eta^{\mu\sigma}h_{\sigma\nu}+f^{\mu\sigma}\eta_{\sigma \nu} \]
-	 
 	 \[
 	 \Rightarrow f^{\mu\sigma}\eta_{\sigma \nu}= (\delta_{\nu}^{\mu} - \eta^{\mu\sigma}\eta_{\sigma\nu})-\eta^{\mu\sigma}h_{\sigma\nu} = -\eta^{\mu\sigma}h_{\sigma\nu}
 	 \]
-	 
 	 Contraindo-se com $ \eta^{\nu \rho} $, chegamos em 
-	 
 	 \[f^{\mu\rho}=-h^{\mu\rho} \Rightarrow g^{\mu \nu}=\eta^{\mu \nu}-h^{\mu \nu} \]
-	 
-	 Note, também, que abaixando-se o primeiro índice dos coeficientes de conexão, chegamos em $ \Gamma_{\rho \nu \sigma}=g_{\rho\mu}\Gamma_{\nu \sigma}^\mu=
+	 Note, também, que abaixando-se o primeiro índice dos coeficientes de conexão, chegamos em 
+	 \[ \Gamma_{\rho \nu \sigma}=g_{\rho\mu}\Gamma_{\nu \sigma}^\mu=
 	 \tfrac{1}{2}g_{\rho\mu}g^{\mu\kappa}(\partial_{\nu}g_{\sigma\kappa}+\partial_{\sigma}g_{\nu\kappa}-\partial_{\kappa}g_{\mu\nu})=
-	 \tfrac{1}{2}\left(\partial_{\nu} g_{\sigma \rho}+\partial_{\sigma} g_{\nu \rho}-\partial_{\rho} g_{\nu \sigma}\right)=
-	 \tfrac{1}{2}\left(\partial_{\nu} h_{\sigma \rho}+\partial_{\sigma} h_{\nu \rho}-\partial_{\rho} h_{\nu \sigma}\right)$. Contraindo-se com $  g^{\mu \nu}=\eta^{\mu \nu}-h^{\mu \nu} $, temos 
-	 
+	 \]
+	 \[
+	 =\tfrac{1}{2}\left(\partial_{\nu} g_{\sigma \rho}+\partial_{\sigma} g_{\nu \rho}-\partial_{\rho} g_{\nu \sigma}\right)=
+	 \tfrac{1}{2}\left(\partial_{\nu} h_{\sigma \rho}+\partial_{\sigma} h_{\nu \rho}-\partial_{\rho} h_{\nu \sigma}\right).
+	\]
+	  Contraindo-se com $  g^{\mu \nu}=\eta^{\mu \nu}-h^{\mu \nu} $, temos 
 	 \[
 	 \Gamma^{\mu}_{\nu\sigma}=
 	 g^{\mu\rho}\Gamma_{\rho\nu\sigma}= \tfrac{1}{2}(\eta^{\mu\rho}-h^{\mu\rho})(\partial_{\nu} h_{\sigma \rho}+\partial_{\sigma} h_{\nu \rho}-\partial_{\rho} h_{\nu \sigma})
 	 \approx \tfrac{1}{2} \eta^{\mu \rho}\left(\partial_{\nu} h_{\sigma \rho}+\partial_{\sigma} h_{\nu \rho}-\partial_{\rho} h_{\nu \sigma}\right)
-	 \]
-	 
-	 
+	 \]	 
 \end{proof}
 
 Assim, desconsiderando-se os valores $ \partial_{0} h_{\mu \nu} $ ao somá-los com $ \partial_{i} h_{\mu \nu} $,
@@ -313,7 +507,7 @@ e
 \[
 \approx -\tfrac{1}{2} \delta^{i k}\left(\partial_{j} h_{0 k}-\partial_{k} h_{0 j}\right) .
 \]
-Desse modo, aproximamos todos os termos do lado esquerdo da equação \eqref{eq:TrajetoriaParteEspacial}. Analogamente, negligenciando produtos de $ c^{-1} d x^{i} / d t $, temos que, a partir de
+Desse modo, aproximamos todos os termos do lado esquerdo da equação \eqref{eq:TrajetoriaParteEspacial}. Analogamente, negligenciando produtos de $ c^{-1} d x^{i} / d t $, temos, a partir de
 \[
 \left(\frac{d \tau}{d t}\right)^{2}=\frac{1}{c^{2}} g_{\mu \nu} \frac{d x^{\mu}}{d t} \frac{d x^{\nu}}{d t}
 \]
@@ -358,7 +552,7 @@ g_{00}=1+2 V / c^{2}}
 
 \section{Lei da gravitação universal de Newton}\label{sec:GravitacaoNewton}
 
-A solução de Schwarzschild é uma solução exata das equações de campo da Relatividade Geral e pode-se interpretá-la como representando o campo produzido por um corpo massivo. Como deduzido no capítulo \ref{cap:EquacoesDeCampoCurvatura}, seu elemento de linha é
+A solução de Schwarzschild é uma solução exata das equações de campo da Relatividade Geral e pode-se interpretá-la como representando o campo produzido por um corpo massivo. Como deduzido na seção \ref{sec:Schwarzschild}, seu elemento de linha é
 \[c^{2} d \tau^{2}=\left(1-2 G M / r c^{2}\right) c^{2} d t^{2}-\left(1-2 G M / r c^{2}\right)^{-1} d r^{2}-r^{2} d \theta^{2}-r^{2} \sin ^{2} \theta d \phi^{2},\]
 onde $ M $ é a massa do corpo e $ G $ a constante gravitacional. Para pequenos valores de $ GM/rc^2 $ isso se aproxima do elemento de linha do espaço-tempo plano em coordenadas esféricas, onde $ r $ é a distância radial. Se definirmos as coordenadas
 \[x^{0} \equiv c t, \quad x^{1} \equiv r \sin \theta \cos \phi, \quad x^{2} \equiv r \sin \theta \sin \phi, \quad x^{3} \equiv r \cos \theta,\]
@@ -370,4 +564,4 @@ onde $ \mathbf{r} \equiv\left(x^{1}, x^{2}, x^{3}\right) $, $ m $ é a massa da 
 
 
 
-\section{*Sistema de referencial giratório}\label{sec:SistemaReferencialGiratorio}
+% \section{*Sistema de referencial giratório}\label{sec:SistemaReferencialGiratorio}
