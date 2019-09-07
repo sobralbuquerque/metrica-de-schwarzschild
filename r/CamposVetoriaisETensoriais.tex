@@ -206,7 +206,7 @@ para pontos cujas coordenadas diferem por $du^i$. Assim, chegamos na fórmula
 		ds^2=g_{ij}du^i du^j,
 	}
 \end{equation}
-que é a generaliza~çao da fórmula cartesiana $ds^2=dx^2+dy^2+dz^2$.
+que é a generalização da fórmula cartesiana $ds^2=dx^2+dy^2+dz^2$.
 
 Suponha, agora, uma função diferenciável $\phi(u,v,w,)$. Isso nos dará uma função da posição e, portanto, um campo escalar. Seu gradiente é
 \[
@@ -278,7 +278,7 @@ de modo que podemos escrever como
 \end{equation}
 Assim, para componentes covariantes, temos
 \[
-	\boldsymbol{\mu}=\boldsymbol{\mu}_{j} \mathbf{e}^{j}=\boldsymbol{\mu}_{j} U_{i^{\prime}}^{j} \mathbf{e}^{i^{\prime}}
+	\boldsymbol{\mu}=\mu_{j} \mathbf{e}^{j}=\mu_{j} U_{i^{\prime}}^{j} \mathbf{e}^{i^{\prime}}
 \]
 e, ao compararmos com $\mathbf{\mu}=\mu_{i^\prime}\mathbf{e}^{i^\prime}$ nos dá
 \begin{equation}\label{eq:TransformadaCoordenadasCovariante}
@@ -327,10 +327,151 @@ As equações \eqref{TransformadaTensorMetricaContravariante} e \eqref{eq:Transf
 
 
 
-\section{*Campos tensoriais no espaço euclidiano}\label{sec:CamposTensoriais}
+% \section{*Campos tensoriais no espaço euclidiano}\label{sec:CamposTensoriais}
 
-\section{*Variedades}\label{sec:Variedades}
+% Embora campos escalares e vetoriais sejam o suficiente para formular a Teoria da Gravitação Universal de Newton, a teoria de Einstein requer o uso de campos tensoriais. 
 
-% e campos tensoriais em variedades
 
-\section{*Propriedades da métrica}\label{sec:Metrica}
+\section{Variedades}\label{sec:Variedades}
+
+O modelo para o espaço-tempo na Relatividade Geral utiliza uma variedade quadridimensional. Dessa forma, precisamos estudar o que isso envolve.
+
+O que torna uma variedade $N$-dimensional é que seus pontos podem ser rotulados por um sistema de $N$ coordenadas reais $x^1,x^2,\ldots,x^N$, de modo que haja uma correspondência de um para um entre os pontos e as coordenadas. Além disso, vamos trabalhar com variedades dotadas de um campo tensorial de métrica, que não é um requerimento para variedades no geral. Não é necessário que toda uma variedade $M$ seja coberta por um único sistema de coordenadas e não há sistema preferencial. O caso geral é que há uma coleção de sistemas coordenados, cada um cobrindo uma região de $M$. Quando dois sistemas se sobrepõem, há um conjunto de equações dando cada coordenada de um sistema em função das coordenadas do outro. Assim, se as coordenadas $x^a$ cobrem uma região $U$ e as coordenadas $x^{a^\prime}$ cobrem a região $U^\prime$ (com essas regiões se interceptando), então as coordendas dos pontos na região de sobreposição são relacionadas por equações da forma
+\begin{equation}\label{eq:TransformacaoVariaveisLinha}
+	x^{a^\prime}=x^{a^\prime}\left(x^{1}, x^{2}, \ldots, x^{N}\right) \quad(a=1, \ldots, N) ,
+\end{equation}
+dando cada $x^{a^\prime}$ como uma função das coordenadas $x^b$, e essas tendo inversas da forma
+\begin{equation}\label{eq:TransformacaoVariaveisLinhaInversas}
+	x^{a}=x^{a}\left(x^{1^\prime}, x^{2^\prime}, \ldots, x^{N^{\prime}}\right) \quad(a=1, \ldots, N),
+\end{equation}
+dando cada $x^a$ como uma função das coordenadas $x^{b^\prime}$. Vamos assumir que as funções envolvidas são diferenciaveis, de modo que as derivadas parciais
+\[
+	X_{b}^{a^{\prime}} \equiv \frac{\partial x^{a^{\prime}}}{\partial x^{b}} \quad \text { e } \quad X_{b^{\prime}}^{a} \equiv \frac{\partial x^{a}}{\partial x^{b^{\prime}}}
+\]
+existam. A matrix $N\times N$ $[X^{a^\prime}_b]$ é a \textit{matriz jacobiana} associada às equações \eqref{eq:TransformacaoVariaveisLinha}. O fato que essas equações possuem inversas \eqref{eq:TransformacaoVariaveisLinhaInversas} significa que essa matriz é inversível, de modo que o Jacobiano $\det[X^{a^\prime}_b]$ é não nulo em cada ponto da região de intersecção. O mesmo pode ser dito para a matriz jacobiana $[X^a_{b^\prime}]$ e seu jacobiano $\det[X^a_{b^\prime}]$. De fato, ambas as matrizes são inversas, uma vez que a regra da cadeia nos dá
+\begin{equation}\label{eq:JacobianaInversa}
+	X^a_{b^\prime}X^{b^\prime}_c=\delta^a_c.
+\end{equation}
+Trocando o papel das coordenadas com linha e sem linha, chegamos na relação
+\begin{equation}\label{eq:JacobianaInversaLinha}
+	X^{a^\prime}_bX^b_{c^\prime}=\delta^a_c .
+\end{equation}
+
+Vamos definir vetores e campos vetoriais em uma variedade como objetos possuindo $N$ componentes de modo que, em uma mudança de variáveis, eles generalizam a equação \eqref{eq:TransformadaCoordenadasContravariante} ou \eqref{eq:TransformadaCoordenadasCovariante} para componentes de vetores no espaço euclidiano. Assim, definimos um \textit{vetor contravariante} em um ponto $P$ como sendo um objeto com $N$ componentes $\lambda^a$ as quais, sob uma mudança de variáveis em $P$ transformam-se de acordo com
+\begin{equation}\label{eq:TransformadaCoordenadasContraVariedade}
+	\boxed{
+		\lambda^{a^\prime} = X^{a^\prime}_b\lambda^b ,
+	}
+\end{equation}
+em que as derivadas parciais são tomadas em $P$. Um \textit{vetor covariante} é definido similarmente, cujas componentes $\mu_a$ transformam-se de acordo com
+\begin{equation}
+	\boxed{
+		\mu_{a^\prime}=X^b_{a^\prime}\mu_b .
+	}
+\end{equation}
+ Para campos vetoriais, essas leis de transformação são válidas em cada ponto em que o campo é definido.
+
+ Um exemplo de vetor contravariante é o vetor tangente a uma curva $\gamma$, que pode ser dado parametricamente por $x^a=x^a(t)$, onde $x^a(t)$ são funções diferenciaveis de $t$ para $t$ em algum intervalo $I$. 
+
+Agora, suponha que para cada sistema de coordenadas em um ponto $P$ de uma variedade $M$ há $N^{r+s}$ quantidades $\tau^{a_1\ldots a_r}_{b_1\ldots b_s}$ que, sob uma mudança de coordenadas, transformam-se de acordo com
+\begin{equation}\label{eq:TransformacaoCoordenadaTensor}
+	\boxed{
+		\tau_{b_{1}^{\prime} \ldots b_{s}^{\prime}}^{a_{1}^{\prime} \ldots a_{r}^{\prime}}=X_{c_{1}}^{a_{1}^{\prime}} \cdots X_{c_{r}}^{a_{r}^{\prime}} X_{b_{1}^{\prime}}^{d_{1}} \cdots X_{b_{s}^{\prime}}^{d_{s}} \tau_{d_{1} \ldots d_{s}}^{c_{1} \ldots c_{r}}   ,
+	}
+\end{equation}
+onde as matrizes jacobianas $[X^{a^\prime}_c],[X^d_{b^\prime}]$ são calculadas em $P$. Então, essas quantidades são as \textit{componentes de um tensor do tipo $(r,s)$ em $P$}. O mesmo vale para o caso especial em que $r=0$ ou $s=0$, de modo que a letra base $\tau$ apenas possua subscritos ou sobrescritos. Por exemplo, as componentes de um tensor do tipo $(2,0)$ transformam-se de acordo com $\tau^{a^{\prime} b^{\prime}}=X_{c}^{a^{\prime}} X_{d}^{b^{\prime}} \tau^{c d}$.
+
+A soma $(r+s)$ é chamada de ordem do tensor. Um tensor do tipo $(r,0)$ é chamado de \textit{tensor contravariante} de ordem $r$, ao passo que um tensor do tipo $(0,s)$ é chamado de $tensor covariante$ de ordem $s$. Se $rs\neq0$, o tensor é descrito como \textit{misto}. Agora podemos reconhecer um vetor contravariante em $P$ como um tensor do tipo $(1,0)$, um vetor covariante como um tensor do tipo $(0,1)$ e um escalar como um  do tipo $(0,0)$.
+
+Se em cada ponto de uma região $N$-dimensional $V$ em $M$ existir um tensor do tipo $(r,s)$, então nós temos um \textit{campo tensorial} em $V$. Podemos, também, ter tensores definidos em cada ponto de uma curva $\gamma$ de $M$ mas não uma região $N$-dimensional (tais como os vetores tangentes a uma curva). Estes constituem um \textit{campo tensorial ao longo de $\gamma$}. O mesmo se aplica a um campo tensorial definido em uma superfície $\Sigma$ em $M$.
+
+Vamos considerar, agora, algumas operações com tensores. A primeira é a \textit{adição}: somar componentes correspondentes de dois tensores do mesmo tipo resulta em quantidades que são componentes de um tensor do mesmo tipo. A segunda é a \textit{multiplicação por escalares}: multiplicar cada componente de um tensor por um escalar resulta em quantidades que são componentes de um tensor do mesmo tipo. A validade dessas operações segue diretamente da fórmula de transformação de componentes.
+
+A terceira operação é a \textit{multiplicação de tensores}, que dá o produto tensorial entre dois destes. As componentes de um produto tensorial são obtidas ao multiplicarem-se as componentes de ambos os tensores envolvidos, de modo a formar todos os produtos possíveis. Por exemplo, se colocarmos $\sigma^a_{bc}\equiv\lambda_b\tau^a_c$, onde $\lambda_b$ são as componentes de um tensor do tipo $(0,1)$ que se transformam de acordo com $\lambda_{b^\prime}=X^e_{b^\prime}\lambda_e$ e $\tau^a_c$ são as de um tensor do tipo $(1,1)$ que se transformam sob $\tau^{a^\prime}_{c^\prime}=X^{a^\prime}_dX^f_{c^\prime}\tau^d_f$, então para $\sigma^{a^\prime}_{b^\prime c^\prime}$, nós temos
+\[
+\begin{aligned} \sigma_{b^{\prime} c^{\prime}}^{a^{\prime}} &=\left(X_{b^{\prime}}^{e} \lambda_{e}\right)\left(X_{d}^{a^{\prime}} X_{c^{\prime}}^{f} \tau_{f}^{d}\right) \\ &=X_{d}^{a^{\prime}} X_{b^{\prime}}^{e} X_{c^{\prime}}^{f} \sigma_{e f}^{d}  ,
+\end{aligned}
+\]
+mostrando que $\sigma^a_{bc}$ são as componentes de um tensor do tipo $(1,2)$.
+
+A quarta operação é a de \textit{contração}. Ela pode ser aplicada a qualquer conjunto de números simbolizados por letras com subscritos e sobrescritos. Se há $r$ sobrescritos e $s$ subscritos, então há $rs$ modos em que isso pode ser feito, cada um gerando uma contração do conjunto de números original. Se essa operação for feita com um tensor do tipo $(r,s)$, então suas contrações são componentes de um tensor do tipo $(r-1,s-1)$. A prova para o caso geral é trabalhosa e por isso vamos dar apenas um exemplo que ilustra bem esse resultado.
+
+
+\noindent
+\rule{\textwidth}{0.4pt}
+\begin{exemplo}
+Sejam $\tau^{ab}_c$ as componentes de um tensor tipo $(2,1)$, e $\sigma^a=\tau^{ab}_b$ uma contração. Usando coordenadas linha, nós formaríamos, analogamente, $\sigma^{a^\prime}=\tau^{a^\prime b^\prime}_{b^\prime}$. Assim,
+\[
+	\sigma^{a^{\prime}}=\tau_{b^{\prime}}^{a^{\prime} b^{\prime}}=\tau_{e}^{c d} X_{c}^{a^{\prime}} X_{d}^{b^{\prime}} X_{b^{\prime}}^{e}=\tau_{e}^{c d} X_{c}^{a^{\prime}} \delta_{d}^{e}=\tau_{d}^{c d} X_{c}^{a^{\prime}}=\sigma^{c} X_{c}^{a^{\prime}} ,
+\]
+mostrando que os números $\sigma^a$ são as componentes de um tensor do tipo $(1,0)$.
+
+\noindent
+\rule{\textwidth}{0.4pt}	
+\end{exemplo}
+
+Um tensor especial é o \textit{tensor de Kronecker}, que é um tensor do tipo $(1,1)$ com a propriedade de que em qualquer sistema de coordenadas usado, suas componentes $\kappa^a_b$ são dadas pelo delta de Kronecker $\delta^a_b$. Para ver isso, suponha que, em um sistema de coordenadas sem linha, nós tenhamos $\kappa_b^a=\delta^a_b$. Então, quando transformamos para um sistema de coordenado com linha, as componentes se tornam
+\[
+	\kappa^{a^\prime}_{b^\prime} = X^{a^\prime}_c X^d_{b^\prime}\delta^c_d = X^{a^\prime}_c X^c_{b^\prime} = \delta^a_b .
+\]
+Por causa disso, denotaremos suas componentes por $\delta^a_b$ em vez de $\kappa^a_b$ (O que foi mostrado aqui é que a propriedade $\kappa^a_b=\delta^a_b$ é independente de coordendas).
+
+Vamos agora analisar como podemos associar tensores de diferentes tipos ao contrai-los com os tensores de métrica covariante ou contravariante.
+
+Como dito no início da seção, assumimos que esta variedade possui um tensor de métrica em cada ponto $g_{ab}$. Esse tensor é simétrico, de modo que $g_{ab}=g_{ba}$, e é não singular, de modo que a matriz $[g_{ab}]$ possui inversa $[g^{ab}]$ cujos elementos satisfazem
+\begin{equation}\label{eq:TensorMetricaDelta}
+	g^{ab}g_{bc}=\delta^a_c .
+\end{equation}
+Como $[g_{ab}]$ é uma matriz simétrica, sua inversa também o é, então $g^{ab}=g^{ba}$.
+
+Nós temos agora um tensor de métrica com componentes $g_{ab}$ que podem ser usadas para abaixar sufixos e o tensor de métrica contravariante com componentes $g^{ab}$ que podem ser usadas para levantar sufixos. Por exemplo, se $\tau^{ab}_c$ são as componentes de um tensor do tipo $(2,1)$, então usando o tensor de métrica para abaixar o primeiro sobrescrito nós dá um tensor do tipo $(1,2)$ cujas componentes são definidas por $\tensor{\tau}{_a^b_c} = g_{ad}\tau^{db}_c$. Se o tensor de métrica contravariante é utilizado para levantar o sufixo abaixado, o tensor original é recuperado: $g^{a d} \tau_{d c}^{b}=g^{a d} g_{d e} \tau_{c}^{e b}=\delta_{e}^{a} \tau_{c}^{e b}=\tau_{c}^{a b}$.
+
+Tensores que podem ser obtidos ao se levantarem ou abaixarem sufixos uns dos outros são chamados de \textit{associados}, e iremos utilizar a mesma letra base para as componentes, como no exemplo anterior. Isso pode ser ambíguo pelo fato de que mais de um tensor do mesmo tipo pode ser associado a um dado tensor. Por exemplo, abaixando-se o primeiro sobrescrito das componentes $\tau^a_b$ de um tensor tipo $(2,0)$ nos dá um de tipo $(1,1)$ que é, em geral, diferente do obtido ao abaixar-se o segundo sobrescrito. A distinção pode ser feita ao utilizar-se um espaçamento nos sufixos:
+\[
+	\tensor{\tau}{_a^b} = g_{ac}\tau^{cb}, \qquad \tensor{\tau}{^a_b}=g_{bc}\tau^{ac} .
+\]
+Os tensores de métrica covariante, contravariante e o tensor de Kronecker são associados, visto que $\delta_{b}^{a}=g^{a c} g_{c b}$ e $g^{a b}=g^{a d} \delta_{d}^{b}=g^{a d} g^{b c} g_{c d}$. No entanto, utilizamos $\delta^a_b$ em vez de $g^a_b$ pela forma especial de suas componentes.
+
+A partir de agora, utilizaremos uma convenção de ``confundir'' um tensor com suas componentes. Isto é, vamos utilizar a nomenclatura de \textit{tensor} $\tau^{ab}$ em vez de \textit{tensor com componentes} $\tau^{ab}$.
+
+\section{Propriedades da métrica}\label{sec:Metrica}
+
+O tensor de métrica $g_{ab}$ nos dá um produto interno $g_{ab}\lambda^a\mu^b$ para vetores $\lambda^a,\mu^a$ em cada ponto $P$ de uma variedade $M$. Assim como no espaço euclidiano \eqref{eq:ProdutoInterno}, há quantro modos de escrevê-lo:
+\begin{equation}
+	\boxed{
+	g_{ab}\lambda^a\mu^b= g^{ab}\lambda_a\mu_b = \lambda_a\mu^a = \lambda^a\mu_a .
+	}
+\end{equation}
+Usualmente, pede-se que um produto interno seja \textit{positivo definido}, isto é, $g_{ab}\lambda^a\lambda^b\geq 0$ para todos os vetores $\lambda^a$ e $g_{ab}\lambda^a\lambda^b=0 \Leftrightarrow \lambda^a=0$. Uma variedade com tensor de métrica positivo definido é chamada de \textit{riemanniana}. No entanto, para podermos modelar o espaço-tempo na Relatividade Geral, vamos ``relaxar'' essa condição e pedir apenas que o tensor de métrica seja não-singular, de modo que a matriz $[g_{ab}]$ seja inversível. Assim, o espaço-tempo de RG é uma variedade chamada \textit{pseudo-riemanniana}. Vamos agora fazer algumas definições de modo a generalizar as propriedades para o espaço euclidiano.
+
+O \textit{módulo} de um vetor $\lambda^a$ é dado por
+\begin{equation}\label{eq:ModuloVetorVariedade}
+	\left|g_{a b} \lambda^{a} \lambda^{b}\right|^{1 / 2}=\left|g^{a b} \lambda_{a} \lambda_{b}\right|^{1 / 2}=\left|\lambda_{a} \lambda^{a}\right|^{1 / 2}
+\end{equation}
+Um vetor \textit{unitário} é um cujo módulo é 1. Se estamos em uma variedade pseudo-riemanniana, podemos ter que $|\lambda_a\lambda^a|^{1/2}=0$ para $\lambda^a\neq0$. Neste caso, dizemos que o vetor $\lambda^a$ é \textit{nulo}.
+
+O \textit{ângulo} $\theta$ entre dois vetores $\lambda^a,\mu^a$ não nulos é dado por
+\[
+	\cos \theta=\frac{g_{a b} \lambda^{a} \mu^{b}}{\left|g_{c d} \lambda^{c} \lambda^{d}\right|^{1 / 2}\left|g_{e f} \mu^{e} \mu^{f}\right|^{1 / 2}}
+\]
+Se o tensor de métrica é indefinido, essa fórmula pode nos dar $|\cos\theta|>1$, resultando em um valor não-real para $\theta$. Dois vetores são \textit{ortogonais} ou \textit{perpendiculares} se seu produto interno for zero.
+
+Como explicado na seção \ref{sec:Variedades}, uma curva $\gamma$ em uma variedade é dada ao colocar $x^a=x^a(t)$, onde o parâmetro $t$ pertence a algum intervalo $I$, e em cada ponto de $\gamma$ um vetor tangente é dado por $\dot{x}^a\equiv dx^a/dt$. Se $I$ é dado por $a\leq t\leq b$, então (generalizando a equação \eqref{eq:ComprimentoCurvaVariedade}), nós podemos definir o \textit{comprimento} de $\gamma$ como sendo
+\begin{equation}\label{eq:ComprimentoCurvaVariedade}
+	\boxed{
+	L = \int_a^b |g_{ab}\dot{x}^a\dot{x}^b|^{1/2}dt .
+	}
+\end{equation}
+Se em uma curva o vetor tangente em cada ponto é nulo, de modo que $g_{ab}\dot{x}^a\dot{x}^b=0$ em todo ponto, temos uma curva de comprimento zero. Dizemos que esta é uma \textit{curva nula}.
+
+Note que apenas definimos o comprimento de curvas, mas não a distância entre pares de pontos arbitrários em $M$. No entanto, podemos definir a distância $\delta s$ entre pontos próximos cujas diferenças nas coordenadas são pequenas. Eles podem ser considerados como pontos em uma curva dada por parâmetros cujas diferenças $\delta t$ são pequenas. Como, em primeira ordem, $\delta x^a= \dot{x}^a \delta t$, a definição nos dá $\delta s^2 = |g_{ab}\delta x^a\delta x^b|$. Na versão infinitesimal, temos
+\begin{equation}\label{eq:ElementoDeLinhaVariedade}
+	ds^2 = |g_{ab}dx^adx^b|
+\end{equation}
+
+Isso generaliza o conceito de comprimento Lorentziano, apresentado na seção \ref{sec:GeometriaHiperbolica}.
+O tipo de variedade que utilizamos para modelar o espaço-tempo é uma variedade pseudo-riemanniana quadridimensional cujo tensor de métrica $g_{\mu\nu} (\mu,\nu=0,1,2,3)$ possui assinatura $(+---)$. Isso significa que  em qualquer ponto $P$ se nós adotarmos um sistema de coordenadas que nos dá $[g_{\mu\nu}]_P$ como uma matriz diagonal, então o primeiro elemento é positivo e os outros três são negativos. Todo vetor diferente de zero é, então, descrito como
+\[
+\left\{\begin{array}{l}{\text {do tipo tempo}} \\ {\text {nulo}} \\ {\text {do tipo espaço}}\end{array} \text { se } g_{\mu \nu} \lambda^{\mu} \lambda^{\nu}\left\{\begin{array}{l}{>0} \\ {=0} \\ {<0}\end{array}\right.\right. .
+\]
+Essas definições também valem para curvas (ou partes de curvas) a partir de seus vetores tangentes.
