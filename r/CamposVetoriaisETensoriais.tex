@@ -1,6 +1,6 @@
 \chapter{Campos vetoriais e tensoriais}\label{cap:CamposVetoriaisETensoriais}
 \section{Sistemas de coordenadas no espaço euclidiano}\label{sec:SistemasCoordenadasEspacoEuclidiano}
-Considerando um espaço euclidiano tridimensional equipado com um sistema cartesiano de coordenadas $ (x,y,z) $ e um conjunto de vetores associados $ \{\mathbf{i}, \mathbf{j}, \mathbf{k}\} $. Seja um outro sistema de coordenadas $ (u,v,w) $ não-cartesiano. Nós podemos expressar as coordenadas cartesianas em termos destas:
+Considere um espaço euclidiano tridimensional equipado com um sistema cartesiano de coordenadas $ (x,y,z) $ e um conjunto de vetores associados $ \{\mathbf{i}, \mathbf{j}, \mathbf{k}\} $. Seja um outro sistema de coordenadas $ (u,v,w) $ não-cartesiano. Nós podemos expressar as coordenadas cartesianas em termos destas:
 
 \begin{equation}\label{eq:TransformacaoXU}
 	x=x(u, v, w), \quad y=y(u, v, w), \quad z=z(u, v, w)
@@ -36,7 +36,7 @@ Sejam
 h_{1} \equiv\left|\mathbf{e}_{u}\right|, \quad h_{2} \equiv\left|\mathbf{e}_{v}\right|, \quad h_{3} \equiv\left|\mathbf{e}_{w}\right|
 \]
 
-Podem-se normalizar os vetores:
+Podemos normalizar os vetores:
 
 \[
 \hat{\mathbf{e}}_{u}=\frac{1}{h_{1}} \mathbf{e}_{u}, \quad \mathbf{\hat { e }}_{v}=\frac{1}{h_{2}} \mathbf{e}_{v}, \quad \mathbf{\hat { e }}_{w}=\frac{1}{h_{3}} \mathbf{e}_{w}
@@ -62,7 +62,7 @@ Assim, podemos trabalhar com cada coordenada como um campo escalar e calcular se
 \begin{aligned} \nabla u &=\frac{\partial u}{\partial x} \mathbf{i}+\frac{\partial u}{\partial y} \mathbf{j}+\frac{\partial u}{\partial z} \mathbf{k} \\ \nabla v &=\frac{\partial v}{\partial x} \mathbf{i}+\frac{\partial v}{\partial y} \mathbf{j}+\frac{\partial v}{\partial z} \mathbf{k} \\ \nabla w &=\frac{\partial w}{\partial x} \mathbf{i}+\frac{\partial w}{\partial y} \mathbf{j}+\frac{\partial w}{\partial z} \mathbf{k} \end{aligned}
 \end{equation}
 
-A cada ponto $ P $, esses vetores são normais às superfícies coordenadas correspondentes, que são $ u=u_0, v=v_0, w=w_0 $. Assim, eles formam uma base alternativa em $ P $. Chamamo-na de base \textit{dual}. Para diferenciá-la da obtida anteriormente, os sufixos são sobrescritos:
+Em cada ponto $ P $ esses vetores são normais às superfícies coordenadas correspondentes, que são $ u=u_0, v=v_0, w=w_0 $. Assim, eles formam uma base alternativa em $ P $. Essa base é chamada de \textit{dual}. Para diferenciá-la da obtida anteriormente, os sufixos são sobrescritos:
 
 \begin{equation}\label{eq:VetoresDuaisU}
 \boxed{\mathbf{e}^{u} \equiv \nabla u, \quad \mathbf{e}^{v} \equiv \nabla v, \quad \mathbf{e}^{w} \equiv \nabla w}
@@ -77,7 +77,7 @@ Dado um campo vetorial $ \mathbf{\lambda} $, é possível escrevê-lo em ambas a
 \section{Notação de sufixos}\label{sec:NotacaoSufixo}
 A notação de sufixos nos dá uma maneira de tratar uma coleção de quantidades relacionadas, tais como as coordenadas de um ponto ou um vetor. A ideia básica é representar os elementos dessa coleção com uma mesma letra base na qual se adiciona um sufixo, de modo a rotular a quantidade da coleção. Podem-se utilizar sufixos tanto subscritos quanto sobrescritos, além de poder haver mais de um sufixo anexado à letra base. Iremos utilizá-lo, junto a convenção de somatório, de modo a compactar o tratamento das quantidades em que estamos interessados.
 
-Primeiramente, vamos convencionar que sufixos simbolizados por letras minúsculas no meio do alfabeto (i.e., $i, j, k, \ldots$) sempre variam ao longo dos valores $1, 2, 3$, de modo que não precisamos escrever um comentário em parêntesis $(i=1,2,3)$ sempre que utilizarmos um índice. Além disso, utilizaremos a convenção de que um índice representado por uma letra minúscula no meio do alfabeto ($a,b,c,\ldots$) varia em $1,2,\ldots,N$; letras maíusculas no inicio do alfabeto ($A,B,C\ldots$) vão de $1,2$ e; letras do alfabeto grego ($\mu,\nu,\sigma,\ldots$) variam ao longo de $0,1,2,3$.
+Primeiramente, vamos convencionar que sufixos simbolizados por letras minúsculas no meio do alfabeto (i.e., $i, j, k, \ldots$) sempre variam ao longo dos valores $1, 2, 3$, de modo que não precisamos escrever um comentário em parêntesis $(i=1,2,3)$ sempre que utilizarmos um índice. Além disso, utilizaremos a convenção de que um índice representado por uma letra minúscula no começo do alfabeto ($a,b,c,\ldots$) varia em $1,2,\ldots,N$; letras maiúsculas no inicio do alfabeto ($A,B,C\ldots$) assumem os valores $1$ ou $2$ e; letras do alfabeto grego ($\mu,\nu,\sigma,\ldots$) variam ao longo de $0,1,2,3$.
 
 Assim, utilizaremos $u^i$ em vez de $(u,v,w)$ para as coordenadas, $\left\{\mathbf{e}_{i}\right\}$ em vez de $\left\{\mathbf{e}_{u}, \mathbf{e}_{v}, \mathbf{e}_{w}\right\}$ para a base natural e $\left\{\mathbf{e}^{i}\right\}$ em vez de $\left\{\mathbf{e}^{u}, \mathbf{e}^{v}, \mathbf{e}^{w}\right\}$ para a base dual. Para um vetor $\boldsymbol{\lambda}$, denotamos suas componentes em relação a $\left\{\mathbf{e}_{i}\right\}$ como $\lambda^i$ e suas componentes com relação a $\left\{\mathbf{e}^{i}\right\}$ como $\lambda_i$.
 Assim, podemos reescrever as equações \eqref{eq:LambdaEmAmbasAsBases} como 
@@ -90,7 +90,7 @@ Além disso, podemos economizar mais nossa notação utilizando a convenção de
 	\boldsymbol{\lambda}=\lambda^{i} \mathbf{e}_{i} \qq{e} \boldsymbol{\lambda}=\lambda_{i} \mathbf{e}^{i} .
 \end{equation}
 
-As componentes $\lambda^i$ de um vetor $\boldsymbol{\lambda}$ que provêm do uso da base natural são chamados de \textit{componentes contravariantes}, enquanto os componentes $\lambda_i$ que surgem do uso da base dual são chamados de \textit{componentes contravariantes}.
+As componentes $\lambda^i$ de um vetor $\boldsymbol{\lambda}$ que provêm do uso da base natural são chamadas de \textit{componentes contravariantes}, enquanto as componentes $\lambda_i$ que surgem do uso da base dual são chamadas de \textit{componentes covariantes}.
 
 Utilizando as definições de $\mathbf{e}^i$ e $\mathbf{e}_j$, temos
 \[
@@ -133,7 +133,7 @@ onde
 \end{equation}
 Também podemos misturar e escrever como
 \[
-	\boldsymbol{\lambda} \cdot \boldsymbol{\mu}=\lambda_{i} \mathbf{e}^{i} \cdot \boldsymbol{\mu}^{j} \mathbf{e}_{j}=\lambda_{i} \mu^{j} \delta_{j}^{i}=\lambda_{i} \mu^{i}
+	\boldsymbol{\lambda} \cdot \boldsymbol{\mu}=\lambda_{i} \mathbf{e}^{i} \cdot \mu^{j} \mathbf{e}_{j}=\lambda_{i} \mu^{j} \delta_{j}^{i}=\lambda_{i} \mu^{i}
 \]
 Assim, temos quatro modos diferentes de escrever o produto interno:
 \begin{equation}\label{eq:ProdutoInterno}
@@ -141,17 +141,17 @@ Assim, temos quatro modos diferentes de escrever o produto interno:
 		\boldsymbol{\lambda} \cdot \boldsymbol{\mu}=g_{ij}\lambda^i\mu^j = g^{ij}\lambda_i\mu_j = \lambda_i\mu^i = \lambda^i\mu_i .
 	}
 \end{equation}
-O fato que $g^{ij}\lambda_i\mu_j=\lambda_i\mu^i$ vale para componentes arbitrárias $\lambda_i$ implica que 
+O fato de que $g^{ij}\lambda_i\mu_j=\lambda_i\mu^i$ vale para componentes arbitrárias $\lambda_i$ implica que 
 \begin{equation}\label{eq:LevantamentoIndice}
 	g^{ij}\mu_j=\mu^i ,
 \end{equation}
-mostrando que as quantidades $g^{ij}$ pode ser utilizada para levantar o sufixo para obter as componentes contravariantes de $\mu$ a partir das covariantes. Analogamente, temos 
+mostrando que as quantidades $g^{ij}$ podem ser utilizadas para levantar o sufixo para obter as componentes contravariantes de $\mu$ a partir das covariantes. Analogamente, temos 
 \begin{equation}\label{eq:AbaixamentoIndice}
 	g_{ij}\mu^j=\mu_i ,
 \end{equation}
-mostrando que as quantidades $g_{ij}$ revertem a operação, abaixando-se os sufixos. Combinando as operações, temos
+mostrando que as quantidades $g_{ij}$ revertem a operação, abaixando os sufixos. Combinando as operações, temos
 \[
-	\mu^i = g^{ij}\mu_j=g^{ij}g_{ik}\mu^k ,
+	\mu^i = g^{ij}\mu_j=g^{ij}g_{jk}\mu^k ,
 \]
 e, porque isso vale para componentes $\mu^i$ arbitrárias, podemos deduzir que
 \begin{equation}
@@ -172,7 +172,7 @@ Suponha que temos as relações
 \begin{equation}\label{eq:CoordenadasFuncoesdeT}
 	u=u(t), \quad v=v(t), \quad w=w(t) ,
 \end{equation}
-onde $u(t),v(t),w(t)$ são funções diferenciaveis de $t$, onde este pertence a algum intervalo $I$. Então os pontos cujas coordenadas são dadas por \eqref{eq:CoordenadasFuncoesdeT} são parte de uma curva $\gamma$ parametrizada por $t$. O vetor posição desses pontos é 
+onde $u(t),v(t),w(t)$ são funções diferenciáveis de $t$, onde este pertence a algum intervalo $I$. Então os pontos cujas coordenadas são dadas por \eqref{eq:CoordenadasFuncoesdeT} são parte de uma curva $\gamma$ parametrizada por $t$. O vetor posição desses pontos é 
 \[
 	\mathbf{r}(t)=x(u(t), v(t), w(t)) \mathbf{i}+y(u(t), v(t), w(t)) \mathbf{j}+z(u(t), v(t), w(t)) \mathbf{k}	
 \]
@@ -208,7 +208,7 @@ para pontos cujas coordenadas diferem por $du^i$. Assim, chegamos na fórmula
 \end{equation}
 que é a generalização da fórmula cartesiana $ds^2=dx^2+dy^2+dz^2$.
 
-Suponha, agora, uma função diferenciável $\phi(u,v,w,)$. Isso nos dará uma função da posição e, portanto, um campo escalar. Seu gradiente é
+Suponha, agora, uma função diferenciável $\phi(u,v,w)$. Isso nos dará uma função da posição e, portanto, um campo escalar. Seu gradiente é
 \[
 	\nabla \phi \equiv \frac{\partial \phi}{\partial x} \mathbf{i}+\frac{\partial \phi}{\partial y} \mathbf{j}+\frac{\partial \phi}{\partial z} \mathbf{k} ,
 \]
@@ -227,9 +227,9 @@ Isto é,
 \begin{equation}\label{eq:GradientePhi}
 	\nabla\phi = \pdv{\phi}{u^i}\mathbf{e}^i,
 \end{equation}
-mostrando que as derivadas parciais $\partial\phi/\partial u^i$ são as componentes de $\nabla\phi$ para a base dual $\{\mathbf{e}^i\}$. Note que, considerar o sufixo repetido como uma indicação de somatório na equação \eqref{eq:GradientePhi}, estamos tratando o sufixo $i$ em $\partial\phi/\partial u^i$ como um subscrito. Podemos deixar isso mais claro ao denotarmos o operador de diferenciação parcial $\partial/\partial u^i$ para $\partial_i$, de modo que $\partial\phi/\partial u^i=\partial_i\phi$. A notação $\phi_{,i}$ também é utilizada para os mesmos fins. Assim, podemos reescrever a equação \eqref{eq:GradientePhi} como 
+mostrando que as derivadas parciais $\partial\phi/\partial u^i$ são as componentes de $\nabla\phi$ para a base dual $\{\mathbf{e}^i\}$. Note que, ao considerar o sufixo repetido como uma indicação de somatório na equação \eqref{eq:GradientePhi}, estamos tratando o sufixo $i$ em $\partial\phi/\partial u^i$ como um subscrito. Podemos deixar isso mais claro ao denotarmos o operador de diferenciação parcial $\partial/\partial u^i$ para $\partial_i$, de modo que $\partial\phi/\partial u^i=\partial_i\phi$. A notação $\phi_{,i}$ também é utilizada para os mesmos fins. Assim, podemos reescrever a equação \eqref{eq:GradientePhi} como 
 \begin{equation}\label{eq:GradientePhiNotacao}
-	\nabla\phi=\partial_\phi \mathbf{e}^i = \phi_{,i}\mathbf{e}^i,
+	\nabla\phi=\partial_i \phi \,\mathbf{e}^i = \phi_{,i}\mathbf{e}^i,
 \end{equation}
 com o sufixo sendo utilizado, corretamente, como subscrito. 
 
@@ -238,7 +238,7 @@ Assim, vemos que, ao lidarmos com tangentes a curvas, é apropriado utilizar a b
 
 \section{Transformações de coordenadas em espaços euclidianos}\label{sec:TransformacoesCoordenadas}
 
-Suponha que temos dois sistemas de coordenadas curvilíneos no espaço euclidiano, denotados por $(u,v,w)$ e $(u^\prime,v^\prime,w^\prime)$. Podemos distingui-los ao chamá-los de coordenadas 'sem linha' e 'com linha', respectivamente. Vamos estudar como as componentes de vetores relativas às bases definidas pelos sistemas coordenados são transformadas quando passamos de um referencial sem linha para um linha (ou \textit{vice versa}). As coordenadas do primeiro serão denotadas por $u^i$, ao passo que no sistema linha, as coordenadas serão $u^{i^\prime}$. Seguindo a notação, temos que a base natural é dada por $\{\mathbf{e}_{i^\prime}\}$, enquanto a base dual é $\{\mathbf{e}^{i^\prime}\}$. Assim, podemos escrever
+Suponha que temos dois sistemas de coordenadas curvilíneos no espaço euclidiano, denotados por $(u,v,w)$ e $(u^\prime,v^\prime,w^\prime)$. Podemos distingui-los ao chamá-los de coordenadas 'sem linha' e 'com linha', respectivamente. Vamos estudar como as componentes de vetores relativas às bases definidas pelos sistemas coordenados são transformadas quando passamos de um referencial sem linha para um com linha (ou \textit{vice versa}). As coordenadas do primeiro serão denotadas por $u^i$, ao passo que no sistema com linha, as coordenadas serão $u^{i^\prime}$. Seguindo a notação, temos que a base natural é dada por $\{\mathbf{e}_{i^\prime}\}$, enquanto a base dual é $\{\mathbf{e}^{i^\prime}\}$. Assim, podemos escrever
 \begin{equation}\label{eq:CoordenadasLinha}
 	\boldsymbol{\lambda}=\lambda^{i^\prime}\mathbf{e}_{i^\prime} , 
 \end{equation}
@@ -252,7 +252,7 @@ Podemos, então, escrever
 \begin{equation}\label{eq:TransformadaContravarianteBase}
 	\mathbf{e}_j = U^{i^\prime}_j \mathbf{e}_{i^\prime}, 
 \end{equation}
-onde $U^{i^\prime}_j $ é um símbolo que representa a derivada parcial $\pdv*{u^{i^\prime}}{u^j}$. Temos, então
+onde $U^{i^\prime}_j $ é um símbolo que representa a derivada parcial $\pdv*{u^{i^\prime}}{u^j}$. Assim, obtemos
 \[
 	\boldsymbol{\lambda}=\lambda^{j} \mathbf{e}_{j}=\lambda^{j} U_{j}^{i^{\prime}} \mathbf{e}_{i^{\prime}}.
 \]
@@ -262,9 +262,7 @@ Comparando com a equação \eqref{eq:CoordenadasLinha}, chegamos em
 		\lambda^{i^\prime} = U^{i^\prime}_j \lambda^j
 	}
 \end{equation}
-como a fórmula de transformação para as coordenadas contravariantes de um vetor. Similarmente para as coordenadas covariantes.
-
-Por definição, $\mathbf{e}^{i} \equiv \nabla u^{i} \text { e } \mathbf{e}^{i^{\prime}} \equiv \nabla u^{i^{\prime}}$. A regra da cadeia nos dá
+como a fórmula de transformação para as coordenadas contravariantes de um vetor. Obtemos uma relação similar para as coordenadas covariantes. Por definição, $\mathbf{e}^{i} \equiv \nabla u^{i} \text { e } \mathbf{e}^{i^{\prime}} \equiv \nabla u^{i^{\prime}}$. A regra da cadeia nos dá
 \[
 	\frac{\partial u^{j}}{\partial x}=\frac{\partial u^{j}}{\partial u^{i^{\prime}}} \frac{\partial u^{i^{\prime}}}{\partial x},
 \]
@@ -288,7 +286,7 @@ e, ao compararmos com $\mathbf{\mu}=\mu_{i^\prime}\mathbf{e}^{i^\prime}$ nos dá
 \end{equation}
 como a fórmula de transformação para componentes covariantes.
 
-Como as coordenadas nenhuma das coordenadas 'linha' ou 'sem linha' é privilegiada, isto é, elas podem trocar de papel, as transformadas inversas são dadas apenas trocando os sufixos. Isso nos dá
+Como nenhuma das coordenadas 'com linha' ou 'sem linha' é privilegiada, isto é, elas podem trocar de papel, as transformadas inversas são dadas apenas trocando os sufixos. Isso nos dá
 \begin{equation}\label{eq:TransformadasBaseInversa}
 	\mathbf{e}_{j^{\prime}}=U_{j^{\prime}}^{i} \mathbf{e}_{i}, \quad \mathbf{e}^{j^{\prime}}=U_{i}^{j^{\prime}} \mathbf{e}^{i} 
 \end{equation}
@@ -299,11 +297,11 @@ para as transformações de base e
 para as componentes. Combinando esta equação com a equação \eqref{eq:TransformadaCoordenadasContravariante}, trocando o índice $j$ por $k$ nesta última, chegamos na relação
 \begin{equation}
 	\boxed{
-		U_{i}^{k} U_{j}^{i^{\prime}}=\delta_{j}^{k} .
+		U_{i'}^{k} U_{j}^{i'}=\delta_{j}^{k} .
 	}
 \end{equation}
 
-No sistema de coordenda com linha, as quantidades correspondentes a $g_{ij}$ são definidas por $g_{i^{\prime} j^{\prime}} \equiv e_{i^{\prime}} \cdot e_{j^{\prime}}$. Usando as transformadas das bases, temos
+No sistema de coordenadas com linha, as quantidades correspondentes a $g_{ij}$ são definidas por $g_{i^{\prime} j^{\prime}} \equiv e_{i^{\prime}} \cdot e_{j^{\prime}}$. Usando as transformadas das bases, temos
 \[
 	g_{i^{\prime} j^{\prime}}=\mathbf{e}_{i^{\prime}} \cdot \mathbf{e}_{j^{\prime}}=\left(U_{i^{\prime}}^{k} \mathbf{e}_{k}\right) \cdot\left(U_{j^{\prime}}^{l} \mathbf{e}_{l}\right)=U_{i^{\prime}}^{k} U_{j^{\prime}}^{l} \mathbf{e}_{k} \cdot \mathbf{e}_{l}=U_{i^{\prime}}^{k} U_{j^{\prime}}^{l} g_{k l} .
 \]
@@ -336,7 +334,7 @@ As equações \eqref{TransformadaTensorMetricaContravariante} e \eqref{eq:Transf
 
 O modelo para o espaço-tempo na Relatividade Geral utiliza uma variedade quadridimensional. Dessa forma, precisamos estudar o que isso envolve.
 
-O que torna uma variedade $N$-dimensional é que seus pontos podem ser rotulados por um sistema de $N$ coordenadas reais $x^1,x^2,\ldots,x^N$, de modo que haja uma correspondência de um para um entre os pontos e as coordenadas. Além disso, vamos trabalhar com variedades dotadas de um campo tensorial de métrica, que não é um requerimento para variedades no geral. Não é necessário que toda uma variedade $M$ seja coberta por um único sistema de coordenadas e não há sistema preferencial. O caso geral é que há uma coleção de sistemas coordenados, cada um cobrindo uma região de $M$. Quando dois sistemas se sobrepõem, há um conjunto de equações dando cada coordenada de um sistema em função das coordenadas do outro. Assim, se as coordenadas $x^a$ cobrem uma região $U$ e as coordenadas $x^{a^\prime}$ cobrem a região $U^\prime$ (com essas regiões se interceptando), então as coordendas dos pontos na região de sobreposição são relacionadas por equações da forma
+O que torna uma variedade $N$-dimensional é que seus pontos podem ser rotulados por um sistema de $N$ coordenadas reais $x^1,x^2,\ldots,x^N$, de modo que haja uma correspondência de um para um entre os pontos e as coordenadas. Além disso, vamos trabalhar com variedades dotadas de um campo tensorial de métrica, que não é um requerimento para variedades no geral. Não é necessário que toda uma variedade $M$ seja coberta por um único sistema de coordenadas e não há sistema preferencial. O caso geral é que há uma coleção de sistemas coordenados, cada um cobrindo uma região de $M$. Quando dois sistemas se sobrepõem, há um conjunto de equações dando cada coordenada de um sistema em função das coordenadas do outro. Assim, se as coordenadas $x^a$ cobrem uma região $U$ e as coordenadas $x^{a^\prime}$ cobrem a região $U^\prime$ (com essas regiões se interceptando), então as coordenadas dos pontos na região de sobreposição são relacionadas por equações da forma
 \begin{equation}\label{eq:TransformacaoVariaveisLinha}
 	x^{a^\prime}=x^{a^\prime}\left(x^{1}, x^{2}, \ldots, x^{N}\right) \quad(a=1, \ldots, N) ,
 \end{equation}
@@ -344,7 +342,7 @@ dando cada $x^{a^\prime}$ como uma função das coordenadas $x^b$, e essas tendo
 \begin{equation}\label{eq:TransformacaoVariaveisLinhaInversas}
 	x^{a}=x^{a}\left(x^{1^\prime}, x^{2^\prime}, \ldots, x^{N^{\prime}}\right) \quad(a=1, \ldots, N),
 \end{equation}
-dando cada $x^a$ como uma função das coordenadas $x^{b^\prime}$. Vamos assumir que as funções envolvidas são diferenciaveis, de modo que as derivadas parciais
+dando cada $x^a$ como uma função das coordenadas $x^{b^\prime}$. Vamos assumir que as funções envolvidas são diferenciáveis, de modo que as derivadas parciais
 \[
 	X_{b}^{a^{\prime}} \equiv \frac{\partial x^{a^{\prime}}}{\partial x^{b}} \quad \text { e } \quad X_{b^{\prime}}^{a} \equiv \frac{\partial x^{a}}{\partial x^{b^{\prime}}}
 \]
@@ -371,7 +369,7 @@ em que as derivadas parciais são tomadas em $P$. Um \textit{vetor covariante} �
 \end{equation}
  Para campos vetoriais, essas leis de transformação são válidas em cada ponto em que o campo é definido.
 
- Um exemplo de vetor contravariante é o vetor tangente a uma curva $\gamma$, que pode ser dado parametricamente por $x^a=x^a(t)$, onde $x^a(t)$ são funções diferenciaveis de $t$ para $t$ em algum intervalo $I$. 
+ Um exemplo de vetor contravariante é o vetor tangente a uma curva $\gamma$, que pode ser dado parametricamente por $x^a=x^a(t)$, onde $x^a(t)$ são funções diferenciáveis em algum intervalo $I$. 
 
 Agora, suponha que para cada sistema de coordenadas em um ponto $P$ de uma variedade $M$ há $N^{r+s}$ quantidades $\tau^{a_1\ldots a_r}_{b_1\ldots b_s}$ que, sob uma mudança de coordenadas, transformam-se de acordo com
 \begin{equation}\label{eq:TransformacaoCoordenadaTensor}
@@ -381,7 +379,7 @@ Agora, suponha que para cada sistema de coordenadas em um ponto $P$ de uma varie
 \end{equation}
 onde as matrizes jacobianas $[X^{a^\prime}_c],[X^d_{b^\prime}]$ são calculadas em $P$. Então, essas quantidades são as \textit{componentes de um tensor do tipo $(r,s)$ em $P$}. O mesmo vale para o caso especial em que $r=0$ ou $s=0$, de modo que a letra base $\tau$ apenas possua subscritos ou sobrescritos. Por exemplo, as componentes de um tensor do tipo $(2,0)$ transformam-se de acordo com $\tau^{a^{\prime} b^{\prime}}=X_{c}^{a^{\prime}} X_{d}^{b^{\prime}} \tau^{c d}$.
 
-A soma $(r+s)$ é chamada de ordem do tensor. Um tensor do tipo $(r,0)$ é chamado de \textit{tensor contravariante} de ordem $r$, ao passo que um tensor do tipo $(0,s)$ é chamado de $tensor covariante$ de ordem $s$. Se $rs\neq0$, o tensor é descrito como \textit{misto}. Agora podemos reconhecer um vetor contravariante em $P$ como um tensor do tipo $(1,0)$, um vetor covariante como um tensor do tipo $(0,1)$ e um escalar como um  do tipo $(0,0)$.
+A soma $(r+s)$ é chamada de ordem do tensor. Um tensor do tipo $(r,0)$ é chamado de \textit{tensor contravariante} de ordem $r$, ao passo que um tensor do tipo $(0,s)$ é chamado de \textit{tensor covariante} de ordem $s$. Se $rs\neq0$, o tensor é descrito como \textit{misto}. Agora podemos reconhecer um vetor contravariante em $P$ como um tensor do tipo $(1,0)$, um vetor covariante como um tensor do tipo $(0,1)$ e um escalar como um  do tipo $(0,0)$.
 
 Se em cada ponto de uma região $N$-dimensional $V$ em $M$ existir um tensor do tipo $(r,s)$, então nós temos um \textit{campo tensorial} em $V$. Podemos, também, ter tensores definidos em cada ponto de uma curva $\gamma$ de $M$ mas não uma região $N$-dimensional (tais como os vetores tangentes a uma curva). Estes constituem um \textit{campo tensorial ao longo de $\gamma$}. O mesmo se aplica a um campo tensorial definido em uma superfície $\Sigma$ em $M$.
 
@@ -394,13 +392,13 @@ A terceira operação é a \textit{multiplicação de tensores}, que dá o produ
 \]
 mostrando que $\sigma^a_{bc}$ são as componentes de um tensor do tipo $(1,2)$.
 
-A quarta operação é a de \textit{contração}. Ela pode ser aplicada a qualquer conjunto de números simbolizados por letras com subscritos e sobrescritos. Se há $r$ sobrescritos e $s$ subscritos, então há $rs$ modos em que isso pode ser feito, cada um gerando uma contração do conjunto de números original. Se essa operação for feita com um tensor do tipo $(r,s)$, então suas contrações são componentes de um tensor do tipo $(r-1,s-1)$. A prova para o caso geral é trabalhosa e por isso vamos dar apenas um exemplo que ilustra bem esse resultado.
+A quarta operação é a de \textit{contração}. Ela pode ser aplicada a qualquer conjunto de números simbolizados por letras com subscritos e sobrescritos. Se há $r$ sobrescritos e $s$ subscritos, então há $rs$ modos em que isso pode ser feito, cada um gerando uma contração do conjunto de números original. Se essa operação for feita com um tensor do tipo $(r,s)$, de modo que suas contrações são componentes de um tensor do tipo $(r-1,s-1)$. A prova para o caso geral é trabalhosa e por isso vamos dar apenas um exemplo que ilustra bem esse resultado.
 
 
 \noindent
 \rule{\textwidth}{0.4pt}
 \begin{exemplo}
-Sejam $\tau^{ab}_c$ as componentes de um tensor tipo $(2,1)$, e $\sigma^a=\tau^{ab}_b$ uma contração. Usando coordenadas linha, nós formaríamos, analogamente, $\sigma^{a^\prime}=\tau^{a^\prime b^\prime}_{b^\prime}$. Assim,
+Sejam $\tau^{ab}_c$ as componentes de um tensor tipo $(2,1)$, e $\sigma^a=\tau^{ab}_b$ uma contração. Usando coordenadas com linha, nós formaríamos, analogamente, $\sigma^{a^\prime}=\tau^{a^\prime b^\prime}_{b^\prime}$. Assim,
 \[
 	\sigma^{a^{\prime}}=\tau_{b^{\prime}}^{a^{\prime} b^{\prime}}=\tau_{e}^{c d} X_{c}^{a^{\prime}} X_{d}^{b^{\prime}} X_{b^{\prime}}^{e}=\tau_{e}^{c d} X_{c}^{a^{\prime}} \delta_{d}^{e}=\tau_{d}^{c d} X_{c}^{a^{\prime}}=\sigma^{c} X_{c}^{a^{\prime}} ,
 \]
@@ -410,23 +408,23 @@ mostrando que os números $\sigma^a$ são as componentes de um tensor do tipo $(
 \rule{\textwidth}{0.4pt}	
 \end{exemplo}
 
-Um tensor especial é o \textit{tensor de Kronecker}, que é um tensor do tipo $(1,1)$ com a propriedade de que em qualquer sistema de coordenadas usado, suas componentes $\kappa^a_b$ são dadas pelo delta de Kronecker $\delta^a_b$. Para ver isso, suponha que, em um sistema de coordenadas sem linha, nós tenhamos $\kappa_b^a=\delta^a_b$. Então, quando transformamos para um sistema de coordenado com linha, as componentes se tornam
+Um tensor especial é o \textit{tensor de Kronecker}, que é um tensor do tipo $(1,1)$ com a propriedade de que em qualquer sistema de coordenadas usado, suas componentes $\kappa^a_b$ são dadas pelo delta de Kronecker $\delta^a_b$. Para ver isso, suponha que, em um sistema de coordenadas sem linha, nós tenhamos $\kappa_b^a=\delta^a_b$. Então, quando transformamos para um sistema de coordenadas com linha, as componentes se tornam
 \[
-	\kappa^{a^\prime}_{b^\prime} = X^{a^\prime}_c X^d_{b^\prime}\delta^c_d = X^{a^\prime}_c X^c_{b^\prime} = \delta^a_b .
+	\kappa^{a^\prime}_{b^\prime} = X^{a^\prime}_c X^d_{b^\prime}\delta^c_d = X^{a^\prime}_c X^c_{b^\prime} = \delta^a_b =\delta^{a'}_{b'} .
 \]
-Por causa disso, denotaremos suas componentes por $\delta^a_b$ em vez de $\kappa^a_b$ (O que foi mostrado aqui é que a propriedade $\kappa^a_b=\delta^a_b$ é independente de coordendas).
+Por causa disso, denotaremos suas componentes por $\delta^a_b$ em vez de $\kappa^a_b$ (O que foi mostrado aqui é que a propriedade $\kappa^a_b=\delta^a_b$ é independente de coordenadas).
 
 Vamos agora analisar como podemos associar tensores de diferentes tipos ao contrai-los com os tensores de métrica covariante ou contravariante.
 
-Como dito no início da seção, assumimos que esta variedade possui um tensor de métrica em cada ponto $g_{ab}$. Esse tensor é simétrico, de modo que $g_{ab}=g_{ba}$, e é não singular, de modo que a matriz $[g_{ab}]$ possui inversa $[g^{ab}]$ cujos elementos satisfazem
+Como dito no início da seção, assumimos que esta variedade possui um tensor de métrica $g_{ab}$ em cada ponto. Esse tensor é simétrico, de modo que $g_{ab}=g_{ba}$, e é não singular, de modo que a matriz $[g_{ab}]$ possui inversa $[g^{ab}]$ cujos elementos satisfazem
 \begin{equation}\label{eq:TensorMetricaDelta}
 	g^{ab}g_{bc}=\delta^a_c .
 \end{equation}
 Como $[g_{ab}]$ é uma matriz simétrica, sua inversa também o é, então $g^{ab}=g^{ba}$.
 
-Nós temos agora um tensor de métrica com componentes $g_{ab}$ que podem ser usadas para abaixar sufixos e o tensor de métrica contravariante com componentes $g^{ab}$ que podem ser usadas para levantar sufixos. Por exemplo, se $\tau^{ab}_c$ são as componentes de um tensor do tipo $(2,1)$, então usando o tensor de métrica para abaixar o primeiro sobrescrito nós dá um tensor do tipo $(1,2)$ cujas componentes são definidas por $\tensor{\tau}{_a^b_c} = g_{ad}\tau^{db}_c$. Se o tensor de métrica contravariante é utilizado para levantar o sufixo abaixado, o tensor original é recuperado: $g^{a d} \tau_{d c}^{b}=g^{a d} g_{d e} \tau_{c}^{e b}=\delta_{e}^{a} \tau_{c}^{e b}=\tau_{c}^{a b}$.
+Nós temos agora um tensor de métrica com componentes $g_{ab}$ que podem ser usadas para abaixar sufixos e o tensor de métrica contravariante com componentes $g^{ab}$ que podem ser usadas para levantar sufixos. Por exemplo, se $\tau^{ab}_c$ são as componentes de um tensor do tipo $(2,1)$, então usando o tensor de métrica para abaixar o primeiro sobrescrito nos dá um tensor do tipo $(1,2)$ cujas componentes são definidas por $\tensor{\tau}{_a^b_c} = g_{ad}\tau^{db}_c$. Se o tensor de métrica contravariante é utilizado para levantar o sufixo abaixado, o tensor original é recuperado: $g^{a d} \tau_{d c}^{b}=g^{a d} g_{d e} \tau_{c}^{e b}=\delta_{e}^{a} \tau_{c}^{e b}=\tau_{c}^{a b}$.
 
-Tensores que podem ser obtidos ao se levantarem ou abaixarem sufixos uns dos outros são chamados de \textit{associados}, e iremos utilizar a mesma letra base para as componentes, como no exemplo anterior. Isso pode ser ambíguo pelo fato de que mais de um tensor do mesmo tipo pode ser associado a um dado tensor. Por exemplo, abaixando-se o primeiro sobrescrito das componentes $\tau^a_b$ de um tensor tipo $(2,0)$ nos dá um de tipo $(1,1)$ que é, em geral, diferente do obtido ao abaixar-se o segundo sobrescrito. A distinção pode ser feita ao utilizar-se um espaçamento nos sufixos:
+Tensores que podem ser obtidos ao se levantarem ou abaixarem sufixos uns dos outros são chamados de \textit{associados}, e iremos utilizar a mesma letra base para as componentes, como no exemplo anterior. Isso pode ser ambíguo pelo fato de que mais de um tensor do mesmo tipo pode ser associado a um dado tensor. Por exemplo, abaixando-se o primeiro sobrescrito das componentes $\tau^{ab}$ de um tensor tipo $(2,0)$ nos dá um de tipo $(1,1)$ que é, em geral, diferente do obtido ao abaixar-se o segundo sobrescrito. A distinção pode ser feita ao utilizar-se um espaçamento nos sufixos:
 \[
 	\tensor{\tau}{_a^b} = g_{ac}\tau^{cb}, \qquad \tensor{\tau}{^a_b}=g_{bc}\tau^{ac} .
 \]
@@ -436,7 +434,7 @@ A partir de agora, utilizaremos uma convenção de ``confundir'' um tensor com s
 
 \section{Propriedades da métrica}\label{sec:Metrica}
 
-O tensor de métrica $g_{ab}$ nos dá um produto interno $g_{ab}\lambda^a\mu^b$ para vetores $\lambda^a,\mu^a$ em cada ponto $P$ de uma variedade $M$. Assim como no espaço euclidiano \eqref{eq:ProdutoInterno}, há quantro modos de escrevê-lo:
+O tensor de métrica $g_{ab}$ nos dá um produto interno $g_{ab}\lambda^a\mu^b$ para vetores $\lambda^a,\mu^a$ em cada ponto $P$ de uma variedade $M$. Assim como no espaço euclidiano \eqref{eq:ProdutoInterno}, há quatro modos de escrevê-lo:
 \begin{equation}
 	\boxed{
 	g_{ab}\lambda^a\mu^b= g^{ab}\lambda_a\mu_b = \lambda_a\mu^a = \lambda^a\mu_a .
@@ -454,7 +452,7 @@ O \textit{ângulo} $\theta$ entre dois vetores $\lambda^a,\mu^a$ não nulos é d
 \[
 	\cos \theta=\frac{g_{a b} \lambda^{a} \mu^{b}}{\left|g_{c d} \lambda^{c} \lambda^{d}\right|^{1 / 2}\left|g_{e f} \mu^{e} \mu^{f}\right|^{1 / 2}}
 \]
-Se o tensor de métrica é indefinido, essa fórmula pode nos dar $|\cos\theta|>1$, resultando em um valor não-real para $\theta$. Dois vetores são \textit{ortogonais} ou \textit{perpendiculares} se seu produto interno for zero.
+Dois vetores são \textit{ortogonais} ou \textit{perpendiculares} se seu produto interno for zero.
 
 Como explicado na seção \ref{sec:Variedades}, uma curva $\gamma$ em uma variedade é dada ao colocar $x^a=x^a(t)$, onde o parâmetro $t$ pertence a algum intervalo $I$, e em cada ponto de $\gamma$ um vetor tangente é dado por $\dot{x}^a\equiv dx^a/dt$. Se $I$ é dado por $a\leq t\leq b$, então (generalizando a equação \eqref{eq:ComprimentoCurvaVariedade}), nós podemos definir o \textit{comprimento} de $\gamma$ como sendo
 \begin{equation}\label{eq:ComprimentoCurvaVariedade}
@@ -470,7 +468,7 @@ Note que apenas definimos o comprimento de curvas, mas não a distância entre p
 \end{equation}
 
 Isso generaliza o conceito de comprimento Lorentziano, apresentado na seção \ref{sec:GeometriaHiperbolica}.
-O tipo de variedade que utilizamos para modelar o espaço-tempo é uma variedade pseudo-riemanniana quadridimensional cujo tensor de métrica $g_{\mu\nu} (\mu,\nu=0,1,2,3)$ possui assinatura $(+---)$. Isso significa que  em qualquer ponto $P$ se nós adotarmos um sistema de coordenadas que nos dá $[g_{\mu\nu}]_P$ como uma matriz diagonal, então o primeiro elemento é positivo e os outros três são negativos. Todo vetor diferente de zero é, então, descrito como
+O tipo de variedade que utilizamos para modelar o espaço-tempo é uma variedade pseudo-riemanniana quadridimensional cujo tensor de métrica $g_{\mu\nu} (\mu,\nu=0,1,2,3)$ possui assinatura $(+---)$. Isso significa que  em qualquer ponto $P$ se nós adotarmos um sistema de coordenadas que nos dá $[g_{\mu\nu}]_P$ como uma matriz diagonal, então o primeiro elemento é positivo e os outros três são negativos. Todo vetor diferente de zero é, portanto, descrito como
 \[
 \left\{\begin{array}{l}{\text {do tipo tempo}} \\ {\text {nulo}} \\ {\text {do tipo espaço}}\end{array} \text { se } g_{\mu \nu} \lambda^{\mu} \lambda^{\nu}\left\{\begin{array}{l}{>0} \\ {=0} \\ {<0}\end{array}\right.\right. .
 \]

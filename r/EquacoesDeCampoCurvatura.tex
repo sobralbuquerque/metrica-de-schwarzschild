@@ -1,31 +1,31 @@
 \chapter{Equações de campo e curvatura}\label{cap:EquacoesDeCampoCurvatura}
 \section{Tensor de energia-momento e dinâmica de fluidos}\label{sec:EnergiaMomentoFluidos}
-Tratamos, à princípio, de espaços planos, em referenciais inerciais, nesta seção. Utilizaremos 4-vetores e 3-vetores, simbolizando estes com o negrito. 
+Trataremos, à princípio, de espaços planos, em referenciais inerciais. Utilizaremos 4-vetores e 3-vetores, simbolizando estes com o negrito. 
 
 \[
 \lambda^{\mu} \equiv\left(\lambda^{0}, \lambda^{1}, \lambda^{2}, \lambda^{3}\right) \equiv\left(\lambda^{0}, \boldsymbol{\lambda}\right)
 \]
 
 Considere uma partícula, com algumas quantidades relevantes:
-\[\begin{array}{l}
-{m \equiv \text{massa de repouso da partícula,}} \\
-{t \equiv \text { tempo do referencial (tempo coordenado), }} \\ 
-{\tau \equiv \text { tempo próprio da partícula, }} \\ 
-{\gamma \equiv d t / d \tau=\left(1-v^{2} / c^{2}\right)^{-1 / 2}, \text { onde } v \text { é a velocidade da partícula, }} \\ 
-{E \equiv \gamma m c^{2} \equiv \text { energia da partícula, }} \\ 
-{u^{\mu} \equiv d x^{\mu} / d \tau \equiv \text { 4-velocidade da partícula }} \\ 
-{v^{\mu} \equiv d x^{\mu} / d t \equiv u^{\mu} / \gamma \equiv \text { velocidade da partícula}} \\ 
-{p^{\mu} \equiv m u^{\mu} \equiv 4 \text {-momento da partícula. }}
-\end{array}\] 
+\begin{align*}
+	m 		&\equiv \text{massa de repouso da partícula,} \\
+	t 		&\equiv \text { tempo do referencial (tempo coordenado),} \\ 
+	\tau 	&\equiv \text { tempo próprio da partícula, } \\ 
+	\gamma 	&\equiv d t / d \tau=\left(1-v^{2} / c^{2}\right)^{-1 / 2}, \text { onde } v \text { é a velocidade da partícula, } \\ 
+	E 		&\equiv \gamma m c^{2} \equiv \text { energia da partícula, } \\ 
+	u^{\mu} &\equiv d x^{\mu} / d \tau \equiv \text { 4-velocidade da partícula } \\ 
+	v^{\mu} &\equiv d x^{\mu} / d t \equiv u^{\mu} / \gamma \equiv \text { velocidade da partícula} \\ 
+	p^{\mu} &\equiv m u^{\mu} \equiv 4 \text {-momento da partícula.}
+\end{align*}
 Assim, na notação definida, $ v^\mu \equiv (c, \mathbf{v}) $, onde $\mathbf{v}$ é a 3-velocidade da partícula, de modo que o $v$ que aparece na fórmula de $\gamma$ é $|\mathbf{v}|$. 
 
 Uma partícula estacionária situada em um ponto cujo vetor posição é $\mathbf{x}_0$ possui 4-velocidade
 \[
 u^\mu \equiv dx^\mu/d\tau = d(c\tau,\mathbf{x}_0)/d\tau = (c,\mathbf{0})
 \]
-e momento
+e 4-momento
 \[
-p^{\mu}=(c,\mathbf{0}).
+p^{\mu}=(mc,\mathbf{0}).
 \]
 A zero-ésima componente de $p^\mu$ é, neste caso, a \textit{energia de repouso} a menos de um fator $c$. Para uma partícula em movimento, temos 
 \begin{equation}\label{eq:QuadriMomentoParticula}
@@ -36,7 +36,7 @@ Vamos, agora, tratar de uma distribuição contínua de matéria. Por simplicida
 
 A fim de que $\rho$ seja um campo escalar, deve-se defini-lo de modo que seja a \textit{densidade própria}, isto é, a massa de repouso por unidade de volume de repouso. Aqui, no lugar do 4-momento da partícula $p^\mu\equiv mu^\mu$, temos a 4-densidade de momento $\rho u^\mu$.
 
-Procura-se, então, um tensor de que, de alguma maneira, represente a energia do fluido e que, ao ser levado a um espaço-tempo curvo, possa agir como a origem do campo gravitacional. Na Relatividade Geral, perde-se a distinção de massa e energia, então toda forma de energia deveria produzir um campo gravitacional. Iremos simplesmente escrevê-lo e, então, interoretar seu significado físico. Ele é o chamado tensor de energia-momento e é definido como
+Procura-se, então, um tensor de que, de alguma maneira, represente a energia do fluido e que, ao ser levado a um espaço-tempo curvo, possa agir como a origem do campo gravitacional. Na Relatividade Geral, perde-se a distinção de massa e energia, de modo que toda forma de energia deveria produzir um campo gravitacional. Iremos simplesmente escrevê-lo e interpretar seu significado físico. Ele é o chamado tensor de energia-momento e é definido como
 \begin{equation}\label{eq:TensorEnergiaMomentoDefinicao}
 	T^{\mu \nu} \equiv\left(\rho+p / c^{2}\right) u^{\mu} u^{\nu}-p \eta^{\mu \nu}.
 \end{equation}
@@ -44,9 +44,9 @@ Pode-se notar que $T^{\mu \nu}$ é simétrico e depende dos campos vetoriais e e
 \[
 	T^{\mu \nu} u_{\nu}=c^{2}\left(\rho+p / c^{2}\right) u^{\mu}-p u^{\mu}=c^{2} \rho u^{\mu},	
 \]
-de modo que $T^{\mu \nu}{u_{\nu}}$ é, a menos de um fator $c^2$, a 4-densidade de momento do fluido. Finalmente, colocando sua divergência $T^{\mu\nu}_{,\mu}$ como zero nos dá duas equações importantes: a equação da continuidade e a equação de movimento. 
+de modo que $T^{\mu \nu}{u_{\nu}}$ é, a menos de um fator $c^2$, a 4-densidade de momento do fluido. Finalmente, colocando sua divergência $\tensor{T}{^{\mu\nu}_{,\mu}}$ como zero nos dá duas equações importantes: a equação da continuidade e a equação de movimento. 
 
-Fazendo a divergencia $T^{\mu\nu}_{,\mu}$ igual a zero nos diferenciá
+Fazendo a divergencia $\tensor{T}{^{\mu\nu}_{,\mu}}$ igual a zero nos diferenciá
 \begin{equation}\label{eq:DivergenciaTensorEnergiaMomento}
 	\left(\rho u^{\mu}\right)_{, \mu} u^{\nu}+\rho u^{\mu} u_{, \mu}^{\nu}+\left(p / c^{2}\right) u_{, \mu}^{\mu} u^{\nu}+\left(p / c^{2}\right) u^{\mu} u_{, \mu}^{\nu}+c^{-2} p_{, \mu} u^{\mu} u^{\nu}-p_{, \mu} \eta^{\mu \nu}=0.
 \end{equation}
@@ -54,7 +54,7 @@ Notando que a 4-velocidade $u^\nu$ satisfaz $u^{\nu}u_\nu=c^2$, temos
 \[
 	u^\nu u_\nu = g_{\nu\sigma}u^\nu u^\sigma = c^2
 \]
-e, diferenciando {\color{ForestGreen} (notando que $g_{\nu\sigma;\mu}=0$)}, chegamos em
+se, diferenciando (notando que $g_{\nu\sigma;\mu}=0$), chegamos em
 \[
 	g_{\nu\sigma}\left(u^{\nu}_{;\mu}u^{\sigma}+u^{\nu}u^{\sigma}_{;\mu}\right)=0 
 	\Rightarrow g_{\nu\sigma}u^{\nu}_{,\mu}u^{\sigma}+g_{\sigma\nu}u^{\sigma}_{,\mu}u^{\nu}= 2u_{,\mu}^{\nu} u_{\nu} = 0
@@ -72,7 +72,7 @@ Colocando esse resultado na equação \eqref{eq:DivergenciaTensorEnergiaMomento}
 	}
 \end{equation}
 
-Vamos mostrar, agora, que a equação \eqref{eq:EquacaoContinuidade4vetorial} e \eqref{eq:EquacaoMovimentoEuler4vetorial}, para fluidos em baixas velocidades e baixas pressões, reduzem para as equações clássicas de continuidade e de movimento de um fluido perfeito. Velocidades baixas implica que $\gamma=1$ e baixas pressões significa que $p/c^2 \ll \rho$. Assim, a equação  \eqref{eq:EquacaoContinuidade4vetorial}  reduz para
+Vamos mostrar, agora, que as equações \eqref{eq:EquacaoContinuidade4vetorial} e \eqref{eq:EquacaoMovimentoEuler4vetorial}, para fluidos em baixas velocidades e baixas pressões, se reduzem ns equações clássicas de continuidade e de movimento de um fluido perfeito. Velocidades baixas implica que $\gamma\approx1$ e baixas pressões significa que $p/c^2 \ll \rho$. Assim, a equação  \eqref{eq:EquacaoContinuidade4vetorial} se reduz em
 \[\left(\rho v^{\mu}\right)_{, \mu}=0,\]
 o que dá
 \[(\rho c)_{, 0}+\left(\rho v^{i}\right)_{, i}=0\]
@@ -82,20 +82,22 @@ e, em notação 3-vetorial isso é
 		\partial \rho / \partial t+\nabla \cdot(\rho \mathbf{v})=0,
 	}
 \end{equation}
-que é a equação da continuidade clássica \textbf{(citar referência)}.
+que é a equação da continuidade clássica.
 
 Já a equação \eqref{eq:EquacaoMovimentoEuler4vetorial}, nessa aproximação, reduz-se a 
 \[
 	\rho v_{, \mu}^{\nu} v^{\mu}=\left(\eta^{\mu \nu}-c^{-2} v^{\mu} v^{\nu}\right) p_{, \mu}
 \]
 e, para baixas velocidades, temos que
+{\small
 \[
 \left[\eta^{\mu \nu}-c^{-2} v^{\mu} v^{\nu}\right] \approx
 \left[\begin{array}{rrrr}{0} & {0} & {0} & {0} \\ {0} & {-1} & {0} & {0} \\ {0} & {0} & {-1} & {0} \\ {0} & {0} & {0} & {-1}\end{array}\right],
 \]
+}
 de modo que as zero-ésimas componentes de ambos os lados da equação são zero. As outras componentes podem ser escritas como
 \[
-	\rho v^{i}, \mu^{\mu}= \rho\left[\partial v^{i} / \partial t+v_{, j}^{i} v^{j}\right]=-\delta^{j i} p_{, j} .\]
+	\rho v^{i}_{, \mu}v^{\mu}= \rho\left[\partial v^{i} / \partial t+v_{, j}^{i} v^{j}\right]=-\delta^{j i} p_{, j} .\]
 Em notação 3-vetorial, essa ultima igualdade é escrita como
 \begin{equation}\label{eq:EquacaoMovimentoEulerClassica3vetorial}
 	\boxed{
@@ -104,28 +106,23 @@ Em notação 3-vetorial, essa ultima igualdade é escrita como
 \end{equation}
 que é a equação de movimento de Euler clássica para um fluido perfeito.
 
-(pág. 100)
+Se nós aceitássemos a equação \eqref{eq:EquacaoContinuidade4vetorial} como a equação relativística de continuidade e \eqref{eq:EquacaoMovimentoEuler4vetorial} como a equação de movimento de um fluido perfeito, então poderiámos inverter nosso argumento, e afirmar que $\tensor{T}{^{\mu\nu}_{,\mu}}=0$ \textit{por causa} das equações de continuidade e de movimento.
 
+Vamos, agora, começar a trabalhar com o espaço-tempo curvo da Relatividade Geral. A seção \ref{sec:EspacotempoRelatividadeGeral} nos dá um modo de expandir definições e equações tensoriais do espaço-tempo plano. Em particular, trocando $\eta_{\mu\nu}$ por $g_{\mu\nu}$, e derivadas parciais por covariantes, nossa equação de definição do tensor de energia-momento de um fluido perfeito se torna
+\begin{equation}\label{eq:TensorEnergiaMomentoCurvo}
+	\boxed{
+	T^{\mu\nu} \equiv (\rho+p/c^2)u^\mu u^\nu - pg^{\mu\nu} ,
+	}
+\end{equation}
+e 
+\begin{equation}\label{eq:DivergenciaTensorEnergiaMomentoCurvo}
+	\boxed{ 
+	\tensor{T}{^\mu^\nu_{;\mu}}=0 .
+	} 
+\end{equation}
+Com definições adequadas do tensor de energia-momento, a equação \eqref{eq:DivergenciaTensorEnergiaMomentoCurvo} é válida para todos os fluidos e campos, não só para fluidos perfeitos. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{*Tensor de curvatura e tensores relacionados}\label{sec:TensorCurvatura}
+\section{Tensor de curvatura e tensores relacionados}\label{sec:TensorCurvatura}
 
 Por questão de generalidade, esta seção tratará de variedades $N$-dimensionais, de modo que se utilizarão sufixos $a,b,\dots$, os quais vão de $1$ a $N$, em vez de $\mu,\nu,\dots$ que vão de $0$ a $3$. 
 
@@ -154,13 +151,10 @@ Como o lado esquerdo da equação \eqref{eq:DiferencaDerivadaSegundaCovariante} 
 
 Então, a condição necessária e suficiente para que a ordem em que a diferenciação covariante de um tensor $(0,1)$ qualquer pode ser trocada é que $R^a_{bcd}=0$.
 
-{\color{red} Fazer exercício 3.2.1 e afirmar que é válido para qualquer campo}
 
 No espaço-tempo plano da Relatividade Especial, sabemos que existem referenciais em que $g_{\mu\nu}=\eta_{\mu\nu}$ e que, nesses sistemas coordenados, $\Gamma^\mu_{\nu\sigma}=0$ e, então, o tensor de curvatura é identicamente nulo.
- %mas isso nem sempre acontece blabla
- {\color{red} Problema 3.1 como exemplo}
 
- Podemos, agora, formalizar a definição de {\color{ForestGreen}planicidade}. Uma variedade (ou uma região de uma variedade) é \textit{plana} se, em todos os seus pontos, $R^a_{bcd}=0$; de outro modo, ela é \textit{curvada}. 
+ Podemos, agora, formalizar a definição de planicidade. Uma variedade (ou uma região de uma variedade) é \textit{plana} se, em todos os seus pontos, $R^a_{bcd}=0$; de outro modo, ela é \textit{curva}. 
 
  A princípio, o tensor $R^a_{bcd}$ possui $N^4$ componentes. No entanto, ele possui muitas simetrias e suas componentes satisfazem uma identidade importante, de modo que esse número abaixa para $N^2(N^2-1)/12$ componentes independentes. 
  
@@ -180,15 +174,12 @@ ou, resumindo, temos a relação:
 \[
 	R_{abcd} \equiv g_{ae}R^e_{bcd}.
 \]
-{\color{red}
-A partir das equações 2.33 2.35 e 2.36 chegamos em
-}
 
+A partir das equações \eqref{eq:ChristoffelPrimeiroTipo}, \eqref{eq:LevantarIndiceGamma} e \eqref{eq:AbaixarIndiceGamma} chegamos em
 \begin{equation}
 	R_{a b c d} \equiv \tfrac{1}{2}\left(\partial_{d} \partial_{a} g_{b c}-\partial_{d} \partial_{b} g_{a c}+\partial_{c} \partial_{b} g_{a d}-\partial_{c} \partial_{a} g_{b d}\right)-g^{e f}\left(\Gamma_{e a c} \Gamma_{f b d}-\Gamma_{e a d} \Gamma_{f b c}\right)
 \end{equation}
-A partir disso, apenas é necessário checarem-se as seguintes propriedades:
-
+A partir dessa relação, obtemos as seguintes propriedades:
 \begin{equation}\label{eq:RSimetriaA}
 	R_{abcd}=-R_{bacd}
 \end{equation}
@@ -198,17 +189,13 @@ A partir disso, apenas é necessário checarem-se as seguintes propriedades:
 \begin{equation}\label{eq:RSimetriaC}
 	R_{abcd}=R_{cdab}
 \end{equation}
-Segue de \eqref{eq:RSimetriaA} que
+Segue de \eqref{eq:RSimetriaA} (e da simetria do tensor de métrica) que
 \[
 R^a_{acd} = 0.
 \]
 
 
-\begin{proof}
-	Provar relações 3.16-3.17
-\end{proof}
-
-Considere, agora, um ponto $P$ qualquer e um sistema de coordenadas tal que $(T^{a}_{bc})_P=0$, {\color{ForestGreen} como explicado na seção \ref{sec:CoordenadasGeodesicas}.} Ao diferenciar a equação \eqref{eq:DefinicaoTensorRiemann} e aplicá-la ao ponto $P$, nesse sistema de coordenadas, temos
+Considere, agora, um ponto $P$ qualquer e um sistema de coordenadas tal que $(\Gamma^{a}_{bc})_P=0$, como explicado na seção \ref{sec:CoordenadasGeodesicas}. Ao diferenciar a equação \eqref{eq:DefinicaoTensorRiemann} e aplicá-la ao ponto $P$, nesse sistema de coordenadas, temos
 \[
 	\left(R_{b c d ; e}^{a}\right)_{\mathrm{P}}=\left(\partial_{e} \partial_{c} \Gamma_{b d}^{a}-\partial_{e} \partial_{d} \Gamma_{b c}^{a}\right)_{\mathrm{P}} .
 \]
@@ -237,22 +224,33 @@ o que nos diz que o tensor de Ricci também é simétrico. Como $R_{ab}$ é sim�
 \end{equation}
 
 Um último tensor importante é o \textit{tensor de Einstein}, definido por
-\begin{equation}
+\begin{equation}\label{eq:TensorEinstein}
 	\boxed{
 		G_{ab} \equiv R_{ab} - \tfrac{1}{2}Rg_{ab} .
 	}
 \end{equation}
+% {\color{red} falta mostrar que o tensor de Einstein tem divergencia nula}
+Em virtude da simetria de todos os termos do lado direito, ele também é simétrico, de modo que possui apenas uma divergência $\tensor{G}{^a^b_{;a}}$. A razão para a importância do tensor de Einstein é que sua divergência é zero. Contraindo-se $a$ com $d$ na identidade de Bianchi \eqref{eq:IdentidadeBianchi} nos dá
+\[
+	R_{bc;e}+\tensor{R}{^a_{bae;c}}+\tensor{R}{^a_{bec;a}}=0 ,
+\]
+ou, ao utilizar a equação \eqref{eq:RSimetriaB},
+\[
+	R_{bc;e}-R_{be;c} + \tensor{R}{^a_{bec;a}} = 0.
+\]
+Levantando $b$ e contraindo com $e$, temos
+\[
+	R^b_{c;b}-R_{;c}+\tensor{R}{^a^b_{bc;a}}=0,
+\]
+mas, pela equação \eqref{eq:RSimetriaC},
+\[
+	\tensor{R}{^a^b_{bc;a}}=\tensor{R}{^b^a_{cb;a}}=R^a_{c;a}=R^b_{c;b},
+\]
+reduzindo para $2R^b_{c;b}-R_{;c}=0$, que nos dá $(R^b_c-\tfrac{1}{2}R\delta^b_c)_{;b}=0$ ao dividir-se por dois e usando a última das equações \eqref{eq:DerivadaCovarianteMetrica}. Assim, temos $G^b_{c;b}=0\Rightarrow \tensor{G}{^b^c_{;b}}=0$, como afirmado.
 
-{\color{red} falta mostrar que o tensor de Einstein tem divergencia nula}
+\section{Curvatura e transporte paralelo}\label{sec:CurvaturaTransporteParalelo}
 
-
-
-
-
-
-\section{*Curvatura e transporte paralelo}\label{sec:CurvaturaTransporteParalelo}
-
-Discutiu-se na Seção \ref{sec:TransporteParalelo} que o transporte paralelo em uma variedade curvada dependia do caminho, mostrando especificamente que esse era o caso para uma esfera. No entanto, nós agora formalizamos o conceito de curvatura em termos do tensor de Riemann. Nesta seção, o intuito é deixar clara a conexão entre esse o transporte paralelo e o tensor de curvatura. Mais especificamente, mostraremos como a mudança $\Delta\lambda^a$ que resulta do transporte paralelo de um vetor $\lambda^a$ ao longo de uma pequena curva fechada ao retor de um ponto $P$ se relaciona com o tensor de curvatora em $P$.
+Discutiu-se na Seção \ref{sec:TransporteParalelo} que o transporte paralelo em uma variedade curva dependia do caminho, mostrando especificamente que esse era o caso para uma esfera. No entanto, nós agora formalizamos o conceito de curvatura em termos do tensor de Riemann. Nesta seção, o intuito é deixar clara a conexão entre o transporte paralelo e o tensor de curvatura. Mais especificamente, mostraremos como a mudança $\Delta\lambda^a$ que resulta do transporte paralelo de um vetor $\lambda^a$ ao longo de uma pequena curva fechada ao retor de um ponto $P$ se relaciona com o tensor de curvatora em $P$.
 
 Suponha, por exemplo, que $\lambda^a$ é transportado paralelamente ao longo de uma curva $\gamma$ de um ponto inicial $O$ em que suas componentes são $\lambda_0^a$. Se $\gamma$ é parametrizado por $t$, então $\lambda^a$ satisfaz a equação diferencial
 \begin{equation}\label{eq:TransporteParaleloDiferencial}
@@ -278,119 +276,208 @@ onde os $\xi^a$ são pequenos. As diferenças entre coordenadas $\xi^a$ podem se
 	\label{fig:SmallLoop}
 \end{figure}
 
-Apesar de termos chegado em uma relação entre $\lambda^a$ e $\lambda^a_0$, nós não podemos calculá-la de uma maneira direita, uma vez que o vetor transportado também aparece na integral à direita. No entanto, podemos utilizar essa relação para conseguir aproximações cada vez melhores que são válidas quando $\lambda^a$ não muda muito de seu valor inicial $\lambda^a_0$, que será o caso para nossa curva pequena próxima de $P$.
+Apesar de termos chegado em uma relação entre $\lambda^a$ e $\lambda^a_0$, nós não podemos calculá-la de uma maneira direta, uma vez que o vetor transportado também aparece na integral à direita. No entanto, podemos utilizar essa relação para conseguir aproximações cada vez melhores que são válidas quando $\lambda^a$ não muda muito de seu valor inicial $\lambda^a_0$, que será o caso para nossa curva pequena próxima de $P$.
 
 Como uma primeira aproximação, podemos utilizar $\lambda^b = \lambda^b_0$ na integral ao lado direito e, então, podemos utilizar o resultado como uma aproximação melhor.
 \begin{align*}
-	\lambda^a &= \lambda^a_0 - \int\Gamma^a_{bc}\lambda^a_0 d\xi^c \\
+	\lambda^a &= \lambda^a_0 - \int\Gamma^a_{bc}\lambda^b_0 d\xi^c \\
 	&= \lambda^a_0 - \lambda^b_0\int\Gamma^a_{bc}d\xi^c .
 \end{align*}
 Utilizando esse resultado ao lado direito, podemos chegar em uma aproximação ainda melhor:
 \begin{equation}\label{eq:AproximacaoSegundaOrdemLambda}
 \begin{aligned} \lambda^{a} &=\lambda_{0}^{a}-\int \Gamma_{b c}^{a}\left(\lambda_{0}^{b}-\lambda_{0}^{d} \int \Gamma_{d e}^{b} d \xi^{e}\right) d \xi^{c} \\ &=\lambda_{0}^{a}-\lambda_{0}^{b} \int \Gamma_{b c}^{a} d \xi^{c}+\lambda_{0}^{d} \int \Gamma_{b c}^{a}\left(\int \Gamma_{d e}^{b} d \xi^{e}\right) d \xi^{c}. \end{aligned}
 \end{equation}
-Esse processo pode ser repetido indefinidamente, mas a aproximação dada por \eqref{eq:AproximacaoSegundaOrdemLambda} é o suficiente para o nosso propósito, o qual envolve utilizar aproximações de segunda ordem em $\xi^a.$.
+Esse processo pode ser repetido indefinidamente, mas a aproximação dada por \eqref{eq:AproximacaoSegundaOrdemLambda} é o suficiente para o nosso propósito, o qual envolve utilizar aproximações de segunda ordem em $\xi^a$.
 
+Na integral do segundo termo da direita, podemos usar a aproximação de primeira ordem $\Gamma^a_{bc}=(\Gamma^a_{bc})_P+(\partial_d\Gamma^a_{bc})_P\xi^d,$ uma vez que será integrado com respeito a $\xi^c$, resultando em uma aproximação de segunda ordem. Para a integral repetida no terceiro termo, podemos aproximar $\Gamma^a_{bc}$ por $(\Gamma^a_{bc})_P$, já que será integrado duas vezes. Usando essas aproximações para integrar de $O$ ao longo de $\gamma$ de volta a $O$, temos
+\[
+	\oint\Gamma^a_{bc}d\xi^c=(\Gamma^a_{bc})_P\oint d\xi^c+(\partial_d\Gamma^a_{bc})_P\oint\xi^d d\xi^c = (\partial_d \Gamma^a_{bc})_P\oint\xi^d d\xi^c
+\]
+(como $\oint d\xi^c=0$) e
+\[
+	\oint\Gamma^a_{bc}\left( \int\Gamma^b_{de} d\xi^e\right)d\xi^c = (\Gamma^a_{bc}\Gamma^b_{de})_P\oint \left( \int d\xi^e \right)d\xi^c = (\Gamma^a_{bc}\Gamma^b_{de})_P \oint\xi^e d\xi^c ,
+\]
+então, da equação \eqref{eq:AproximacaoSegundaOrdemLambda}, a variação em $\lambda^a$ ao transportá-lo em $\gamma$ é
+\[
+	\Delta\lambda^a = -\lambda^b_0(\partial_d\Gamma^a_{bc})_P\oint\xi^d d\xi^c+\lambda^d_0(\Gamma^a_{bc}\Gamma^b_{de})_P\oint\xi^e d\xi^c,
+\]
+que se reduz para
+\begin{equation}\label{eq:VariacaoLambda}
+	\Delta\lambda^a=-\lambda_0^b(\partial_c\Gamma^a_{bc}-\Gamma^a_{ed}\Gamma^e_{bc})_P\oint\xi d\xi^d ,
+\end{equation}
+ao fazer uma troca de índices. Como $\oint d(\xi^c\xi^d)=0$, temos que
+\[
+	f^{cd}\equiv\oint \xi^c d\xi^d = \tfrac{1}{2}\oint(\xi^c d\xi^d-\xi^d d\xi^c),
+\]
+que é antissimétrico. Assim, a partir da equação \eqref{eq:VariacaoLambda}
+\begin{align*}
+\Delta\lambda^a &=-\lambda_0^b(\partial_c\Gamma^a_{bc}-\Gamma^a_{ed}\Gamma^e_{bc})_P f^{cd} \\
+&=-\lambda_0^b(\partial_d\Gamma^a_{bc}-\Gamma^a_{ec}\Gamma^e_{bd})_P(-f^{cd}) \qquad \text{(trocando $c$ por $d$)}.
+\end{align*}
+Somando e dividindo por 2, temos
+\[
+\Delta\lambda^a = -\tfrac{1}{2}(
+	\partial_c\Gamma^a_{bd}-\partial_d\Gamma^a_{bc}+\Gamma^a_{ec}\Gamma^e_{bd}-\Gamma^a_{ed}\Gamma^e_{bc}
+	)_P\lambda^b_0 f^{cd} .
+\]
+Isto é, 
+\begin{equation}\label{eq:VariacaoLambdaRiemann}
+	\boxed{
+		\Delta\lambda^a=-\tfrac{1}{2}(\tensor{R}{^a_{bcd}})_P\lambda^b_0 f^{cd}.
+	}
+\end{equation}
+Essa equação estabelece a relação básica entre o tensor de curvatura em um ponto $P$ e o transporte paralelo ao redor de um ciclo pequeno próximo a $P$.
 
+\section{Desvio geodésico}\label{sec:DesvioGeodesico}
+Outro contexto em que a curvatura aparece é na equação do desvio geodésico, que vamos deduzir nesta seção.
 
+Considere duas geodésicas próximas, $\gamma$ dada por $x^a(u)$ e $\tilde{\gamma}$, dada por $\tilde{x}^a(u)$, ambas com parâmetros afins. Seja também $\xi^a(u)$ o ``vetor'' pequeno que conecta os pontos com mesmos parâmetros, i.e, $\xi^a(u)=\tilde{x}^a(u)-x^a(u)$ (veja a Figura \ref{fig:DesvioGeodesico}). Se nenhuma geodésica é nula, o comprimento de arco $s$ pode ser utilizado.
 
-
-
-
-% EXEMPLO DE LOOP NA ESFERA
-% \begin{figure}[t]
-% 	\centering
-% 	\plot{0.4\linewidth}{figuras/EsferaLoop}
-% 	\caption{A small loop on a shpere.}
-% 	\label{fig:EsferaLoop}
-% \end{figure}
-
-
-\section{*Desvio geodésico}\label{sec:DesvioGeodesico}
-
-
-\begin{figure}[t]
+\begin{figure}[th]
 	\centering
 	\plot{0.4\linewidth}{figuras/DesvioGeodesico}
-	\caption{Geodesic deviation.}
+	\caption{Duas geodésicas próximas.}
 	\label{fig:DesvioGeodesico}
 \end{figure}
 
-\section{*Equações de campo de Einstein}\label{sec:EquacoesCampoEinstein}
+Já que $\gamma$ e $\tilde{\gamma}$ são geodésicas, temos
+\begin{equation}\label{eq:GeodesicaTil}
+	\frac{d^2\tilde{x}^a}{du^2}+\tilde{\Gamma}^a_{bc}\frac{d\tilde{x}^b}{du}\frac{d\tilde{x}^c}{du}=0
+\end{equation}
+e
+\begin{equation}\label{eq:GeodesicaSemTil}
+	\frac{d^2x^a}{du^2}+{\Gamma}^a_{bc}\frac{dx^b}{du}\frac{dx^c}{du}=0.
+\end{equation}
+Mas, em primeira ordem,
+\[
+	\tilde{\Gamma^a_{bc}}=\Gamma^a_{bc}+\Gamma^a_{bc,d}\xi^d,
+\]
+e subtrair a equação \eqref{eq:GeodesicaSemTil} de \eqref{eq:GeodesicaTil} nos dá
+\[
+	\ddot{\xi}^a+\Gamma^a_{bc,d}\dot{x}^b\dot{x}^c\xi^d+\Gamma^a_{bc}\dot{x}^b\dot{\xi}^c+\Gamma^a_{bc}\dot{\xi}^b\dot{x}^c=0,
+\]
+onde os pontos denotam as derivadas com respeito a $u$ e apenas os termos de primeira ordem foram considerados. Isso pode ser escrito como
+\[
+	d(\dot{\xi}^a+  \Gamma^a_{bc}\xi^b\dot{x}^c)/du -
+	\Gamma^a_{bc,d}\xi^b\dot{x}^c\dot{x}^d -
+	\Gamma^a_{bc}\xi^b\ddot{x}^c +
+	\Gamma^a_{bc,d}\dot{x}^b\dot{x}^c\xi^d +
+	\Gamma^a_{bc}\dot{x}^b\dot{\xi}^c = 0 .
+\]
+Substituindo $\ddot{x}^c$ da equação \eqref{eq:GeodesicaSemTil}, podemos rearranjar para
+\[
+	d(\dot{\xi}^a+  \Gamma^a_{bc}\xi^b\dot{x}^c)/du +
+	\Gamma^a_{de}(\dot{\xi}^d+\Gamma^d_{bc}\xi^b\dot{x}^c)\dot{x}^e -
+	\Gamma^a_{de}\Gamma^d_{bc}\xi^b\dot{x}^c\dot{x}^e 
+\]
+\[
+	- \Gamma^a_{bc,d}\xi^b\dot{x}^c\dot{x}^d+
+	\Gamma^a_{bc}\xi^b\Gamma^c_{de}\dot{x}^d\dot{x}^e +
+	\Gamma^a_{bc,d}\dot{x}^b\dot{x}^c\xi^d = 0 .
+\]
+Ao renomear sufixos, podemos reduzir essa expressão para
+\[
+	D^2\xi^a/du^2+(
+		\Gamma^a_{cd,b} - \Gamma^a_{bc,d}+\Gamma^a_{be}\Gamma^e_{dc}-\Gamma^a_{ed}\Gamma^e_{bc}
+		)\xi^b\dot{x}^c\dot{x}^d = 0 , 
+\]
+que, por sua vez, pode ser escrito de maneira mais compacta como
+\begin{equation}\label{eq:DesvioGeodesico}
+	\boxed{
+	D^2\xi^a/du^2 + R^a_{cbd}\xi^b\dot{x}^c\dot{x}^d=0.
+	}
+\end{equation}
+Essa é a \textit{equação do desvio geodésico}. 
 
-\section{*Equações de Einstein e de Poisson}\label{sec:EinsteinPoisson}
+Em uma variedade plana, $\tensor{R}{^a_{bcd}}=0$ e, em coordenadas cartesianas, $D/du=d/du$, de modo que a equação \eqref{eq:DesvioGeodesico} é reduzida a $d^2\xi^a/du^2=0$, que implica que $\xi^a(u)=A^a u+B^a$, onde $A^a,B^a$ são constantes. Assim, o vetor de separação aumenta linearmente com $u$ (e com $s$ se $\gamma$ for não-nula). No entanto, em uma variedade curva, $\tensor{R}{^a_{bcd}}\neq0$ e não temos essa relação linear.
 
+\section{Equações de campo de Einstein}\label{sec:EquacoesCampoEinstein}
 
-
-
-
-
-
-
-
-
-
-
-
-
-\section{*A solução de Schwarzschild}\label{sec:Schwarzschild}
-
-As equações de campo discutidas aqui são extremamentes difíceis de serem resolvidas, visto que possuem um alto grau de não-linearidade. Assim, para encontrar soluções, é preciso simplificar o problema, isto é, buscar situações de alta simetria.
-
-A primeira solução das equações de campo foi uma solução especial e foi obtida por K. Schwarzschild em 1916. O que foi procurado foi o campo tensorial de métrica representando um campo gravitacional estático e de simetria esférica situado no espaço-tempo vazio em torno de um objeto esférico massivo, tal como uma estrela. Suas suposições para o problema foram:
-%  {\color{red}(comentar sobre a condição (a) ser redundante?)}
-\begin{enumerate}[label=(\alph*)]
-	\item o campo é estático,\label{sup:estatico}
-	\item o campo possui simetria esférica,\label{sup:esferico}
-	\item o espaço-tempo está vazio, \label{sup:vazio}
-	\item o espaço-tempo é assintoticamente plano.\label{sup:plano}
+O tensor de métrica contém dois tipos de informação distintos:
+\begin{enumerate}[label=\textbf{(\roman*)}]
+	\item A informação com respeito ao sistema de coordenadas utilizado (coordenadas esféricas, cartesianas etc);
+	\item A informação (mais importante) com respeito a existência de potenciais gravitacionais.
 \end{enumerate}
 
-Também assumiu-se que o espaço-tempo poderia ser descrito por um sistema de coordenadas $(t,r,\theta,\phi)$, onde $t$ é uma {\color{red} coordenada do tipo tempo}, % $\theta$ e $\phi$ são os ângulos polares blabalbla??
+Vimos na seção \ref{sec:PotencialGravitacionalGeodesica} que em um sistema quase plano, $g_{00}$ é basicamente o potencial newtoniano. Em um sistema de coordenadas mais geral, esse potencial estaria difuso ao longo de $g_{\mu\nu}$, de modo que todas as componentes podem ser tratadas como potenciais gravitacionais.
 
-Então, procurou-se um elemento de linha da forma
-\begin{equation}\label{eq:ElementoLinhaSchwarzschildPostulado}
-	c^2d\tau^2=A(r)dt^2-B(r)dr^2-r^2d\theta^2-r^2\sin^2\theta d\phi^2,
-\end{equation}
-onde $A(r)$ e $B(r)$ são funções deseconhecidas de $r$ a serem obtidas ao resolver as equações.
-
-O fato que nenhum dos termos depende de $t$ reflete a suposição \ref{sup:estatico}, e o fato que as superfícies dadas por $r,t$ constantes têm elementos de linha dados por
-\begin{equation}\label{eq:RTConstantes}
-	d s^{2}=r^{2}\left(d \theta^{2}+\sin ^{2} \theta d \phi^{2}\right)
-\end{equation}
-mostra que possuem a geometria de esferas {\color{red}(Exercício 1.6.2)} e isso indica sua suposição \ref{sup:esferico}. A suposição \ref{sup:vazio} significa que $A(r), B(r)$ devem ser encontrados utilizando as equações de campo do espaço-tempo vazio $R_{\mu\nu}=0$, ao passo que a suposição \ref{sup:plano} nos dá as condições de contorno em $A,B$:
-
-\begin{equation}\label{eq:CondicoesContornoSchwarzschild}
-	A(r) \rightarrow c^{2} \qq{ e } B(r) \rightarrow 1 \text { quando } r \rightarrow \infty
-\end{equation}
-
-{\color{red} $r$ não é a distância radial???}
-
-Vamos agora extrair a solução de Schwarzschild das equações de campo. O intuito é utilizar o tensor de métrica $g_{\mu\nu}$ obtido pelo elemento de linha \refeq{eq:ElementoLinhaSchwarzschildPostulado} como uma tentativa de solução da equação de campo para o espaço-tempo vazio. Da equação \textbf{eq:DefinicaoTensorRicci}, temos 
+Como vimos na seção \ref{sec:EnergiaMomentoFluidos}, o conteúdo de matéria contido no espaço-tempo é resumido no tensor de energia-momento $T^{\mu\nu}$. Assim, se a matéria causa a geometria, poderíamos tentar postular
 \[
-R_{\mu \nu} \equiv \partial_{\nu} \Gamma_{\mu \sigma}^{\sigma}-\partial_{\sigma} \Gamma_{\mu \nu}^{\sigma}+\Gamma_{\mu \sigma}^{\rho} \Gamma_{\rho \nu}^{\sigma}-\Gamma_{\mu \nu}^{\rho} \Gamma_{\rho \sigma}^{\sigma}
+	g^{\mu\nu}=\kappa T^{\mu\nu},
 \]
-e do exemplo {\color{red} FAZER PROBLEMA 2.7}, temos
-\[
-\begin{array}{lll}
-{\Gamma_{01}^{0}=A^{\prime} / 2 A,} & {\Gamma_{00}^{1}=A^{\prime} / 2 B,} & {\Gamma_{11}^{1}=B^{\prime} / 2 B,} \\ 
-{\Gamma_{22}^{1}=-r / B,} & {\Gamma_{33}^{1}=-\left(r \sin ^{2} \theta\right) / B,} &{ \Gamma_{12}^{2}=1 / r,} \\ 
-{\Gamma_{33}^{2}=-\sin \theta \cos \theta,} & {\Gamma_{13}^{3}=1 / r,} & {\Gamma_{23}^{3}=\cot \theta,}
-\end{array}	
-\]
-com todos os outros coeficientes de conexão nulos. Aqui fizemos a identificação das coordenadas $x^0\equiv t, x^1\equiv r, x^2\equiv\theta,x^3\equiv\phi$ e a linha significa uma diferenciação com respeito a $r$. 
-{\color{red} fazer as contas, a partir de $R_{\mu\nu}=0$}, temos
+onde $\kappa$ é uma constante de acoplamento. Isso a princípio parece plausível, pois ambos $g^{\mu\nu}$ e $T^{\mu\nu}$ são simétricos e possuem divergência nula (equação \eqref{eq:DerivadaCovarianteMetrica}). No entanto, essa equação não se reduz à equação de Poisson $\nabla^2V=4\pi G\rho$ no limite newtoniano. Como $g_{\mu\nu}$ são os potenciais gravitacionais, precisamos de um tensor simétrico envolvendo as derivadas de segunda ordem de $g^{\mu\nu}$ na equação.
 
-\begin{equation}\label{eq:SolucaoR00}
-	R_{00}=-\frac{A^{\prime \prime}}{2 B}+\frac{A^{\prime}}{4 B}\left(\frac{A^{\prime}}{A}+\frac{B^{\prime}}{B}\right)-\frac{A^{\prime}}{r B}=0,
+O tensor de Ricci é simétrico e possui as segundas derivadas de $g_{\mu\nu}$. Poderíamos, então, tentar novamente postular uma equação do tipo $R^{\mu\nu}= \kappa T^{\mu\nu}$. No entanto, $R^{\mu\nu}$ não satisfaz $\tensor{R}{^{\mu\nu}_{;\mu}}=0$. Assim, modificando a equação para
+\begin{equation}\label{eq:EquacoesdeCampo}
+	\boxed{
+		R^{\mu\nu}-\tfrac{1}{2}Rg^{\mu\nu}=\kappa T^{\mu\nu} ,
+	}
 \end{equation}
-\begin{equation}\label{eq:SolucaoR11}
-	R_{11}=\frac{A^{\prime \prime}}{2 A}-\frac{A^{\prime}}{4 A}\left(\frac{A^{\prime}}{A}+\frac{B^{\prime}}{B}\right)-\frac{B^{\prime}}{r B}=0
+temos que o lado esquerdo é o tensor de Einstein $G^{\mu\nu}$, que vimos na seção \ref{sec:TensorCurvatura}, que satisfaz $\tensor{G}{^{\mu\nu}_{;\mu}}=0$, de modo que a equação \eqref{eq:EquacoesdeCampo} parece satisfatória em todos os aspectos. Note que temos agora dez equações de campo, em vez de uma única, como na teoria newtoniana. Uma forma alternativa para escrevê-las é
+\begin{equation}\label{eq:EquacoesdeCampoAlternativa}
+	R^{\mu\nu}=\kappa(T^{\mu\nu}-\tfrac{1}{2}Tg^{\mu\nu}) ,
 \end{equation}
-\begin{equation}\label{eq:SolucaoR22}
-	R_{22}=\frac{1}{B}-1+\frac{r}{2 B}\left(\frac{A^{\prime}}{A}-\frac{B^{\prime}}{B}\right)=0
+onde $T \equiv T^\mu_\mu$.
+
+Lembre-se que $T^{\mu\nu}$ contém toda forma de energia e momento. Por exemplo, se há radiação eletromagnética presente, então isso deve estar incluso em $T^{\mu\nu}$. Uma região no espaço-tempo em que $T^{\mu\nu}=0$ é chamada de \textit{vazia}, sendo desprovida de matéria, energia de radiação e momento. Pode-se ver da equação \eqref{eq:EquacoesdeCampoAlternativa} que as equações de campo para o espaço-tempo vazio são
+\begin{equation}\label{eq:EquacoesCampoVazio}
+	R^{\mu\nu}=0.
 \end{equation}
-\begin{equation}\label{eq:SolucaoR33}
-	R_{33}=R_{22} \sin ^{2} \theta=0
+
+A equação de Poisson pode ser recuperada das equações de campo ao considerarmos sua componente $00$ na aproximação de campo fraco. Utilizando a versão covariante da equação \eqref{eq:EquacoesdeCampoAlternativa} para essa componente, temos
+\begin{equation}\label{eq:EquacaoCampo00}
+	R_{00}=\kappa(T_{00}-\tfrac{1}{2}Tg_{00}).
 \end{equation}
-e $R_{\mu\nu}=0$ sem nenhuma condição a mais para $\mu\neq\nu$
+Vamos utilizar um sistema de coordenadas como na seção \ref{sec:PotencialGravitacionalGeodesica}, onde $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}$, e os produtos de $h_{\mu\nu}$ podem ser desprezados. Também assumimos a condição quasi-estática utilizada naquela seção.
+
+Vamos assumir que o nosso campo gravitacional fraco provém de um fluido perfeito cujas partículas têm (no nosso sistema de coordenadas) velocidades $v$ muito menores do que $c$, de modo que $\gamma = (1-v^2/c^2)^{-1/2}\approx 1$. Vamos utilizar também que $p/c^2 \ll \rho$, que é válido para a maioria das distribuições clássicas, de modo que o tensor de energia-momento é
+\[
+	T_{\mu\nu}=\rho u_\mu u_\nu .
+\]
+Isso nos dá $T=\rho c^2$ e a equação \ref{eq:EquacaoCampo00} se torna
+\[
+	R_{00}=\kappa\rho(u_0u_o-\tfrac{1}{2}c^2g_{00}),
+\]
+mas $u_0 \approx c$ e $g_{00}\approx 1$, de modo que temos
+\begin{equation}\label{eq:Ricci00KappaRhoC}
+	R_{00}\approx\tfrac{1}{2}\kappa\rho c^2,
+\end{equation}
+onde, da equação \eqref{eq:DefinicaoTensorRiemann}, temos 
+\begin{equation*}
+	R_{00}=\partial_0\Gamma^\mu_{0\mu}-\partial_\mu\Gamma^\mu_{00}+\Gamma^\nu_{0\mu}\Gamma^\mu_{\nu0}-\Gamma^\nu_{00}\Gamma^\mu_{\nu\mu.
+	} .
+\end{equation*}
+
+No nosso sistema de coordenadas, temos que $\Gamma^\mu_{\nu\sigma}$ são pequenos, e portanto podemos ignorar os dois ultimos termos. Utilizando a condição quasi-estática, temos
+\[
+	R_{00}\approx-\partial_i\Gamma^i_{00} .
+\]
+Da seção \ref{sec:PotencialGravitacionalGeodesica}, temos que nessa aproximação vale
+\[
+	\Gamma^i_{00}=\tfrac{1}{2}\delta^{ij}\partial_j h_{00},
+\]
+reduzindo a equação \eqref{eq:Ricci00KappaRhoC} a
+\[
+	-\tfrac{1}{2}\delta^{ij}\partial_j\partial_j h_{00}\approx\tfrac{1}{2}\kappa\rho c^2.
+\]
+Mas $\delta^{ij}\partial_j\partial_j=\nabla^2$ e, da equação \eqref{eq:RelacaoG00Potencial}, $h_{00}=2V/c^2$, onde $V$ é o potencial gravitacional. Isso resulta em 
+\[
+	\nabla^2V\approx-\tfrac{1}{2}\kappa\rho c^4,
+\]
+que corresponde à equação de Poisson, desde que identifiquemos a constante $\kappa$ na equação de Einstein com $-8\pi G/c^4$. Assim, a equação se torna
+\begin{equation}
+	\boxed{
+		\nabla^2V\approx 4\pi G\rho
+	}
+\end{equation}
+
+\section*{Conclusões}
+
+Neste relatório, conforme previsto pelo projeto proposto, fez-se primeiramente uma revisão de Relatividade Especial, no capítulo \ref{cap:RelatividadeEspecial}, onde chegamos nas transformações de Lorentz, comparamos a geometria de RE com a geometria hiperbólica e discutimos a mecânica relativística.
+
+Após isso, começou-se o estudo da Teoria da Relatividade Geral, firmando a base matemática, passando pelos tópicos de sistemas de coordenadas no espaço euclidiano e suas transformações, variedades e campos tensoriais, incluindo o tensor de métrica (capítulo \ref{cap:CamposVetoriaisETensoriais}). Após isso, tratamos de derivadas e geodésicas no espaço curvo, bem como conceitos relacionados tais como o transporte paralelo e estudamos o espaço-tempo da Relatividade Geral, de modo a retomar algumas leis clássicas, como a Lei da Gravitação de Newton para campos gravitacionais fracos (capítulo \ref{cap:EspacoTempoRelatividadeGeralTrajetoriaParticulas}).
+
+Definimos, também, os tensores de Riemann, Ricci e, fazendo a introdução de conceitos físicos, culminamos na definição do tensor de energia-momento no contexto de dinâmica de fluidos. Por fim, chegamos nas equações de Einstein, relacionando conceitos matemáticos (tensor de curvatura de Einstein) com conceitos físicos (tensor de energia-momento), no capítulo \ref{cap:EquacoesDeCampoCurvatura}.
+
+Tudo está de acordo com o projeto inicial e pretendemos continuar seguindo o cronograma. Isto é, o espaço-tempo de Schwarzschild será análisado, cuja métrica será deduzida a partir das equações de Einstein. Com a métrica obtida, serão estudadas as propriedades físicas desse espaço-tempo como simetrias, geodésicas de partículas massivas e da luz, potencial efetivo e efeitos de \textit{redshift}. Por fim, será descrito o buraco negro de Schwarzschild, identificando propriedades físicas importantes, como o horizonte de eventos, estrutura causal e diagrama de Carter-Penrose.
+
